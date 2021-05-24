@@ -1,6 +1,5 @@
 body {
   margin: 0px;
-  background-color: #383838;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -231,8 +230,6 @@ p {
 }
 
 #splash {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/Images/Face Photos/3DF01550-AB73-423A-8948-9A87B1AA4E8F.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Images/Face Photos/3DF01550-AB73-423A-8948-9A87B1AA4E8F.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   padding-top: 56.25%;
