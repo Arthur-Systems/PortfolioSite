@@ -1,0 +1,10 @@
+images/Face Photos
+images/China
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+
+
+
