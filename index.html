@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="src/Css/style.css" />
     <script src="src/Scripts/scripts.js"></script>
+    <script src="src/Scripts/AOS.js"></script>
     <link rel="stylesheet" href="src\Css\azonix.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,20 +56,18 @@
 
 <body>
     <div id="splash">
-        <div id="text">
-            <h1>
-                <span>
-
-                </span> Haichaun Wei</h1><br>
+        <canvas id="bg"></canvas>
+        <script type="module" src="src/Scripts/three.js"></script>
+        <!----<div id="text">
+            <h1>Haichaun Wei</h1><br>
             <p>Full Stack Developer, Computer Scientist, and Musician</p>
         </div>
-        <i class="fas fa-angle-down"></i>
+        <i class="fas fa-angle-down"></i>-->
     </div>
 
     <button onclick="showsocial()">Click Me</button>
 
-    <canvas id="bg"></canvas>
-    <script type="module" src="src/Scripts/three.js"></script>
+
     <div id="intro">
         <h2>About Me</h2>
         <p> Hello, My name Is Haichuan Wei and I am a computer scientist.This page was created by me to help showcase my techinal skills. </p>
