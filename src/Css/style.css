@@ -19,6 +19,18 @@ body {
 
 header {
   background-color: #0088CC;
+  position: fixed;
+  display: inline;
+  top: -150px;
+  width: 100%;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+  z-index: 1;
+}
+
+footer {
+  background-color: black;
+  padding-top: 5em;
 }
 
 #Navlist {
@@ -230,6 +242,10 @@ header {
           animation-name: rotate;
   -webkit-animation-duration: 200ms;
           animation-duration: 200ms;
+}
+
+#placeholder {
+  margin: 1000px;
 }
 
 .btn {
