@@ -27,28 +27,12 @@ function showsocial() {
 
 function arrowturn() {}
 
-function reset() {
-    location.reload();
-}
 addEventListener('resize', function() {
     location.reload();
 });
 
-function myFunction() {
-    var w = window.outerWidth;
-    var h = window.outerHeight;
-    var txt = "Window size: width=" + w + ", height=" + h;
-    document.getElementById("demo").innerHTML = txt;
+if (user.browser.family === 'Chrome') {
+    alert('You\'re using the Safari browser');
 }
 
-jQuery(function($) {
-    var windowWidth = $(window).width();
-    var windowHeight = $(window).height();
-
-    $(window).resize(function() {
-        if (windowWidth != $(window).width() || windowHeight != $(window).height()) {
-            location.reload();
-            return;
-        }
-    });
-});
+function NavBar() {}
