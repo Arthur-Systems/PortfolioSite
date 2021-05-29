@@ -1,10 +1,10 @@
-images/Face Photos
-images/China
+src/images/Face Photos
+src/images/China
 node_modules
 .DS_Store
 dist
 dist-ssr
 *.local
-
+dist
 
 

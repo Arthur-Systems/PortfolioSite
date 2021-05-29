@@ -1,14 +1,11 @@
 <div align = "center">
 <img src="/src/Images/Public/Show.png">
 <p>⚠ Due to the overhaul, It is now impossible download and run this repo unless you have node.js installed on your computer ⚠</p>
-
-<h3> My Portfoilo Project</h3>
-
+<h2> My Portfoilo Project</h2>
 <p> Thank you for checking out my projects! This is my current and only project that I am working on. This project is ongoing. This project will be showcasing my skills so I want it to be perfect. Due to this, noticeable changes will be slow. Thank you for understanding. I am learning as I go.</p>
 </div>
-
+<p>Website:<a href="https://arthur-systems.tk">arthur-systems.tk</a></p>
 <h3> What I am using for this project</h3>
-
 <div align="left"> 
 <p>Front End:</p>
 <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="Html5" width="40" height="40"/> </a> 

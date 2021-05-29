@@ -31,8 +31,4 @@ addEventListener('resize', function() {
     location.reload();
 });
 
-if (user.browser.family === 'Chrome') {
-    alert('You\'re using the Safari browser');
-}
-
 function NavBar() {}
