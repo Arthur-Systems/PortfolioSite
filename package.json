@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "aos": "^2.3.4",
+        "simple-icons": "^4.25.0",
         "three": "^0.128.0"
     },
     "description": "<h3 align = \"center\" > Portfoilo</h3>\r <p>This Project is on goging. Updates will be slow. I am learning as I go.</p>",
