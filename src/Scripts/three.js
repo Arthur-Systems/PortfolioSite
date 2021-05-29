@@ -1,5 +1,5 @@
 import '/src/Css/style.css'
-import * as THREE from 'three';
+import * as THREE from 'three'
 
 //debugging
 function reportWindowSize() {
