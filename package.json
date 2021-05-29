@@ -7,11 +7,23 @@
         "serve": "vite preview"
     },
     "devDependencies": {
-        "typescript": "^4.2.3",
         "vite": "^2.3.4"
     },
     "dependencies": {
         "aos": "^2.3.4",
         "three": "^0.128.0"
-    }
+    },
+    "description": "<h3 align = \"center\" > Portfoilo</h3>\r <p>This Project is on goging. Updates will be slow. I am learning as I go.</p>",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Arthur-Systems/PortfolioSite.git"
+    },
+    "keywords": [],
+    "author": "Arthur",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Arthur-Systems/PortfolioSite/issues"
+    },
+    "homepage": "https://github.com/Arthur-Systems/PortfolioSite#readme"
 }

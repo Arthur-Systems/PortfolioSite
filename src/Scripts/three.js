@@ -1,14 +1,11 @@
 import '/src/Css/style.css'
 import * as THREE from 'three';
-import { Material, RedFormat } from 'three';
 
 //debugging
 function reportWindowSize() {
     var heightOutput = size.innerHeight;
     var widthOutput = size.innerWidth;
 }
-
-
 
 const scene = new THREE.Scene();
 var size = document.querySelector('#splash');
