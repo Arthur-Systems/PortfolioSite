@@ -4,7 +4,6 @@
 <h2> My Portfoilo Project</h2>
 <p> Thank you for checking out my projects! This is my current and only project that I am working on. This project is ongoing. This project will be showcasing my skills so I want it to be perfect. Due to this, noticeable changes will be slow. Thank you for understanding. I am learning as I go.</p>
 </div>
-<p>Website:<a href="https://arthur-systems.tk">arthur-systems.tk</a></p>
 <h3> What I am using for this project</h3>
 <div align="left"> 
 <p>Front End:</p>
@@ -22,6 +21,5 @@
 <p>Management:</p>
 <a href="https://git-scm.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> 
  </div> 
-
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8736448c-411c-41ef-ada2-1f72aea027d1/deploy-status)](https://app.netlify.com/sites/competent-liskov-0381a2/deploys)
