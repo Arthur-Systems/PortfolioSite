@@ -27,6 +27,8 @@ function showsocial() {
 
 function arrowturn() {}
 
-
-
 function NavBar() {}
+
+addEventListener('resize', function() {
+    location.reload();
+});

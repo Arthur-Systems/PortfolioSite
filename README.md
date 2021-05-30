@@ -1,6 +1,5 @@
 <div align = "center">
 <img src="/src/Images/Public/Show.png">
-<p>⚠ Due to the overhaul, It is now impossible download and run this repo unless you have node.js installed on your computer ⚠</p>
 <h2> My Portfoilo Project</h2>
 <p> Thank you for checking out my projects! This is my current and only project that I am working on. This project is ongoing. This project will be showcasing my skills so I want it to be perfect. Due to this, noticeable changes will be slow. Thank you for understanding. I am learning as I go.</p>
 </div>
