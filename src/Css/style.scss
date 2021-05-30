@@ -1,11 +1,11 @@
-   //start keyframes
+   //!start keyframes
    @keyframes rotate {
        100% {
            transform: rotate(90deg);
        }
    }
    
-   // Start Mixins
+   // !Start Mixins
    @mixin socialsize {
        font-size: 25px;
        margin: 5px 15px;
@@ -25,20 +25,20 @@
        justify-content: center;
    }
    
-   //main body 
+   //!main body 
    body {
        margin: 0px;
        //background-color: #383838;
        font-family: 'Montserrat', sans-serif;
    }
    
-   header {
+   #head {
        background-color: #0088CC;
        position: fixed;
-       display: inline;
+       display: block;
        top: -150px;
        width: 100%;
-       transition: top 0.3s;
+       transition: top 0.7s;
        z-index: 1;
    }
    
@@ -224,7 +224,7 @@
        left: 0;
    }
    
-   //start Media
+   //!start Media
    @media (max-width: 1000px) {
        #SDD {
            display: none;

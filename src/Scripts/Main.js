@@ -1,48 +1,11 @@
-//Start General Scripts
-
-function openNav() {
-    var x = document.getElementById("Spotify");
-    if (x.style.display == "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-
-function closeNav() {
-    document.getElementById("Spotify").style.width = "0";
-}
-
-function arrowmove() {
-    var x = document.getElementById("Arrows");
-    x.style.transform;
-}
-
-function showsocial() {
-    var x = document.getElementById("social");
-    if (x.style.display == "none") {
-        x.style.display = "grid";
-    } else {
-        x.style.display = "none";
-    }
-}
-
-function arrowturn() {}
-
-function NavBar() {}
-
-addEventListener('resize', function() {
-    location.reload();
-});
-
-//Start AOS.js
+//!Start AOS.js
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 
-//start Three.js
+//!start Three.js
 import '/src/Css/style.css'
 import * as THREE from 'three'
 
@@ -56,7 +19,6 @@ const scene = new THREE.Scene();
 var size = document.querySelector('#splash');
 var w = size.offsetWidth;
 var h = size.offsetHeight;
-var value = window.devicePixelRatio;
 const camera = new THREE.PerspectiveCamera(75, w / h, 2, 1000);
 camera.position.setZ(40);
 camera.position.setX(0);

@@ -13,17 +13,25 @@
         "aos": "^2.3.4",
         "three": "^0.128.0"
     },
-    "description": "<h3 align = \"center\" > Portfoilo</h3>\r <p>This Project is on goging. Updates will be slow. I am learning as I go.</p>",
-    "main": "index.js",
+    "description": "<h2> My Portfoilo Project</h2> <p> Thank you for checking out my projects! This is my current and only project that I am working on. This project is ongoing. This project will be showcasing my skills so I want it to be perfect. Due to this, noticeable changes will be slow. Thank you for understanding. I am learning as I go.</p>",
     "repository": {
         "type": "git",
+        "main": "src/Scripts/Main.js",
         "url": "git+https://github.com/Arthur-Systems/PortfolioSite.git"
     },
+
     "keywords": [],
     "author": "Arthur",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/Arthur-Systems/PortfolioSite/issues"
     },
-    "homepage": "https://github.com/Arthur-Systems/PortfolioSite#readme"
+    "homepage": "https://github.com/Arthur-Systems/PortfolioSite#readme",
+    "exports": {
+        ".": {
+            "import": "./src/Scripts/Test.js",
+            "require": "./src/Scripts/Test.js"
+        }
+    }
+
 }
