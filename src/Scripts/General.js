@@ -11,17 +11,15 @@ jQuery(function($) {
 });
 
 function scroll() {
-    window.scrollTo(0, 10);
+    window.scrollTo(0, 20);
 }
 
 var position = $(window).scrollTop();
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll > position) {
-        console.log('scrollDown');
         document.getElementById("head").style.top = "-150px";
     } else {
-        console.log('scrollUp');
         document.getElementById("head").style.top = "0px";
     }
     position = scroll;

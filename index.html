@@ -18,7 +18,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <script type="module" src="/src/Scripts/Main.js"></script>
+    <script type="module" src="/src/Scripts/Three.js"></script>
     <script type="module" src="/src/Scripts/General.js"></script>
     <script type="module" src="/src/Scripts/AOS.JS"></script>
 </head>
@@ -51,18 +51,24 @@
 <body>
     <div id="splash">
         <canvas id="bg"></canvas>
+    </div>
+    <div id="placeholder">
+        <div id="intro">
+            <img src="/src/Images/Face Photos/Intro.png">
+            <h2>About Me</h2>
+            <p> Hello, My name Is Haichuan Wei and I am a computer scientist.This page was created by me to help showcase my techinal skills. </p>
+        </div>
 
     </div>
-    <button onclick="openNav()">Click Me</button>
-    <!--<div id="intro">
-        <h2>About Me</h2>
-        <p> Hello, My name Is Haichuan Wei and I am a computer scientist.This page was created by me to help showcase my techinal skills. </p>
-    </div>-->
-    <div id="placeholder"></div>
 </body>
 <footer>
-    <a href="#intro">Credits</a>
+    <div>
+        <a href="#intro">Credits</a>
+        <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/css3.svg" />
+    </div>
+    <div>
+        <p>Site Created Using:</p>
+    </div>
 </footer>
-<img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/css3.svg" />
 
 </html>
