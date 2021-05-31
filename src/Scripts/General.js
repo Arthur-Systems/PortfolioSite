@@ -9,11 +9,6 @@ jQuery(function($) {
         }
     });
 });
-
-function scroll() {
-    window.scrollTo(0, 20);
-}
-
 var position = $(window).scrollTop();
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
@@ -21,10 +16,15 @@ $(window).scroll(function() {
         document.getElementById("head").style.top = "-150px";
     } else {
         document.getElementById("head").style.top = "0px";
+        if (document.documentElement.scrollTop == 0) {
+            document.getElementById("head").style.top = "-150px";
+        }
     }
     position = scroll;
 });
-
+if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.getElementById("head").style.top = "0px";
+}
 
 function openSpot() {
     var x = document.getElementById("Spotify");
@@ -35,6 +35,8 @@ function openSpot() {
     }
 }
 
+
+
 function closeSpot() {
     document.getElementById("Spotify").style.width = "0";
 }
@@ -44,13 +46,5 @@ function arrowmove() {
     x.style.transform;
 }
 
-function showsocial() {
-    var x = document.getElementById("social");
-    if (x.style.display == "none") {
-        x.style.display = "grid";
-    } else {
-        x.style.display = "none";
-    }
-}
 
 function arrowturn() {}

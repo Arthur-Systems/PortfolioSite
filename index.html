@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+<script>
+    function showsocial() {
+        var x = document.getElementById("social");
+        if (x.style.display == "none") {
+            x.style.display = "grid";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
 
 <head onload=scroll()>
     <!-- Info -->
@@ -20,8 +30,6 @@
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script type="module" src="/src/Scripts/Three.js"></script>
     <script type="module" src="/src/Scripts/General.js"></script>
-    <!--<script type="module" src="/src/Scripts/AOS.js"></script>-->
-
 </head>
 <header id="head">
     <div id="header">
@@ -29,10 +37,10 @@
             <img src="src/Images/Public/Mission.png">
         </div>
         <div id="Navlist">
-            <a href="#intro">Home</a>
-            <a href="#intro">Qualifications</a>
+            <a href="#intro">About</a>
             <a href="#intro">Achievements</a>
-            <a href="Html/Gallery.html">Gallery</a>
+            <a href="#intro">Qualifications</a>
+            <a href="Html/Gallery.html">Contact</a>
         </div>
         <div id="SDD">
             <p onclick=showsocial()>
@@ -55,13 +63,20 @@
 
     </div>
     <div id="placeholder">
-        <div id="intro">
+        <div id="introimg">
             <img src="/src/Images/Face Photos/Intro.png">
+        </div>
+        <div id="intro" data-aos="fade-in">
             <h2>About Me</h2>
-            <p> Hello, My name Is Haichuan Wei and I am a computer scientist.This page was created by me to help showcase my techinal skills. </p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
 
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 <footer>
     <div>
