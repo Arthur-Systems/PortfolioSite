@@ -6,6 +6,7 @@ import { MapControls, OrbitControls } from 'three/examples/jsm/controls/OrbitCon
 
 
 
+
 //!Canvas Setup
 const scene = new THREE.Scene();
 const loader = new GLTFLoader();
@@ -26,7 +27,7 @@ size.appendChild(renderer.domElement);
 //!lightings
 
 const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 5, 5);
+pointLight.position.set(5, 10, 20);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
@@ -56,7 +57,7 @@ scene.add(torus);*/
 
 loader.load('/src/Models/Monitor.glb', function(gltf) {
     scene.add(gltf.scene);
-    gltf.scene.rotation.y = -90;
+    gltf.scene.rotation.y = -95.9;
 
 });
 
