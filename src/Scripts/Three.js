@@ -5,6 +5,7 @@ import { AmbientLight, PointLight, TextGeometry } from 'three';
 import { MapControls, OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 
+
 //!Canvas Setup
 const scene = new THREE.Scene();
 const loader = new GLTFLoader();
