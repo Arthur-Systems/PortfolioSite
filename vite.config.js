@@ -2,7 +2,7 @@ import copy from "rollup-plugin-copy-assets";
 
 export default {
     build: {
-        input: "/src/Scripts/index.js",
+        input: "/src/Scripts/General.js",
         output: {
             file: "dist/bundle.js",
             format: "cjs",
