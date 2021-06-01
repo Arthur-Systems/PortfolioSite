@@ -4,9 +4,6 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { AmbientLight, PointLight, TextGeometry } from 'three';
 import { MapControls, OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-
-
-
 //!Canvas Setup
 const scene = new THREE.Scene();
 const loader = new GLTFLoader();
@@ -20,9 +17,22 @@ camera.position.setY(0);
 const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
 });
-renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setPixelRatio(size.devicePixelRatio);
 renderer.setSize(w, h);
 size.appendChild(renderer.domElement);
+
+//!Other
+$(window).scroll(function() {
+    const x = document.body.getBoundingClientRect().top;
+    //camera.position.x = x * -0.5;
+    camera.position.x = x * -0.05;
+    camera.position.y = x * -0.05;
+
+
+});
+
+
+
 
 //!lightings
 
@@ -45,7 +55,7 @@ const lightpos = new THREE.PointLightHelper(pointLight)
 const gridpos = new THREE.GridHelper(200, 50);
 scene.add(lightpos, gridpos)
 
-const control = new OrbitControls(camera, renderer.domElement);
+//const control = new OrbitControls(camera, renderer.domElement);
 
 //!Models
 
@@ -59,14 +69,12 @@ loader.load('/src/Models/Monitor.glb', function(gltf) {
     scene.add(gltf.scene);
     gltf.scene.rotation.y = -95.9;
 
-});
+    function spin() {
+        requestAnimationFrame(spin);
 
-function animate() {
-    requestAnimationFrame(animate);
-    /*torus.rotation.x += 0.01;
-    torus.rotation.y += 0.005;
-    torus.rotation.z += 0.1;*/
-    control.update();
-    renderer.render(scene, camera);
-}
-animate();
+        gltf.scene.rotation.y += 0.05;
+
+        renderer.render(scene, camera);
+    }
+    spin();
+});

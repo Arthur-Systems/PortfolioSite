@@ -14,17 +14,17 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll > position) {
         document.getElementById("head").style.top = "-150px";
+    } else if (document.documentElement.scrollTop == 0) {
+        document.getElementById("head").style.top = "-150px";
     } else {
+
         document.getElementById("head").style.top = "0px";
-        if (document.documentElement.scrollTop == 0) {
-            document.getElementById("head").style.top = "-150px";
-        }
+
+
     }
     position = scroll;
 });
-if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    document.getElementById("head").style.top = "0px";
-}
+
 
 function openSpot() {
     var x = document.getElementById("Spotify");

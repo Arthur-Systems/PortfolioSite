@@ -16,6 +16,7 @@ body {
   margin: 0px;
   background-color: #333333;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
 }
 
 #head {
@@ -31,7 +32,14 @@ body {
 
 footer {
   background-color: black;
-  padding-top: 5em;
+  padding-top: 50px;
+  margin: 0;
+  width: 100%;
+}
+
+footer P {
+  margin: 0;
+  padding: 0;
 }
 
 #Navlist {
@@ -323,6 +331,8 @@ footer {
 canvas {
   position: absolute;
   top: 0;
+  margin: 0;
+  padding: 0;
   left: 0;
 }
 
