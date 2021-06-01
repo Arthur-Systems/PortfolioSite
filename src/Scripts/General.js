@@ -19,8 +19,6 @@ $(window).scroll(function() {
     } else {
 
         document.getElementById("head").style.top = "0px";
-
-
     }
     position = scroll;
 });
