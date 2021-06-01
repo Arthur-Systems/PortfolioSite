@@ -127,12 +127,13 @@
            &.fa-#{$logo} {
                background: linear-gradient($i);
                @include socialsize();
-               @each $color in $Socalcolor {
-                   &:hover {
-                       color: $color;
-                       @include socialhover();
-                   }
-               }
+           }
+       }
+       @each $logo,
+       $i in $Socallogo {
+           &.fa-#{$logo}:hover {
+               color: $i;
+               @include socialhover();
            }
        }
        &.fa-angle-right {
