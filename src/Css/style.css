@@ -159,13 +159,56 @@ footer P {
   background: white;
 }
 
+.fa.fa-telegram:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-telegram:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-telegram:hover {
+  color: #1778F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-telegram:hover {
+  color: #211F1F;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-telegram:hover {
+  color: #0e76a8;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
 .fa.fa-instagram {
-  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0088CC));
+  background: linear-gradient(#0088CC);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
   height: 25px;
   width: 25px;
+}
+
+.fa.fa-instagram:hover {
+  color: #0088CC;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
 }
 
 .fa.fa-instagram:hover {
@@ -175,14 +218,49 @@ footer P {
   background: white;
 }
 
+.fa.fa-instagram:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-instagram:hover {
+  color: #1778F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-instagram:hover {
+  color: #211F1F;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-instagram:hover {
+  color: #0e76a8;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
 .fa.fa-twitter {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1DA1F2));
+  background: linear-gradient(#1DA1F2);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
   height: 25px;
   width: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1DA1F2));
-  background: linear-gradient(#1DA1F2);
+}
+
+.fa.fa-twitter:hover {
+  color: #0088CC;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
 }
 
 .fa.fa-twitter:hover {
@@ -192,14 +270,63 @@ footer P {
   background: white;
 }
 
+.fa.fa-twitter:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-twitter:hover {
+  color: #1778F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-twitter:hover {
+  color: #211F1F;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-twitter:hover {
+  color: #0e76a8;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
 .fa.fa-facebook {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1778F2));
+  background: linear-gradient(#1778F2);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
   height: 25px;
   width: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1778F2));
-  background: linear-gradient(#1778F2);
+}
+
+.fa.fa-facebook:hover {
+  color: #0088CC;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-facebook:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-facebook:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
 }
 
 .fa.fa-facebook:hover {
@@ -209,14 +336,56 @@ footer P {
   background: white;
 }
 
+.fa.fa-facebook:hover {
+  color: #211F1F;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-facebook:hover {
+  color: #0e76a8;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
 .fa.fa-github {
+  background: -webkit-gradient(linear, left top, left bottom, from(#211F1F));
+  background: linear-gradient(#211F1F);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
   height: 25px;
   width: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#211F1F));
-  background: linear-gradient(#211F1F);
+}
+
+.fa.fa-github:hover {
+  color: #0088CC;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-github:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-github:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-github:hover {
+  color: #1778F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
 }
 
 .fa.fa-github:hover {
@@ -226,14 +395,56 @@ footer P {
   background: white;
 }
 
+.fa.fa-github:hover {
+  color: #0e76a8;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
 .fa.fa-linkedin {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0e76a8));
+  background: linear-gradient(#0e76a8);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
   height: 25px;
   width: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0e76a8));
-  background: linear-gradient(#0e76a8);
+}
+
+.fa.fa-linkedin:hover {
+  color: #0088CC;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-linkedin:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-linkedin:hover {
+  color: #1DA1F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-linkedin:hover {
+  color: #1778F2;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
+}
+
+.fa.fa-linkedin:hover {
+  color: #211F1F;
+  -webkit-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+  background: white;
 }
 
 .fa.fa-linkedin:hover {
@@ -334,21 +545,5 @@ canvas {
   margin: 0;
   padding: 0;
   left: 0;
-}
-
-@media (max-width: 1000px) {
-  #SDD {
-    display: none;
-  }
-}
-
-@media (max-width: 850px) {
-  #Navlist a {
-    margin: 20px;
-  }
-  #header {
-    -ms-grid-columns: 100px 500px;
-        grid-template-columns: 100px 500px;
-  }
 }
 /*# sourceMappingURL=style.css.map */

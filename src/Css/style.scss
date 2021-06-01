@@ -27,6 +27,8 @@
    
    //!Varables start
    $backgroud:#333333;
+   $Socallogo: ("telegram": #0088CC, "instagram": #0088CC, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
+   $Socalcolor:(#0088CC, #1DA1F2, #1DA1F2, #1778F2, #211F1F, #0e76a8);
    //!main body start
    html {}
    
@@ -120,52 +122,17 @@
        @include center;
        text-align: center;
        text-decoration: none;
-       &.fa-telegram {
-           background: linear-gradient(#0088CC);
-           @include socialsize();
-           &:hover {
-               color: #0088CC;
-               @include socialhover();
-           }
-       }
-       &.fa-instagram {
-           background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-           @include socialsize();
-           &:hover {
-               color: #1DA1F2;
-               @include socialhover();
-           }
-       }
-       &.fa-twitter {
-           @include socialsize();
-           background: linear-gradient(#1DA1F2);
-           &:hover {
-               color: #1DA1F2;
-               @include socialhover();
-           }
-       }
-       &.fa-facebook {
-           @include socialsize();
-           background: linear-gradient(#1778F2);
-           &:hover {
-               color: #1778F2;
-               @include socialhover();
-           }
-       }
-       &.fa-github {
-           @include socialsize();
-           background: linear-gradient(#211F1F);
-           &:hover {
-               color: #211F1F;
-               @include socialhover();
-           }
-       }
-       &.fa-linkedin {
-           @include socialsize();
-           background: linear-gradient(#0e76a8);
-           &:hover {
-               color: #0e76a8;
-               @include socialhover();
+       @each $logo,
+       $i in $Socallogo {
+           &.fa-#{$logo} {
+               background: linear-gradient($i);
+               @include socialsize();
+               @each $color in $Socalcolor {
+                   &:hover {
+                       color: $color;
+                       @include socialhover();
+                   }
+               }
            }
        }
        &.fa-angle-right {
@@ -244,21 +211,3 @@
    }
    
    //!start Media
-   @media (max-width: 1000px) {
-       #SDD {
-           display: none;
-       }
-   }
-   
-   @media (max-width:850px) {
-       #Navlist {
-           a {
-               margin: 20px;
-           }
-       }
-       #header {
-           grid-template-columns: 100px 500px;
-       }
-   }
-   
-   @media(max-width:600px) {}
