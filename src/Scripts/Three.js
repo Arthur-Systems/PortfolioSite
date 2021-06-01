@@ -36,11 +36,23 @@ $(window).scroll(function() {
 
 //!lightings
 
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 10, 20);
+const pointLight1 = new THREE.PointLight(0xffffff);
+pointLight1.position.set(5, 10, 20);
+
+const pointLight2 = new THREE.PointLight(0xffffff);
+pointLight2.position.set(-5, 10, 20);
+
+const pointLight3 = new THREE.PointLight(0xffffff);
+pointLight3.position.set(5, 10, -10);
+
+const pointLight4 = new THREE.PointLight(0xffffff);
+pointLight4.position.set(0, -5, 20);
+
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight);
+
+
+scene.add(pointLight1, pointLight2, pointLight3, pointLight4, ambientLight);
 
 //!debugging
 
@@ -50,10 +62,12 @@ scene.add(pointLight, ambientLight);
     var widthOutput = size.innerWidth;
 }
 const report = new THREE.TextGeometry(reportWindowSize())*/
-
-const lightpos = new THREE.PointLightHelper(pointLight)
-const gridpos = new THREE.GridHelper(200, 50);
-scene.add(lightpos, gridpos)
+const lightpos2 = new THREE.PointLightHelper(pointLight2)
+const lightpos1 = new THREE.PointLightHelper(pointLight1)
+const lightpos3 = new THREE.PointLightHelper(pointLight3)
+const lightpos4 = new THREE.PointLightHelper(pointLight4)
+    //const gridpos = new THREE.GridHelper(200, 50);
+scene.add(lightpos1, lightpos2, lightpos4, lightpos3)
 
 //const control = new OrbitControls(camera, renderer.domElement);
 
@@ -72,7 +86,7 @@ loader.load('/src/Models/Monitor.glb', function(gltf) {
     function spin() {
         requestAnimationFrame(spin);
 
-        gltf.scene.rotation.y += 0.05;
+        //gltf.scene.rotation.y += 0.05;
 
         renderer.render(scene, camera);
     }
