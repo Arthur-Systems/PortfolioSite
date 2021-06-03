@@ -12,7 +12,7 @@ jQuery(function($) {
 var position = $(window).scrollTop();
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll > position) {
+    if (scroll >= position) {
         document.getElementById("head").style.top = "-150px";
     } else if (document.documentElement.scrollTop == 0) {
         document.getElementById("head").style.top = "-150px";
@@ -23,15 +23,6 @@ $(window).scroll(function() {
     position = scroll;
 });
 
-
-function openSpot() {
-    var x = document.getElementById("Spotify");
-    if (x.style.display == "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // true for mobile device

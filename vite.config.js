@@ -7,9 +7,9 @@ export default ({ command, mode }) => {
                 copy({
                     assets: [
                         // You can include directories
-                        "/src/Models/Monitor.glb",
+                        "/src/Models/",
                         // You can also include files
-                        "src/external/buffer.bin",
+
                     ],
                 }),
             ],
