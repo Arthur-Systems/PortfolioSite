@@ -1,1 +1,1 @@
-Nothing is here because I would like to keep my photos private.
+Nothing is here because I would like to keep my photos private Lol. :)
