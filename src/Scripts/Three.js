@@ -79,7 +79,7 @@ const material = new THREE.MeshStandardMaterial({ color: 0xFF6347 });
 const torus = new THREE.Mesh(geomenty, material);
 scene.add(torus);*/
 
-loader.load('/src/Models/Test.glb', function(Test) {
+loader.load('/src/Models/Monitor.glb', function(Test) {
     scene.add(Test.scene);
     Test.scene.rotation.x = -80;
     Test.scene.position.z = -5;
@@ -89,15 +89,16 @@ loader.load('/src/Models/Test.glb', function(Test) {
         requestAnimationFrame(spin);
         Test.scene.rotation.x += 0.05;
 
+
     }
     spin();
 
 
 });
-/*loader.load('/src/Models/Monitor.glb', function(Monitor) {
+loader.load('/src/Models/MonitorEdit.glb', function(Monitor) {
     scene.add(Monitor.scene);
     Monitor.scene.rotation.y = -95.9;
-});*/
+});
 
 function update() {
     requestAnimationFrame(update);
