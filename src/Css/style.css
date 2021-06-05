@@ -1,14 +1,14 @@
 @-webkit-keyframes rotate {
-  100% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
 @keyframes rotate {
-  100% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
@@ -104,31 +104,39 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  margin-right: 50px;
-  margin-bottom: 10px;
-  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-#SDD::after {
-  display: block;
-  content: 'test';
+#SDD p::after {
+  margin-top: 25px;
+  content: "";
   position: absolute;
-  bottom: 0;
+  left: 100%;
+  right: 100%;
+  background-color: black;
+  border-radius: 100px;
+  height: 3px;
 }
 
-#SDD p {
-  display: block;
-}
-
-#SDD:hover {
+#SDD p:hover {
   cursor: pointer;
+  color: black;
 }
 
-#SDD:hover::after {
-  font-size: 50px;
+#SDD p:hover i {
+  cursor: pointer;
+  color: black;
+}
+
+#SDD p:hover::after {
+  left: 15%;
+  right: 15%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #social {
@@ -136,18 +144,29 @@ html {
   display: grid;
   padding: 7px;
   overflow: hidden;
-  left: -50;
-  -ms-grid-columns: 100px 100px 100px 100px 100px auto;
-      grid-template-columns: 100px 100px 100px 100px 100px auto;
+  -ms-grid-columns: (auto)[6];
+      grid-template-columns: repeat(6, auto);
   grid-auto-rows: auto;
 }
 
 #header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px auto auto 200px;
-      grid-template-columns: 100px auto auto 200px;
+  -ms-grid-columns: 100px auto 0fr 200px;
+      grid-template-columns: 100px auto 0fr 200px;
   grid-auto-rows: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#header.social {
+  -ms-grid-columns: 100px auto 0.6fr 200px;
+      grid-template-columns: 100px auto 0.6fr 200px;
+  -webkit-transition: grid-template-columns 1s;
+  transition: grid-template-columns 1s;
+  transition: grid-template-columns 1s, -ms-grid-columns 1s;
 }
 
 #Spotify {

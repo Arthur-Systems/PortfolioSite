@@ -7,5 +7,6 @@ dist
 dist-ssr
 *.local
 dist
-
+src/Images/100CANON
+src/Models
 

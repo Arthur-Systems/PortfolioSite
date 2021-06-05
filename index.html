@@ -9,6 +9,15 @@
             x.style.display = "none";
         }
     }
+
+    function social() {
+        var x = document.getElementById("header");
+        if (x.classList.contains("social")) {
+            x.classList.remove("social");
+        } else {
+            x.classList.add("social");
+        }
+    }
 </script>
 
 <head>
@@ -65,8 +74,7 @@
 
 
         <div id="SDD">
-            <p>
-                <i class="fa fa-angle-right"></i>&nbsp;Social Media</p>
+            <p onclick="social()"><i class="fa fa-angle-right"></i>&nbsp;Social Media </p>
 
         </div>
 
