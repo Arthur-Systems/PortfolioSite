@@ -27,7 +27,7 @@
    
    //!Varables start
    $backgroud:#333333;
-   $Socallogo: ("telegram": #0088CC, "instagram": #0088CC, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
+   $Socallogo: ("telegram": #0088CC, "instagram":#833ab4, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
    //!main body start
    body,
    html {
@@ -147,6 +147,7 @@
    #header {
        display: grid;
        grid-template-columns: 100px auto 0fr 200px;
+       transition: grid-template-columns 0.4s;
        grid-auto-rows: auto;
        user-select: none;
    }
@@ -217,12 +218,25 @@
    }
    
    #splash {
-       padding-top: 56.25%;
-       background-image: url(/src/Images/Public/image-placeholder.jpg);
-       background-size: 100% 100%;
-       opacity: 0.3;
+       padding: (56.25%)/3;
+       padding-left: 0;
+       padding-right: 0;
+       background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/Images/China/IMG_1183\ \(2\).JPG');
+       width: 100%;
        background-color: black;
-       position: relative;
+       background-attachment: fixed;
+       background-position: center;
+       p {
+           color: white;
+           font-size: 50px;
+           @include center();
+       }
+       h1 {
+           color: white;
+           @include center();
+           font-size: 100px;
+           font-family: 'Space Grotesk', sans-serif;
+       }
    }
    
    #intro {
@@ -230,14 +244,18 @@
        margin-top: 20px;
        padding-left: 25px;
        box-shadow: 5px;
+       left: 80%;
+       right: 80%;
        width: 50%;
        display: flex;
-       align-self: left;
+       align-self: center;
        align-items: center;
        padding-bottom: 20px;
        background-color: lighten($backgroud, 10%);
        p {
            margin: 15px;
+           font-family: 'Nunito Sans', sans-serif;
+           font-size: 25px;
        }
        h2 {
            text-align: center;

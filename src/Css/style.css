@@ -154,6 +154,9 @@ html {
   display: grid;
   -ms-grid-columns: 100px auto 0fr 200px;
       grid-template-columns: 100px auto 0fr 200px;
+  -webkit-transition: grid-template-columns 0.4s;
+  transition: grid-template-columns 0.4s;
+  transition: grid-template-columns 0.4s, -ms-grid-columns 0.4s;
   grid-auto-rows: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -206,8 +209,8 @@ html {
 }
 
 .fa.fa-instagram {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0088CC));
-  background: linear-gradient(#0088CC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#833ab4));
+  background: linear-gradient(#833ab4);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
@@ -263,7 +266,7 @@ html {
 }
 
 .fa.fa-instagram:hover {
-  color: #0088CC;
+  color: #833ab4;
   -webkit-transition: ease-out 0.5s;
   transition: ease-out 0.5s;
   background: white;
@@ -344,12 +347,44 @@ html {
 }
 
 #splash {
-  padding-top: 56.25%;
-  background-image: url(/src/Images/Public/image-placeholder.jpg);
-  background-size: 100% 100%;
-  opacity: 0.3;
+  padding: 18.75%;
+  padding-left: 0;
+  padding-right: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("/src/Images/China/IMG_1183 (2).JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/src/Images/China/IMG_1183 (2).JPG");
+  width: 100%;
   background-color: black;
-  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#splash p {
+  color: white;
+  font-size: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#splash h1 {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 100px;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 #intro {
@@ -358,12 +393,14 @@ html {
   padding-left: 25px;
   -webkit-box-shadow: 5px;
           box-shadow: 5px;
+  left: 80%;
+  right: 80%;
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: left;
-      align-self: left;
+  -ms-flex-item-align: center;
+      align-self: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -373,6 +410,8 @@ html {
 
 #intro p {
   margin: 15px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 25px;
 }
 
 #intro h2 {
