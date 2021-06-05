@@ -12,9 +12,9 @@ jQuery(function($) {
 var position = $(window).scrollTop();
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
-    if (scroll >= position) {
+    if (scroll > position) {
         document.getElementById("head").style.top = "-150px";
-    } else if (document.documentElement.scrollTop == 0) {
+    } else if (document.documentElement.scrollTop <= 0) {
         document.getElementById("head").style.top = "-150px";
     } else {
 

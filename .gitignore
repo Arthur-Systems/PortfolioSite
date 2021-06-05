@@ -1,5 +1,6 @@
 src/images/Face Photos
 src/images/China
+src/Scripts/Three.js
 node_modules
 .DS_Store
 dist
