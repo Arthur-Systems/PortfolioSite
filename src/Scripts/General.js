@@ -14,6 +14,7 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll > position) {
         document.getElementById("head").style.top = "-150px";
+
     } else if (document.documentElement.scrollTop <= 0) {
         document.getElementById("head").style.top = "-150px";
     } else {

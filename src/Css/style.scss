@@ -29,9 +29,8 @@
    $backgroud:#333333;
    $Socallogo: ("telegram": #0088CC, "instagram": #0088CC, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
    //!main body start
-   html {}
-   
-   body {
+   body,
+   html {
        margin: 0px;
        background-color: $backgroud;
        font-family: 'Montserrat', sans-serif;
@@ -40,6 +39,8 @@
    
    #head {
        background-color: #0088CC;
+       font-family: 'Space Grotesk', sans-serif;
+       font-size: 20px;
        position: fixed;
        display: block;
        top: -150px;
@@ -48,10 +49,10 @@
        z-index: 1;
    }
    
-   footer {
+   #footer {
        background-color: black;
-       padding-top: 50px;
        margin: 0;
+       padding-top: 100px;
        width: 100%;
        P {
            margin: 0;
@@ -61,13 +62,33 @@
    
    //classes and ID's
    #Navlist {
-       @include center();
+       display: flex;
+       align-items: center;
+       margin: 0;
+       padding: 0;
        a {
-           text-decoration: none;
-           margin: 50px 50px;
+           margin: 0px 50px 0 0;
+           font-size: 100%;
            color: white;
+           position: relative;
+           text-decoration: none;
+           &::after {
+               content: "";
+               position: absolute;
+               left: 100%;
+               right: 100%;
+               bottom: 0;
+               background-color: black;
+               border-radius: 100px;
+               height: 3px;
+           }
            &:hover {
                color: black;
+               &::after {
+                   left: 0%;
+                   right: 0%;
+                   transition: all 0.5s;
+               }
            }
        }
    }
@@ -83,30 +104,42 @@
    #SDD {
        color: white;
        position: relative;
-       display: inline-block;
-       @include center();
+       display: flex;
+       align-items: center;
+       justify-content: right;
+       margin-right: 50px;
+       margin-bottom: 10px;
+       overflow: hidden;
+       &::after {
+           display: block;
+           content: 'test';
+           position: absolute;
+           bottom: 0;
+       }
        p {
            display: block;
        }
        &:hover {
            cursor: pointer;
+           &::after {
+               font-size: 50px;
+           }
        }
    }
    
    #social {
-       display: none;
-       position: absolute;
-       background-color: black;
-       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-       grid-template-rows: auto auto;
-       top: 0;
-       grid-template-columns: auto auto auto;
-       z-index: 1;
+       display: grid;
+       padding: 7px;
+       overflow: hidden;
+       left: -50;
+       grid-template-columns: 100px 100px 100px 100px 100px auto;
+       grid-auto-rows: auto;
    }
    
    #header {
        display: grid;
-       grid-auto-flow: column;
+       grid-template-columns: 100px auto auto 200px;
+       grid-auto-rows: auto;
    }
    
    #Spotify {
@@ -171,6 +204,10 @@
    
    #splash {
        padding-top: 56.25%;
+       background-image: url(/src/Images/Public/image-placeholder.jpg);
+       background-size: 100% 100%;
+       opacity: 0.3;
+       background-color: black;
        position: relative;
    }
    
@@ -200,14 +237,6 @@
            width: 200px;
            border-width: 50px;
        }
-   }
-   
-   canvas {
-       position: absolute;
-       top: 0;
-       margin: 0;
-       padding: 0;
-       left: 0;
    }
    
    //!start Media

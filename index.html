@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
 <script>
-    function showsocial() {
-        var x = document.getElementById("social");
-        if (x.style.display == "none") {
-            x.style.display = "grid";
-        } else {
-            x.style.display = "none";
-        }
-    }
-
     function openSpot() {
         var x = document.getElementById("Spotify");
         if (x.style.display == "none") {
@@ -39,6 +30,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/src/Css/style.css" />
@@ -62,24 +54,28 @@
             <a href="#intro">Qualifications</a>
             <a href="Html/Gallery.html">Contact</a>
         </div>
-        <div id="SDD">
-            <p onclick=showsocial()>
-                <i class="fa fa-angle-right"></i>&nbsp;Social Media</p>
-            <div id="social">
-                <a href="https://twitter.com/WeiHaichuan" class="fa fa-twitter"></a>
-                <a href="https://www.instagram.com/real_arthur_wei/" class="fa fa-instagram"></a>
-                <a href="https://www.linkedin.com/in/haichuanwei/" class="fa fa-linkedin"></a>
-                <a href="https://t.me/ArthurWei1" class="fa fa-telegram"></a>
-                <a href="https://www.facebook.com/HaichuanWei/" class="fa fa-facebook"></a>
-                <a href="https://github.com/Arthur-Systems" class="fa fa-github"></a>
-            </div>
+        <div id="social">
+            <a href="https://twitter.com/WeiHaichuan" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/real_arthur_wei/" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/haichuanwei/" class="fa fa-linkedin"></a>
+            <a href="https://t.me/ArthurWei1" class="fa fa-telegram"></a>
+            <a href="https://www.facebook.com/HaichuanWei/" class="fa fa-facebook"></a>
+            <a href="https://github.com/Arthur-Systems" class="fa fa-github"></a>
         </div>
+
+
+        <div id="SDD">
+            <p>
+                <i class="fa fa-angle-right"></i>&nbsp;Social Media</p>
+
+        </div>
+
     </div>
 </header>
 
 <body>
     <div id="splash">
-        <canvas id="bg"></canvas>
+
 
     </div>
     <div id="placeholder">
@@ -88,8 +84,16 @@
         </div>
         <div id="intro" data-aos="fade-in">
             <h2>About Me</h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. In massa tempor nec feugiat nisl pretium.
+                Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. A cras semper auctor neque. Metus aliquam eleifend mi in nulla. Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Curabitur vitae nunc sed velit.
+                Elit duis tristique sollicitudin nibh sit amet commodo. Eu feugiat pretium nibh ipsum consequat nisl. Interdum consectetur libero id faucibus nisl tincidunt. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Curabitur
+                vitae nunc sed velit dignissim sodales ut. Eu ultrices vitae auctor eu. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Leo duis ut diam quam nulla porttitor.
+                Dui ut ornare lectus sit amet est placerat in egestas. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Morbi tristique senectus et netus. Sed id semper risus in. Fusce id velit ut tortor pretium. Arcu dictum varius duis at
+                consectetur lorem donec massa. Sed id semper risus in hendrerit gravida rutrum. Scelerisque viverra mauris in aliquam sem. Cursus turpis massa tincidunt dui ut. Odio aenean sed adipiscing diam donec adipiscing tristique risus. Platea dictumst
+                quisque sagittis purus. Sapien eget mi proin sed libero enim sed faucibus turpis. Lacus suspendisse faucibus interdum posuere. Nunc consequat interdum varius sit amet mattis vulputate. Enim ut sem viverra aliquet. Amet cursus sit amet
+                dictum sit amet justo. Ut pharetra sit amet aliquam id diam maecenas ultricies. Consectetur libero id faucibus nisl. Scelerisque purus semper eget duis at tellus at urna. Netus et malesuada fames ac turpis egestas sed tempus. Massa id
+                neque aliquam vestibulum morbi blandit. Tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Molestie at elementum eu facilisis sed. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Diam vulputate
+                ut pharetra sit amet aliquam. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim.</p>
         </div>
 
     </div>
@@ -98,7 +102,7 @@
         AOS.init();
     </script>
 </body>
-<footer>
+<footer id='footer'>
     <div>
         <a href="#intro">Credits</a>
         <img height="32" width="32" src="https://cdn.jsdelivr.net/npm/simple-icons@v4/icons/css3.svg" />
