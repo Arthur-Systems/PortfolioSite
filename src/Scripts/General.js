@@ -14,7 +14,8 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll > position) {
         document.getElementById("head").style.top = "-150px";
-        document.getElementById("header").classList.remove("social")
+        document.getElementById("header").classList.remove("social");
+        document.getElementById("arrow").classList.remove("flip");
 
     } else if (document.documentElement.scrollTop < 0) {
         document.getElementById("head").style.top = "-150px";
@@ -26,6 +27,10 @@ $(window).scroll(function() {
     position = scroll;
 });
 
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+if (isChrome) {
+
+}
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // true for mobile device

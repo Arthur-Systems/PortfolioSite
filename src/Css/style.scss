@@ -43,7 +43,7 @@
        font-size: 20px;
        position: fixed;
        display: block;
-       top: -150px;
+       top: 0px;
        width: 100%;
        transition: top 0.7s;
        z-index: 1;
@@ -136,6 +136,16 @@
        }
    }
    
+   #arrow {
+       &.flip {
+           animation-name: rotate;
+           animation-duration: 0.6s;
+           animation-iteration-count: 1;
+           animation-timing-function: ease;
+           animation-fill-mode: forwards;
+       }
+   }
+   
    #social {
        display: grid;
        padding: 7px;
@@ -150,11 +160,10 @@
        transition: grid-template-columns 0.4s;
        grid-auto-rows: auto;
        user-select: none;
-   }
-   
-   #header.social {
-       grid-template-columns: 100px auto 0.6fr 200px;
-       transition: grid-template-columns 1s;
+       &.social {
+           grid-template-columns: 100px auto 0.6fr 200px;
+           transition: grid-template-columns 1s;
+       }
    }
    
    #Spotify {
@@ -244,8 +253,6 @@
        margin-top: 20px;
        padding-left: 25px;
        box-shadow: 5px;
-       left: 80%;
-       right: 80%;
        width: 50%;
        display: flex;
        align-self: center;
@@ -272,3 +279,12 @@
    }
    
    //!start Media
+   @media (max-width:1500px) {}
+   
+   //! Start Qualifications
+   #QTitle {
+       padding: 100px;
+       color: white;
+       display: flex;
+       justify-content: center;
+   }
