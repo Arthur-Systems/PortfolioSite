@@ -5,6 +5,25 @@
        }
    }
    
+   @keyframes bounce {
+       0% {
+           opacity: 1;
+           transform: translateY(0px) scale(1);
+       }
+       25% {
+           opacity: 0;
+           transform: translateY(10px) scale(0.9);
+       }
+       26% {
+           opacity: 0;
+           transform: translateY(-10px) scale(0.9);
+       }
+       55% {
+           opacity: 1;
+           transform: translateY(0px) scale(1);
+       }
+   }
+   
    // !Start Mixins
    @mixin socialsize {
        font-size: 25px;
@@ -25,8 +44,19 @@
        justify-content: center;
    }
    
+   @mixin underline {
+       content: "";
+       position: absolute;
+       left: 100%;
+       right: 100%;
+       background-color: $navlistcolor;
+       border-radius: 100px;
+       height: 3px;
+   }
+   
    //!Varables start
    $backgroud:#333333;
+   $navlistcolor:#FF8235;
    $Socallogo: ("telegram": #0088CC, "instagram":#833ab4, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
    //!main body start
    body,
@@ -38,11 +68,11 @@
    }
    
    #head {
-       background-color: #0088CC;
+       background: #667db6;
+       background: linear-gradient(to right, #000000, #434343);
        font-family: 'Space Grotesk', sans-serif;
        font-size: 20px;
        position: fixed;
-       display: block;
        top: 0px;
        width: 100%;
        transition: top 0.7s;
@@ -73,20 +103,41 @@
            position: relative;
            text-decoration: none;
            &::after {
-               content: "";
-               position: absolute;
-               left: 100%;
-               right: 100%;
                bottom: 0;
-               background-color: black;
-               border-radius: 100px;
-               height: 3px;
+               @include underline();
            }
            &:hover {
-               color: black;
+               color: $navlistcolor;
                &::after {
                    left: 0%;
                    right: 0%;
+                   transition: all 0.5s;
+               }
+           }
+       }
+   }
+   
+   #SDD {
+       color: white;
+       position: relative;
+       @include center();
+       margin: 0;
+       padding: 0;
+       p {
+           &::after {
+               margin-top: 25px;
+               @include underline();
+           }
+           &:hover {
+               cursor: pointer;
+               color: $navlistcolor;
+               i {
+                   cursor: pointer;
+                   color: $navlistcolor;
+               }
+               &::after {
+                   left: 15%;
+                   right: 15%;
                    transition: all 0.5s;
                }
            }
@@ -98,41 +149,6 @@
        margin: 0 0;
        img {
            height: 100px;
-       }
-   }
-   
-   #SDD {
-       color: white;
-       position: relative;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       margin: 0;
-       padding: 0;
-       p {
-           &::after {
-               margin-top: 25px;
-               content: "";
-               position: absolute;
-               left: 100%;
-               right: 100%;
-               background-color: black;
-               border-radius: 100px;
-               height: 3px;
-           }
-           &:hover {
-               cursor: pointer;
-               color: black;
-               i {
-                   cursor: pointer;
-                   color: black;
-               }
-               &::after {
-                   left: 15%;
-                   right: 15%;
-                   transition: all 0.5s;
-               }
-           }
        }
    }
    
@@ -199,6 +215,15 @@
                animation-duration: 200ms;
            }
        }
+       &.fa-chevron-down {
+           margin: 0;
+           padding: 0;
+           font-size: 20px;
+           animation-name: bounce;
+           animation-duration: 1.4s;
+           animation-iteration-count: infinite;
+           animation-timing-function: linear;
+       }
    }
    
    #placeholder {
@@ -227,12 +252,10 @@
    }
    
    #splash {
-       padding: (56.25%)/3;
+       padding: (56.25%)/6;
        padding-left: 0;
        padding-right: 0;
-       background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/src/Images/China/IMG_1183\ \(2\).JPG');
-       width: 100%;
-       background-color: black;
+       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/src/Images/China/IMG_1183\ \(2\).JPG');
        background-attachment: fixed;
        background-position: center;
        p {
@@ -255,8 +278,6 @@
        box-shadow: 5px;
        width: 50%;
        display: flex;
-       align-self: center;
-       align-items: center;
        padding-bottom: 20px;
        background-color: lighten($backgroud, 10%);
        p {
@@ -270,15 +291,34 @@
        }
    }
    
-   #introimg {
+   #square {
+       width: 350px;
+       height: 350px;
+       margin: auto;
+       transform: rotate(-45deg);
+       overflow: hidden;
+       @include center;
        img {
-           height: 200px;
-           width: 200px;
-           border-width: 50px;
+           width: 500px;
+           height: 500px;
+           transform: rotate(45deg);
        }
    }
    
    //!start Media
+   @media (max-width:1800px) {
+       #header {
+           &.social {
+               grid-template-columns: 100px auto clamp(0.8fr, 0.7fr, 20%) 200px;
+               transition: grid-template-columns 1s;
+           }
+       }
+       #social {
+           overflow: hidden;
+           grid-template-columns: repeat(6, auto);
+       }
+   }
+   
    @media (max-width:1500px) {}
    
    //! Start Qualifications
