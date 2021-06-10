@@ -1,7 +1,7 @@
 <div align = "center">
 <img src="https://lh3.googleusercontent.com/Z-TRINFvo3cFksPw-euQXbq7UKjWVItx9J4ZL7f6-7Ior5Qm9Yz1SHnpPIAjRm-TBD3xiKd0fZ1vBKvWAlX9RaKHmY7IKXadvavERQSmOrEuiBtcX_TuyHTTHxH9mXLgHODo82i3HttU2Omd6HiWNWZepmYvtf2_9JfiW5BYcy_yf0Qp3OoKIzFvznMZOs8ib4drla139rNwBBtM43mLR842mbzeKxeAsXC2LtZA07XZx80fGNXytunVu5C-6myJ9cPiGGNYzDVvFFfvYtolOx_4xtGQx0pzmAcAIcM1yVPOzb5qW0MveWTPtrMrRzD771RJFH7KrB38NcpXmuVwojHRLkmvKkZyeaUsIrseEjFbkC-9AKMpErNDjWSCviZiF2DuX2Fw4Ce3m7uUmNl_a5kay7IW4JMUvxyvWVkrhpYq0nC8lfA-lfugnc3qkhatXkZXScN7AkGkdNkzWkdQ5QnifQbNPI_qEXC1WXSDsE031PTOlZE76arzZNj5rBkxiCYhscPJbmFIAOOPdWZABVrMp6_XzH13yPAnb9M-AOfF7c5u-NTz5khvEboPsS1Vjg1zXzJwyiSVM0RI0nfy1B_zbnBgxnfgWimHS8YbZYBLbaPWtd4D-E568m0MbHR8a2R15Ls9P4ZhZWuYXOBMo40fUe5wBFVpe_J7X5junur36yY6yFsBdf9ZQkmED-FQIXNcwoVRO-I64vrkkCH-UGlq=w945-h214-no?authuser=0">
 <h2> My Portfoilo Project</h2>
-<p> Thank you for checking out my projects! This is my current and only project that I am working on. Work is still ongoing. This website will be showcasing my my collective skills so I want it to be perfect. Due to this, noticeable changes will be slow. I am learning as I go. Thank you for understanding. </p>
+<p> Thank you for checking out my projects! This is the current only coding project that I am working on. Work is still ongoing. Since this website will be showcasing my collective skills, I want it to be perfect. Due to this, noticeable changes will be slow. I am learning as I go. Thank you for understanding. </p>
 </div>
 <h3> What I am using for this project</h3>
 <div align="left"> 

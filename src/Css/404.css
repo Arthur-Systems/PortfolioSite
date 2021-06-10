@@ -12,52 +12,6 @@
   }
 }
 
-@-webkit-keyframes bounce {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-  }
-  25% {
-    opacity: 0;
-    -webkit-transform: translateY(10px) scale(0.9);
-            transform: translateY(10px) scale(0.9);
-  }
-  26% {
-    opacity: 0;
-    -webkit-transform: translateY(-10px) scale(0.9);
-            transform: translateY(-10px) scale(0.9);
-  }
-  55% {
-    opacity: 1;
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-  }
-  25% {
-    opacity: 0;
-    -webkit-transform: translateY(10px) scale(0.9);
-            transform: translateY(10px) scale(0.9);
-  }
-  26% {
-    opacity: 0;
-    -webkit-transform: translateY(-10px) scale(0.9);
-            transform: translateY(-10px) scale(0.9);
-  }
-  55% {
-    opacity: 1;
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-  }
-}
-
 body,
 html {
   margin: 0px;
@@ -72,7 +26,6 @@ html {
   background: linear-gradient(to right, #000000, #434343);
   font-family: 'Space Grotesk', sans-serif;
   font-size: 20px;
-  position: fixed;
   top: 0px;
   width: 100%;
   -webkit-transition: top 0.7s;
@@ -206,7 +159,6 @@ html {
   overflow: hidden;
   -ms-grid-columns: (auto)[6];
       grid-template-columns: repeat(6, auto);
-  grid-auto-rows: auto;
 }
 
 #header {
@@ -230,17 +182,6 @@ html {
   -webkit-transition: grid-template-columns 1s;
   transition: grid-template-columns 1s;
   transition: grid-template-columns 1s, -ms-grid-columns 1s;
-}
-
-#Spotify {
-  position: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: none;
 }
 
 .fa {
@@ -371,25 +312,61 @@ html {
           animation-duration: 200ms;
 }
 
-.fa.fa-chevron-down {
+#box {
+  padding-left: 50px;
+  height: 0;
+  width: auto;
+  height: auto;
+  padding-bottom: 50px;
   margin: 0;
+  border-radius: 10px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#back a {
+  text-decoration: none;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  font-family: 'Space Grotesk', sans-serif;
+  display: inline-block;
+}
+
+#back .fa-arrow-left {
+  color: black;
+  display: inline-block;
+}
+
+#Error {
   padding: 0;
+  margin: 0;
+}
+
+#Error h1 {
+  color: black;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  padding: 10px;
+  padding-top: 50px;
+}
+
+#Error p {
+  color: black;
+  padding: 10px;
+  margin-top: 0;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 20px;
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-duration: 1.4s;
-          animation-duration: 1.4s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 
-#placeholder {
-  margin-bottom: 1000px;
-}
-
-.btn {
+#Error button {
   color: black;
   background-color: transparent;
   padding: 15px 5px;
@@ -400,127 +377,7 @@ html {
   transition: background-color 0.5s ease-in-out;
 }
 
-.btn:hover {
+#Error button:hover {
   background-color: gold;
 }
-
-#resume {
-  margin-top: 5%;
-}
-
-#Title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#splash {
-  padding: 9.375%;
-  padding-left: 0;
-  padding-right: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/src/Images/China/IMG_1183 (2).JPG");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/Images/China/IMG_1183 (2).JPG");
-  background-attachment: fixed;
-  background-position: center;
-}
-
-#splash p {
-  color: white;
-  font-size: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#splash h1 {
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 100px;
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-#intro {
-  color: white;
-  margin-top: 20px;
-  padding-left: 25px;
-  -webkit-box-shadow: 5px;
-          box-shadow: 5px;
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 20px;
-  background-color: #4d4d4d;
-}
-
-#intro p {
-  margin: 15px;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 25px;
-}
-
-#intro h2 {
-  text-align: center;
-  margin: 10px;
-}
-
-#square {
-  width: 350px;
-  height: 350px;
-  margin: auto;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#square img {
-  width: 500px;
-  height: 500px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-@media (max-width: 1800px) {
-  #header.social {
-    -ms-grid-columns: 100px auto clamp(0.8fr, 0.7fr, 20%) 200px;
-        grid-template-columns: 100px auto clamp(0.8fr, 0.7fr, 20%) 200px;
-    -webkit-transition: grid-template-columns 1s;
-    transition: grid-template-columns 1s;
-    transition: grid-template-columns 1s, -ms-grid-columns 1s;
-  }
-  #social {
-    overflow: hidden;
-    -ms-grid-columns: (auto)[6];
-        grid-template-columns: repeat(6, auto);
-  }
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=404.css.map */

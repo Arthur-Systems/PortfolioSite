@@ -7,7 +7,7 @@ export default ({ command, mode }) => {
                 copy({
                     assets: [
                         // You can include directories
-                        "/src/Models/",
+
                         // You can also include files
 
                     ],
