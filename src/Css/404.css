@@ -337,6 +337,11 @@ html {
   display: inline-block;
 }
 
+#back a:visited {
+  text-decoration: none;
+  color: black;
+}
+
 #back .fa-arrow-left {
   color: black;
   display: inline-block;
