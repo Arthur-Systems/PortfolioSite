@@ -7,7 +7,7 @@ export default ({ command, mode }) => {
                 copy({
                     assets: [
                         // You can include directories
-
+                        "src/Html/404.html"
                         // You can also include files
 
                     ],
