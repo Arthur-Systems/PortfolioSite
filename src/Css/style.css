@@ -431,14 +431,12 @@ html {
 #border {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 15px solid;
   background: transparent;
-  border-image-source: linear-gradient(0deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
-  border-image-slice: 1;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-box-shadow: 0 0 10px red, inset 0 0 20px red;
-          box-shadow: 0 0 10px red, inset 0 0 20px red;
+  border: 15px #eb311f solid;
+  -webkit-box-shadow: 0 0 30px #eb311f, inset 0 0 30px #eb311f;
+          box-shadow: 0 0 30px #eb311f, inset 0 0 30px #eb311f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,10 +446,10 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-animation: moveGradient 0.3s ease-in-out, turn 2s ease-in-out;
-          animation: moveGradient 0.3s ease-in-out, turn 2s ease-in-out;
   padding: 0;
   overflow: hidden;
+  -webkit-transition: ease-in-out all 1s;
+  transition: ease-in-out all 1s;
 }
 
 #square {
@@ -475,10 +473,14 @@ html {
   height: 350px;
 }
 
-#square > * {
+#square * {
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+#blend {
+  mix-blend-mode: multiply;
 }
 
 #blend * {
@@ -490,32 +492,11 @@ html {
 #grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid: repeat(2, 1fr)/repeat(2, 1fr);
 }
 
-.one {
-  display: -ms-grid;
-  display: grid;
-  background-color: green;
-}
-
-.two {
-  background-color: black;
-  display: -ms-grid;
-  display: grid;
-}
-
-.three {
-  background-color: grey;
-  display: -ms-grid;
-  display: grid;
-}
-
-.four {
-  background-color: gold;
-  display: -ms-grid;
-  display: grid;
+#grid span {
+  position: relative;
 }
 
 @-webkit-keyframes rotate {
