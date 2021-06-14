@@ -1,336 +1,392 @@
-   //!start keyframes
-   @keyframes rotate {
-       to {
-           transform: rotate(180deg);
-       }
-   }
-   
-   @keyframes bounce {
-       0% {
-           opacity: 1;
-           transform: translateY(0px) scale(1);
-       }
-       25% {
-           opacity: 0;
-           transform: translateY(10px) scale(0.9);
-       }
-       26% {
-           opacity: 0;
-           transform: translateY(-10px) scale(0.9);
-       }
-       55% {
-           opacity: 1;
-           transform: translateY(0px) scale(1);
-       }
-   }
-   
-   // !Start Mixins
-   @mixin socialsize {
-       font-size: 25px;
-       margin: 5px 15px;
-       padding: 20px;
-       height: 25px;
-       width: 25px;
-   }
-   
-   @mixin socialhover {
-       transition: ease-out 0.5s;
-       background: white;
-   }
-   
-   @mixin center {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-   }
-   
-   @mixin underline {
-       content: "";
-       position: absolute;
-       left: 100%;
-       right: 100%;
-       background-color: $navlistcolor;
-       border-radius: 100px;
-       height: 3px;
-   }
-   
-   //!Varables start
-   $backgroud:#333333;
-   $navlistcolor:#FF8235;
-   $Socallogo: ("telegram": #0088CC, "instagram":#833ab4, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
-   //!main body start
-   body,
-   html {
-       margin: 0px;
-       background-color: $backgroud;
-       font-family: 'Montserrat', sans-serif;
-       overflow-x: hidden;
-   }
-   
-   #head {
-       background: #667db6;
-       background: linear-gradient(to right, #000000, #434343);
-       font-family: 'Space Grotesk', sans-serif;
-       font-size: 20px;
-       position: fixed;
-       top: 0px;
-       width: 100%;
-       transition: top 0.7s;
-       z-index: 1;
-   }
-   
-   #footer {
-       background-color: black;
-       margin: 0;
-       padding-top: 100px;
-       width: 100%;
-       P {
-           margin: 0;
-           padding: 0;
-       }
-   }
-   
-   //classes and ID's
-   #Navlist {
-       display: flex;
-       align-items: center;
-       margin: 0;
-       padding: 0;
-       a {
-           margin: 0px 50px 0 0;
-           font-size: 100%;
-           color: white;
-           position: relative;
-           text-decoration: none;
-           &::after {
-               bottom: 0;
-               @include underline();
+           // !Start Mixins
+           @mixin socialsize {
+               font-size: 25px;
+               margin: 5px 15px;
+               padding: 20px;
+               height: 25px;
+               width: 25px;
            }
-           &:hover {
-               color: $navlistcolor;
-               &::after {
-                   left: 0%;
-                   right: 0%;
-                   transition: all 0.5s;
+           
+           @mixin socialhover {
+               transition: ease-out 0.5s;
+               background: white;
+           }
+           
+           @mixin center {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+           }
+           
+           @mixin underline {
+               content: "";
+               position: absolute;
+               left: 100%;
+               right: 100%;
+               background-color: $navlistcolor;
+               border-radius: 100px;
+               height: 3px;
+           }
+           
+           //!Varables start
+           $angle:0deg;
+           $backgroud:#333333;
+           $navlistcolor:#FF8235;
+           $Socallogo: ("telegram": #0088CC, "instagram":#833ab4, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
+           //!main body start
+           body,
+           html {
+               margin: 0px;
+               background-color: $backgroud;
+               font-family: 'Montserrat', sans-serif;
+               overflow-x: hidden;
+           }
+           
+           #head {
+               background: #667db6;
+               background: linear-gradient(to right, #000000, #434343);
+               font-family: 'Space Grotesk', sans-serif;
+               font-size: 20px;
+               position: fixed;
+               top: 0px;
+               width: 100%;
+               transition: top 0.7s;
+               z-index: 1;
+           }
+           
+           #footer {
+               background-color: black;
+               margin: 0;
+               padding-top: 100px;
+               width: 100%;
+               P {
+                   margin: 0;
+                   padding: 0;
                }
            }
-       }
-   }
-   
-   #SDD {
-       color: white;
-       position: relative;
-       @include center();
-       margin: 0;
-       padding: 0;
-       p {
-           &::after {
-               margin-top: 25px;
-               @include underline();
-           }
-           &:hover {
-               cursor: pointer;
-               color: $navlistcolor;
-               i {
-                   cursor: pointer;
-                   color: $navlistcolor;
+           
+           //classes and ID's
+           #Navlist {
+               display: flex;
+               align-items: center;
+               margin: 0;
+               padding: 0;
+               a {
+                   margin: 0px 50px 0 0;
+                   font-size: 100%;
+                   color: white;
+                   position: relative;
+                   text-decoration: none;
+                   &::after {
+                       bottom: 0;
+                       @include underline();
+                   }
+                   &:hover {
+                       color: $navlistcolor;
+                       &::after {
+                           left: 0%;
+                           right: 0%;
+                           transition: all 0.5s;
+                       }
+                   }
                }
-               &::after {
-                   left: 15%;
-                   right: 15%;
-                   transition: all 0.5s;
+           }
+           
+           #SDD {
+               color: white;
+               position: relative;
+               @include center();
+               margin: 0;
+               padding: 0;
+               p {
+                   &::after {
+                       margin-top: 25px;
+                       @include underline();
+                   }
+                   &:hover {
+                       cursor: pointer;
+                       color: $navlistcolor;
+                       i {
+                           cursor: pointer;
+                           color: $navlistcolor;
+                       }
+                       &::after {
+                           left: 15%;
+                           right: 15%;
+                           transition: all 0.5s;
+                       }
+                   }
                }
            }
-       }
-   }
-   
-   #logo {
-       padding: 0 0;
-       margin: 0 0;
-       img {
-           height: 100px;
-       }
-   }
-   
-   #arrow {
-       &.flip {
-           animation-name: rotate;
-           animation-duration: 0.6s;
-           animation-iteration-count: 1;
-           animation-timing-function: ease;
-           animation-fill-mode: forwards;
-       }
-   }
-   
-   #social {
-       display: grid;
-       padding: 7px;
-       overflow: hidden;
-       grid-template-columns: repeat(6, auto);
-       grid-auto-rows: auto;
-   }
-   
-   #header {
-       display: grid;
-       grid-template-columns: 100px auto 0fr 200px;
-       transition: grid-template-columns 0.4s;
-       grid-auto-rows: auto;
-       user-select: none;
-       &.social {
-           grid-template-columns: 100px auto 0.6fr 200px;
-           transition: grid-template-columns 1s;
-       }
-   }
-   
-   #Spotify {
-       position: flex;
-       justify-content: right;
-       align-items: center;
-       display: none;
-   }
-   
-   .fa {
-       color: white;
-       @include center;
-       text-align: center;
-       text-decoration: none;
-       @each $logo,
-       $i in $Socallogo {
-           &.fa-#{$logo} {
-               background: linear-gradient($i);
-               @include socialsize();
+           
+           #logo {
+               padding: 0 0;
+               margin: 0 0;
+               img {
+                   height: 100px;
+               }
            }
-       }
-       @each $logo,
-       $i in $Socallogo {
-           &.fa-#{$logo}:hover {
-               color: $i;
-               @include socialhover();
+           
+           #arrow {
+               &.flip {
+                   animation-name: rotate;
+                   animation-duration: 0.6s;
+                   animation-iteration-count: 1;
+                   animation-timing-function: ease;
+                   animation-fill-mode: forwards;
+               }
            }
-       }
-       &.fa-angle-right {
-           display: inline-block;
-           &:hover {
-               animation-name: rotate;
-               animation-duration: 200ms;
+           
+           #social {
+               display: grid;
+               padding: 7px;
+               overflow: hidden;
+               grid-template-columns: repeat(6, auto);
+               grid-auto-rows: auto;
            }
-       }
-       &.fa-chevron-down {
-           padding: 0;
-           margin: 0;
-           font-size: 25px;
-           animation-name: bounce;
-           animation-duration: 1.5s;
-           animation-iteration-count: infinite;
-           animation-timing-function: linear;
-           animation-delay: calc(var(--order)*300ms);
-       }
-   }
-   
-   #placeholder {
-       margin-bottom: 1000px;
-   }
-   
-   .btn {
-       color: black;
-       background-color: transparent;
-       padding: 15px 5px;
-       margin: 10px 5px;
-       text-align: center;
-       text-overflow: clip;
-       transition: background-color 0.5s ease-in-out;
-       &:hover {
-           background-color: gold;
-       }
-   }
-   
-   #resume {
-       margin-top: 5%;
-   }
-   
-   #Title {
-       @include center();
-   }
-   
-   #splash {
-       padding: (56.25%)/6;
-       padding-left: 0;
-       padding-right: 0;
-       background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://eastus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=jpg&cs=fFNQTw&docid=https%3A%2F%2Fohlone-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!of-j9UBLRkKFgpts_iPfoh5H9PvYSztLj2Z0BStZ-S7fqpCbc1ehRLtVt8osvDwy%2Fitems%2F01JBBA4KLWOZHSCFQ67BD3UNJAZ77DV3BL%3Fversion%3DPublished&access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDAvb2hsb25lLW15LnNoYXJlcG9pbnQuY29tQGE3ZTIyNTYxLWI3ZmItNGZlMi04YjgzLWZmN2ZiZDRiZjVlNSIsImlzcyI6IjAwMDAwMDAzLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMCIsIm5iZiI6IjE2MjM1NTMyMDAiLCJleHAiOiIxNjIzNTc0ODAwIiwiZW5kcG9pbnR1cmwiOiJ1Kzl3cUJrWVA2SUZGVFVMV3R4aDlyUzNCMTZrTzRXd2t2dXE0bm9Dc1VvPSIsImVuZHBvaW50dXJsTGVuZ3RoIjoiMTE2IiwiaXNsb29wYmFjayI6IlRydWUiLCJ2ZXIiOiJoYXNoZWRwcm9vZnRva2VuIiwic2l0ZWlkIjoiWmpWaE0yWm1ZVEV0TkdJME1DMDBNalEyTFRnMU9ESXRPV0kyWTJabE1qTmtabUV5IiwibmFtZWlkIjoiMCMuZnxtZW1iZXJzaGlwfGh3ZWk2QHN0dWRlbnQub2hsb25lLmVkdSIsIm5paSI6Im1pY3Jvc29mdC5zaGFyZXBvaW50IiwiaXN1c2VyIjoidHJ1ZSIsImNhY2hla2V5IjoiMGguZnxtZW1iZXJzaGlwfDEwMDMyMDAwNDg2MGIzMzdAbGl2ZS5jb20iLCJ0dCI6IjAiLCJ1c2VQZXJzaXN0ZW50Q29va2llIjoiMiJ9.NUxtd2VickdLODVVMEN3c3pGa2ZERE9RVDMzSFByVjd1cE9XSGliaHhDUT0&encodeFailures=1&width=1589&height=893&srcWidth=1836&srcHeight=1032");
-       background-attachment: fixed;
-       background-position: center;
-       p {
-           color: white;
-           font-size: 50px;
-           @include center();
-           margin: 0;
-       }
-       h1 {
-           color: white;
-           @include center();
-           font-size: 100px;
-           font-family: 'Space Grotesk', sans-serif;
-       }
-   }
-   
-   #intro {
-       color: white;
-       margin-top: 20px;
-       padding-left: 25px;
-       box-shadow: 5px;
-       width: 50%;
-       display: flex;
-       padding-bottom: 20px;
-       background-color: lighten($backgroud, 10%);
-       p {
-           margin: 15px;
-           font-family: 'Nunito Sans', sans-serif;
-           font-size: 25px;
-       }
-       h2 {
-           text-align: center;
-           margin: 10px;
-       }
-   }
-   
-   #border {
-       box-sizing: border-box;
-       border: 15px #eb311f solid;
-       transform: rotate(45deg);
-       box-shadow: 0 0 10px #eb311f, inset 0 0 20px #eb311f;
-       &::before,
-       &::after {
-           box-sizing: inherit;
-           content: '';
-           position: absolute;
-           width: 100%;
-           height: 100%;
-       }
-   }
-   
-   #square {
-       width: 350px;
-       height: 350px;
-       margin: auto;
-       @include center;
-       img {
-           width: 500px;
-           height: 500px;
-       }
-   }
-   
-   //!start Media
-   @media (max-width:1800px) {
-       #header {
-           &.social {
-               grid-template-columns: 100px auto clamp(0.8fr, 0.7fr, 20%) 200px;
-               transition: grid-template-columns 1s;
+           
+           #header {
+               display: grid;
+               grid-template-columns: 100px auto 0fr 200px;
+               transition: grid-template-columns 0.4s;
+               grid-auto-rows: auto;
+               user-select: none;
+               &.social {
+                   grid-template-columns: 100px auto 0.6fr 200px;
+                   transition: grid-template-columns 1s;
+               }
            }
-       }
-       #social {
-           overflow: hidden;
-           grid-template-columns: repeat(6, auto);
-       }
-   }
-   
-   @media (max-width:1500px) {}
+           
+           #Spotify {
+               position: flex;
+               justify-content: right;
+               align-items: center;
+               display: none;
+           }
+           
+           .fa {
+               color: white;
+               @include center;
+               text-align: center;
+               text-decoration: none;
+               @each $logo,
+               $i in $Socallogo {
+                   &.fa-#{$logo} {
+                       background: linear-gradient($i);
+                       @include socialsize();
+                   }
+               }
+               @each $logo,
+               $i in $Socallogo {
+                   &.fa-#{$logo}:hover {
+                       color: $i;
+                       @include socialhover();
+                   }
+               }
+               &.fa-angle-right {
+                   display: inline-block;
+                   &:hover {
+                       animation-name: rotate;
+                       animation-duration: 200ms;
+                   }
+               }
+               &.fa-chevron-down {
+                   padding: 0;
+                   margin: 0;
+                   font-size: 25px;
+                   animation-name: bounce;
+                   animation-duration: 1.5s;
+                   animation-iteration-count: infinite;
+                   animation-timing-function: linear;
+                   animation-delay: calc(var(--order)*300ms);
+               }
+           }
+           
+           #placeholder {
+               margin-bottom: 1000px;
+           }
+           
+           .btn {
+               color: black;
+               background-color: transparent;
+               padding: 15px 5px;
+               margin: 10px 5px;
+               text-align: center;
+               text-overflow: clip;
+               transition: background-color 0.5s ease-in-out;
+               &:hover {
+                   background-color: gold;
+               }
+           }
+           
+           #resume {
+               margin-top: 5%;
+           }
+           
+           #Title {
+               @include center();
+           }
+           
+           #splash {
+               padding: (56.25%)/6;
+               padding-left: 0;
+               padding-right: 0;
+               background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://dsm01pap002files.storage.live.com/y4mM6OxOmTMT6zlTZfsadYm8C2jHCVRNEAvIgDaQ22J1XWTgGI8ITGt8b_v_EHUyjgbV-FRvd0JL6YdczLa-s5Q9VO7RDjgDxvRJpUPw5YDxQHJJm8UckjrYyLZ_pPh_UOBN5Rjn20TbtRvXjv2qyxxwUOiuI4RHb5ej4tvBgtoWeOQCFYSrCf0rWFl13kFbrvc?width=1836&height=1032&cropmode=none");
+               background-attachment: fixed;
+               background-position: center;
+               background-repeat: no-repeat;
+               p {
+                   color: white;
+                   font-size: 50px;
+                   @include center();
+                   margin: 0;
+               }
+               h1 {
+                   color: white;
+                   @include center();
+                   font-size: 100px;
+                   font-family: 'Space Grotesk', sans-serif;
+               }
+           }
+           
+           #intro {
+               color: white;
+               margin-top: 20px;
+               padding-left: 25px;
+               box-shadow: 5px;
+               width: 50%;
+               display: flex;
+               padding-bottom: 20px;
+               background-color: lighten($backgroud, 10%);
+               p {
+                   margin: 15px;
+                   font-family: 'Nunito Sans', sans-serif;
+                   font-size: 25px;
+               }
+               h2 {
+                   text-align: center;
+                   margin: 10px;
+               }
+           }
+           
+           #border {
+               box-sizing: border-box;
+               border: 15px solid;
+               background: transparent;
+               border-image-source: linear-gradient($angle, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
+               border-image-slice: 1;
+               transform: rotate(45deg);
+               box-shadow: 0 0 10px red, inset 0 0 20px red;
+               @include center;
+               animation: moveGradient 0.3s ease-in-out, turn 2s ease-in-out;
+               padding: 0;
+               overflow: hidden;
+           }
+           
+           #square {
+               position: relative;
+               height: 350px;
+               width: 350px;
+               margin: auto;
+               @include center;
+               img {
+                   width: 350px;
+                   height: 350px;
+               }
+               >* {
+                   position: absolute;
+                   height: 100%;
+                   width: 100%;
+               }
+           }
+           
+           #blend {
+               * {
+                   position: absolute;
+                   height: 100%;
+                   width: 100%;
+               }
+           }
+           
+           #grid {
+               display: grid;
+               grid-template-columns: auto auto;
+           }
+           
+           .one {
+               display: grid;
+               background-color: green;
+           }
+           
+           .two {
+               background-color: black;
+               display: grid;
+           }
+           
+           .three {
+               background-color: grey;
+               display: grid;
+           }
+           
+           .four {
+               background-color: gold;
+               display: grid;
+           }
+           
+           //!start keyframes
+           @keyframes rotate {
+               to {
+                   transform: rotate(180deg);
+               }
+           }
+           
+           @keyframes turn {
+               to {
+                   transform: rotate(135deg);
+                   border-image-source: linear-gradient(270deg, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
+               }
+           }
+           
+           @keyframes bounce {
+               0% {
+                   opacity: 1;
+                   transform: translateY(0px) scale(1);
+               }
+               25% {
+                   opacity: 0;
+                   transform: translateY(10px) scale(0.9);
+               }
+               26% {
+                   opacity: 0;
+                   transform: translateY(-10px) scale(0.9);
+               }
+               55% {
+                   opacity: 1;
+                   transform: translateY(0px) scale(1);
+               }
+           }
+           
+           @keyframes moveGradient {
+               0% {
+                   border-image-outset: 50px;
+               }
+               100% {
+                   border-image-outset: 0px;
+               }
+           }
+           
+           //!start Media
+           @media (max-width:1800px) {
+               #header {
+                   &.social {
+                       grid-template-columns: 100px auto clamp(0.8fr, 0.7fr, 20%) 200px;
+                       transition: grid-template-columns 1s;
+                   }
+               }
+               #social {
+                   overflow: hidden;
+                   grid-template-columns: repeat(6, auto);
+               }
+           }
+           
+           @media (max-width:1500px) {}

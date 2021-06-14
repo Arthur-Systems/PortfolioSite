@@ -35,6 +35,7 @@ if (isChrome) {
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     // true for mobile device
     console.log("mobile device");
+    alert("It looks like you are using a mobile device. This is site is NOT optimized for mobile usage. Please use a desktop computer to view this site! ");
 } else {
     // false for not mobile device
     console.log("not mobile device");
