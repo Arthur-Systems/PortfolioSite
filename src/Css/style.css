@@ -518,17 +518,15 @@ html {
 
 @-webkit-keyframes turn {
   to {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-    border-image-source: linear-gradient(270deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
 
 @keyframes turn {
   to {
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
-    border-image-source: linear-gradient(270deg, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f, #abf25f, #5ff281, #5ff2f0);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
 
@@ -598,25 +596,12 @@ html {
 
 @media (max-width: 1800px) {
   #header {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100px auto 0fr 200px;
-        grid-template-columns: 100px auto 0fr 200px;
-    -webkit-transition: grid-template-columns 1s;
-    transition: grid-template-columns 1s;
-    transition: grid-template-columns 1s, -ms-grid-columns 1s;
-    grid-auto-rows: auto;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -ms-grid-columns: 100px auto 0 200px !important;
+        grid-template-columns: 100px auto 0 200px !important;
   }
   #header.social {
-    -ms-grid-columns: 100px auto 0.6fr 200px;
-        grid-template-columns: 100px auto 0.6fr 200px;
-    -webkit-transition: grid-template-columns 1s;
-    transition: grid-template-columns 1s;
-    transition: grid-template-columns 1s, -ms-grid-columns 1s;
+    -ms-grid-columns: 100px auto 40vw 200px !important;
+        grid-template-columns: 100px auto 40vw 200px !important;
   }
   #social {
     overflow: hidden;
@@ -632,8 +617,128 @@ html {
 }
 
 @media (max-width: 1500px) {
+  #square > * {
+    margin-top: 10vh;
+  }
+  #header {
+    -ms-grid-columns: 100px auto 0fr 200px !important;
+        grid-template-columns: 100px auto 0fr 200px !important;
+  }
+  #header.social {
+    -ms-grid-columns: 100px auto 1fr 200px !important;
+        grid-template-columns: 100px auto 1fr 200px !important;
+  }
+  #social a {
+    margin-right: -30px !important;
+  }
+}
+
+#splash p {
+  font-size: 3vw;
+  padding-top: 2vh;
+  margin: 0;
+}
+
+#splash h1 {
+  padding-top: 6vh;
+  font-size: 8vw;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+@media (max-width: 1200px) {
+  #square > * {
+    margin-top: 20vh;
+  }
+  #splash p {
+    font-size: 3vw;
+    padding-top: 5vh;
+    margin: 0;
+  }
+  #splash h1 {
+    padding-top: 12vh;
+    font-size: 8vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  #square > * {
+    margin-top: 20vh;
+  }
+  #splash p {
+    font-size: 3vw;
+    padding-top: 5vh;
+    margin: 0;
+  }
+  #splash h1 {
+    padding-top: 12vh;
+    font-size: 8vw;
+    font-family: 'Space Grotesk', sans-serif;
+  }
   #splash {
-    margin-top: 5vh;
+    background-attachment: scroll;
+    background-size: 150%;
+  }
+}
+
+@media (max-width: 900px) {
+  #SDD {
+    color: white;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  #social {
+    display: none !important;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    display: -ms-grid;
+    display: grid;
+    padding: 7px;
+    overflow: hidden;
+    grid-auto-rows: auto;
+  }
+  #header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100px auto 200px !important;
+        grid-template-columns: 100px auto 200px !important;
+    grid-auto-rows: auto !important;
+  }
+  #header.social {
+    -ms-grid-columns: 100px auto 200px !important;
+        grid-template-columns: 100px auto 200px !important;
+  }
+  #Navlist {
+    position: relative;
+    display: inline-block;
+  }
+  #Navlist a {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  #arrow.flip {
+    -webkit-animation-name: turn !important;
+            animation-name: turn !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
