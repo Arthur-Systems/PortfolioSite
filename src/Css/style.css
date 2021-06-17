@@ -80,6 +80,121 @@ html {
   transition: all 0.5s;
 }
 
+#NavDrop {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  position: relative;
+  list-style: none;
+  width: 15vw;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  z-index: 100;
+}
+
+#NavDrop p {
+  cursor: pointer;
+  margin: 0;
+  font-size: 100%;
+  color: white;
+  position: relative;
+  text-decoration: none;
+}
+
+#NavDrop p::after {
+  margin-top: 27px;
+  content: "";
+  position: absolute;
+  left: 100%;
+  right: 100%;
+  background-color: #FF8235;
+  border-radius: 100px;
+  height: 3px;
+}
+
+#NavDrop p:hover {
+  color: #FF8235;
+}
+
+#NavDrop p:hover i {
+  cursor: pointer;
+  color: #FF8235;
+}
+
+#NavDrop p:hover::after {
+  left: 0%;
+  right: 0%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#NavDrop li ul {
+  display: none;
+}
+
+#NavDrop ul {
+  list-style: none;
+  background: #090909;
+  left: 0;
+  padding: 0;
+  position: absolute;
+  top: -300px;
+  width: 30vw;
+}
+
+#NavDrop ul li::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  right: 100%;
+  background-color: #FF8235;
+  border-radius: 100px;
+  height: 3px;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+#NavDrop ul li a {
+  text-decoration: none;
+  padding: 20px 20px 3vw 20px;
+  padding-top: 1.5vw;
+  text-align: left;
+  color: white;
+  display: block;
+  font-size: 2vw;
+}
+
+#NavDrop ul li a::after {
+  margin-bottom: auto;
+  content: "";
+  position: absolute;
+  left: 100%;
+  right: 100%;
+  background-color: #FF8235;
+  border-radius: 100px;
+  height: 3px;
+}
+
+#NavDrop ul li a:hover {
+  cursor: pointer;
+  color: #FF8235;
+}
+
+#NavDrop ul li a:hover::after {
+  left: 15%;
+  right: 15%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#NavDrop.drop li ul {
+  display: block !important;
+  height: auto;
+}
+
 #SDD {
   color: white;
   position: relative;
@@ -97,7 +212,7 @@ html {
 }
 
 #SDD p::after {
-  margin-top: 25px;
+  margin-top: 30px;
   content: "";
   position: absolute;
   left: 100%;
@@ -119,7 +234,7 @@ html {
 
 #SDD p:hover::after {
   left: 15%;
-  right: 15%;
+  right: 10%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -136,6 +251,19 @@ html {
 #arrow.flip {
   -webkit-animation-name: rotate;
           animation-name: rotate;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#arrownav.flip {
+  -webkit-animation-name: turn;
+          animation-name: turn;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-iteration-count: 1;
@@ -177,17 +305,6 @@ html {
   -webkit-transition: grid-template-columns 1s;
   transition: grid-template-columns 1s;
   transition: grid-template-columns 1s, -ms-grid-columns 1s;
-}
-
-#Spotify {
-  position: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: none;
 }
 
 .fa {
@@ -311,13 +428,6 @@ html {
   display: inline-block;
 }
 
-.fa.fa-angle-right:hover {
-  -webkit-animation-name: rotate;
-          animation-name: rotate;
-  -webkit-animation-duration: 200ms;
-          animation-duration: 200ms;
-}
-
 .fa.fa-chevron-down {
   padding: 0;
   margin: 0;
@@ -336,25 +446,6 @@ html {
 
 #placeholder {
   margin-bottom: 1000px;
-}
-
-.btn {
-  color: black;
-  background-color: transparent;
-  padding: 15px 5px;
-  margin: 10px 5px;
-  text-align: center;
-  text-overflow: clip;
-  -webkit-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
-}
-
-.btn:hover {
-  background-color: gold;
-}
-
-#resume {
-  margin-top: 5%;
 }
 
 #Title {
@@ -378,6 +469,11 @@ html {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 120%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #splash p {
@@ -593,21 +689,17 @@ html {
   }
 }
 
-@-webkit-keyframes moveGradient {
-  0% {
-    border-image-outset: 50px;
-  }
-  100% {
-    border-image-outset: 0px;
+@-webkit-keyframes moveDown {
+  to {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
   }
 }
 
-@keyframes moveGradient {
-  0% {
-    border-image-outset: 50px;
-  }
-  100% {
-    border-image-outset: 0px;
+@keyframes moveDown {
+  to {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
   }
 }
 
@@ -624,12 +716,6 @@ html {
     overflow: hidden;
     -ms-grid-columns: (auto)[6];
         grid-template-columns: repeat(6, auto);
-  }
-  .fa {
-    margin: 5px;
-  }
-  .fa .fa-github {
-    margin: -200px;
   }
 }
 
@@ -672,7 +758,7 @@ html {
     padding: 0;
   }
   #Navlist a {
-    margin-right: 10px !important;
+    margin-right: 20px !important;
     font-size: 100%;
     color: white;
     position: relative;
@@ -680,6 +766,9 @@ html {
   }
   #square > * {
     margin-top: 20vh;
+  }
+  #splash {
+    background-size: 150%;
   }
   #splash p {
     font-size: 3vw;
@@ -692,32 +781,36 @@ html {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   #Navlist {
-    position: relative;
-    display: inline-block;
+    display: none !important;
   }
-  #Navlist a {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
-    z-index: 1;
+  #NavDrop {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #NavDrop ul {
+    -webkit-animation: moveDown 2s ease-in-out 0.1s 1 linear !important;
+            animation: moveDown 2s ease-in-out 0.1s 1 linear !important;
+  }
+  #header {
+    -ms-grid-columns: 100px auto 0fr 200px !important;
+        grid-template-columns: 100px auto 0fr 200px !important;
+  }
+  #header.social {
+    -ms-grid-columns: 100px auto 2fr 200px !important;
+        grid-template-columns: 100px auto 2fr 200px !important;
   }
   #square > * {
     margin-top: 20vh;
   }
-  #splash p {
-    font-size: 3vw;
-    padding-top: 2vh;
-    margin: 0;
+  #splash {
+    background-attachment: scroll;
   }
-  #splash h1 {
-    padding-top: 12vh;
-    font-size: 8vw;
+  #splash p {
+    padding-top: 2vh;
   }
 }
 
@@ -737,35 +830,45 @@ html {
     margin: 0;
     padding: 0;
   }
+  #splash {
+    background-size: 170%;
+  }
   #social {
     display: none !important;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    display: -ms-grid;
-    display: grid;
-    padding: 7px;
-    overflow: hidden;
-    grid-auto-rows: auto;
   }
   #header {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 100px auto 200px !important;
-        grid-template-columns: 100px auto 200px !important;
-    grid-auto-rows: auto !important;
+    -ms-grid-columns: 100px auto 150px !important;
+        grid-template-columns: 100px auto 150px !important;
   }
   #header.social {
-    -ms-grid-columns: 100px auto 200px !important;
-        grid-template-columns: 100px auto 200px !important;
+    -ms-grid-columns: 100px auto 150px !important;
+        grid-template-columns: 100px auto 150px !important;
+  }
+  #NavDrop {
+    padding: 1%;
   }
   #arrow.flip {
     -webkit-animation-name: turn !important;
             animation-name: turn !important;
+  }
+  #border {
+    border: 0.8vh #eb311f solid;
+    -webkit-box-shadow: 0 0 2vh #eb311f, inset 0 0 2vh #eb311f;
+            box-shadow: 0 0 2vh #eb311f, inset 0 0 2vh #eb311f;
+  }
+}
+
+@media (max-width: 400px) {
+  #header {
+    -ms-grid-columns: auto 200px !important;
+        grid-template-columns: auto 200px !important;
+  }
+  #header #logo {
+    display: none;
+  }
+  #header.social {
+    -ms-grid-columns: auto 200px !important;
+        grid-template-columns: auto 200px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

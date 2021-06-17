@@ -11,16 +11,37 @@
     }
 
     function social() {
+
         var x = document.getElementById("header");
         if (x.classList.contains("social")) {
             x.classList.remove("social");
         } else {
             x.classList.add("social");
         }
+
+    }
+
+
+    function Nav() {
+        var x = document.getElementById("NavDrop");
+        if (x.classList.contains("drop")) {
+            x.classList.remove("drop");
+        } else {
+            x.classList.add("drop");
+        }
     }
 
     function Flip() {
         var x = document.getElementById("arrow");
+        if (x.classList.contains("flip")) {
+            x.classList.remove("flip");
+        } else {
+            x.classList.add("flip");
+        }
+    }
+
+    function NavFlip() {
+        var x = document.getElementById("arrownav");
         if (x.classList.contains("flip")) {
             x.classList.remove("flip");
         } else {
@@ -80,6 +101,18 @@
             <a href="/src/Html/Achievements.html">Achievements</a>
             <a href="/Arfur">:3</a>
         </div>
+        <ul id="NavDrop">
+            <li>
+                <p onclick="NavFlip() , Nav()">Navigation&nbsp;<i id="arrownav" class="fa fa-angle-right"></i></p>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Qualifications</a></li>
+                    <li><a href="#">Achievements</a></li>
+                    <li><a href="#">:3</a></li>
+                </ul>
+            </li>
+        </ul>
 
         <div id="social">
             <a href="https://twitter.com/WeiHaichuan" class="fa fa-twitter"></a>
@@ -89,6 +122,8 @@
             <a href="https://www.facebook.com/HaichuanWei/" class="fa fa-facebook"></a>
             <a href="https://github.com/Arthur-Systems" class="fa fa-github"></a>
         </div>
+
+
 
         <div id="SDD">
             <p onclick="social(); Flip()"><i id="arrow" class="fa fa-angle-right"></i>&nbsp;Social Media </p>
