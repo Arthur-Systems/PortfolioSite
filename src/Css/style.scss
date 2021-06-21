@@ -502,17 +502,15 @@ font-family: 'Nunito Sans', sans-serif;
             }
         }
         #square>* {
-            margin-top: 20vh;
+            margin-bottom: auto !important;
         }
         #splash {
             background-size: 150%;
             p {
                 font-size: 3vw;
-                padding-top: 5vh;
-                margin: 0;
             }
             h1 {
-                padding-top: 12vh;
+                padding-top: 50px;
                 font-size: 8vw;
             }
         }
@@ -535,14 +533,23 @@ font-family: 'Nunito Sans', sans-serif;
                 grid-template-columns: 100px auto 2fr 200px !important;
             }
         }
-        #arrow {}
         #square>* {
-            margin-top: 20vh;
+            margin-bottom: auto;
+            margin-top: 100px;
         }
         #splash {
             background-attachment: scroll;
+            h1 {
+                padding-top: auto;
+            }
             p {
-                padding-top: 2vh;
+                padding-top: 0;
+            }
+        }
+        #SplashAD {
+            padding-top: 30px !important;
+            * {
+                font-size: 10px !important;
             }
         }
     }
@@ -554,7 +561,6 @@ font-family: 'Nunito Sans', sans-serif;
             @include center();
             margin: 0;
             padding: 0;
-            &:hover {}
         }
         #splash {
             background-size: 170%;
@@ -587,9 +593,12 @@ font-family: 'Nunito Sans', sans-serif;
             #logo {
                 display: none;
             }
-            grid-template-columns: auto 200px !important;
+            #NavDrop {
+                @include center();
+            }
+            grid-template-columns: auto auto !important;
             &.social {
-                grid-template-columns: auto 200px !important;
+                grid-template-columns: auto auto !important;
             }
         }
     }

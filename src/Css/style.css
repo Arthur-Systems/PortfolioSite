@@ -765,18 +765,16 @@ html {
     text-decoration: none;
   }
   #square > * {
-    margin-top: 20vh;
+    margin-bottom: auto !important;
   }
   #splash {
     background-size: 150%;
   }
   #splash p {
     font-size: 3vw;
-    padding-top: 5vh;
-    margin: 0;
   }
   #splash h1 {
-    padding-top: 12vh;
+    padding-top: 50px;
     font-size: 8vw;
   }
 }
@@ -804,13 +802,23 @@ html {
         grid-template-columns: 100px auto 2fr 200px !important;
   }
   #square > * {
-    margin-top: 20vh;
+    margin-bottom: auto;
+    margin-top: 100px;
   }
   #splash {
     background-attachment: scroll;
   }
+  #splash h1 {
+    padding-top: auto;
+  }
   #splash p {
-    padding-top: 2vh;
+    padding-top: 0;
+  }
+  #SplashAD {
+    padding-top: 30px !important;
+  }
+  #SplashAD * {
+    font-size: 10px !important;
   }
 }
 
@@ -860,15 +868,26 @@ html {
 
 @media (max-width: 400px) {
   #header {
-    -ms-grid-columns: auto 200px !important;
-        grid-template-columns: auto 200px !important;
+    -ms-grid-columns: auto auto !important;
+        grid-template-columns: auto auto !important;
   }
   #header #logo {
     display: none;
   }
+  #header #NavDrop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   #header.social {
-    -ms-grid-columns: auto 200px !important;
-        grid-template-columns: auto 200px !important;
+    -ms-grid-columns: auto auto !important;
+        grid-template-columns: auto auto !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
