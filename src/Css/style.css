@@ -81,6 +81,7 @@ html {
 }
 
 #NavDrop {
+  z-index: 0;
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -129,16 +130,22 @@ html {
   transition: all 0.5s;
 }
 
+#NavDrop li ul {
+  visibility: hidden;
+}
+
 #NavDrop ul {
   list-style: none;
-  background: #090909;
+  background: none;
   left: 0;
   padding: 0;
   position: absolute;
-  top: 100px;
+  top: -300px;
+  z-index: -999;
 }
 
 #NavDrop ul li {
+  background: #090909;
   padding-top: 2vw;
   padding-left: 4vw;
   padding-right: 4vw;
@@ -172,8 +179,7 @@ html {
           justify-content: center;
   width: auto !important;
   text-decoration: none;
-  padding: 0 !important;
-  padding-top: 1.5vw;
+  padding: 0;
   text-align: left;
   color: white;
   position: relative;
@@ -204,19 +210,22 @@ html {
 
 #NavDrop.drop li ul {
   height: auto;
+  visibility: visible;
 }
 
-#NavDrop.drop ul {
+#NavDrop.drop ul li {
   -webkit-animation-name: moveDown;
           animation-name: moveDown;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-delay: calc(var(--order)*200ms);
+          animation-delay: calc(var(--order)*200ms);
 }
 
 #SDD {
@@ -263,6 +272,10 @@ html {
   transition: all 0.5s;
 }
 
+#SocialMedia1 {
+  display: none;
+}
+
 #logo {
   padding: 0;
   margin: 0;
@@ -275,6 +288,19 @@ html {
 #arrow.flip {
   -webkit-animation-name: rotate;
           animation-name: rotate;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#arrow1.flip {
+  -webkit-animation-name: turn;
+          animation-name: turn;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-iteration-count: 1;
@@ -714,24 +740,16 @@ html {
 }
 
 @-webkit-keyframes moveDown {
-  from {
-    top: 0px !important;
-    opacity: 0 !important;
-  }
   to {
-    top: 200px !important;
-    opacity: 1 !important;
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
   }
 }
 
 @keyframes moveDown {
-  from {
-    top: 0px !important;
-    opacity: 0 !important;
-  }
   to {
-    top: 200px !important;
-    opacity: 1 !important;
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
   }
 }
 
@@ -913,9 +931,19 @@ html {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  #header #NavDrop ul {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
   #header.social {
     -ms-grid-columns: auto auto !important;
         grid-template-columns: auto auto !important;
+  }
+  #SocialMedia1 {
+    display: block;
+  }
+  #SocialMedia {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

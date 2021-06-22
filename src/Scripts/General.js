@@ -6,6 +6,8 @@ $(window).scroll(function() {
         document.getElementById("header").classList.remove("social");
         document.getElementById("arrow").classList.remove("flip");
         document.getElementById("NavDrop").classList.remove("drop");
+        document.getElementById("arrownav").classList.remove("flip");
+
 
     } else if (document.documentElement.scrollTop < 0) {
         document.getElementById("head").style.top = "0px";
@@ -16,6 +18,11 @@ $(window).scroll(function() {
     }
     position = scroll;
 });
+/*$(window).on('resize', function() {
+    if ($(window).width() >= 300) {
+        document.getElementById("SocialMedia").innerHTML = "Testing"
+    }
+});*/
 
 var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 if (isChrome) {
@@ -32,15 +39,3 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     // false for not mobile device
     console.log("not mobile device");
 }
-
-function closeSpot() {
-    document.getElementById("Spotify").style.width = "0";
-}
-
-function arrowmove() {
-    var x = document.getElementById("Arrows");
-    x.style.transform;
-}
-
-
-function arrowturn() {}
