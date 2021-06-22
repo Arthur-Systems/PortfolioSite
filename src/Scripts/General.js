@@ -5,6 +5,7 @@ $(window).scroll(function() {
         document.getElementById("head").style.top = "-150px";
         document.getElementById("header").classList.remove("social");
         document.getElementById("arrow").classList.remove("flip");
+        document.getElementById("NavDrop").classList.remove("drop");
 
     } else if (document.documentElement.scrollTop < 0) {
         document.getElementById("head").style.top = "0px";

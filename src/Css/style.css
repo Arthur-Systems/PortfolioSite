@@ -91,7 +91,6 @@ html {
   width: 15vw;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  z-index: 100;
 }
 
 #NavDrop p {
@@ -130,18 +129,21 @@ html {
   transition: all 0.5s;
 }
 
-#NavDrop li ul {
-  display: none;
-}
-
 #NavDrop ul {
   list-style: none;
   background: #090909;
   left: 0;
   padding: 0;
   position: absolute;
-  top: -300px;
-  width: 30vw;
+  top: 100px;
+}
+
+#NavDrop ul li {
+  padding-top: 2vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-bottom: 2vw;
+  position: relative;
 }
 
 #NavDrop ul li::before {
@@ -152,23 +154,32 @@ html {
   background-color: #FF8235;
   border-radius: 100px;
   height: 3px;
+  top: 0;
   left: 0;
   right: 0;
   background-color: white;
 }
 
 #NavDrop ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto !important;
   text-decoration: none;
-  padding: 20px 20px 3vw 20px;
+  padding: 0 !important;
   padding-top: 1.5vw;
   text-align: left;
   color: white;
-  display: block;
-  font-size: 2vw;
+  position: relative;
 }
 
 #NavDrop ul li a::after {
-  margin-bottom: auto;
   content: "";
   position: absolute;
   left: 100%;
@@ -176,6 +187,7 @@ html {
   background-color: #FF8235;
   border-radius: 100px;
   height: 3px;
+  bottom: 0;
 }
 
 #NavDrop ul li a:hover {
@@ -191,8 +203,20 @@ html {
 }
 
 #NavDrop.drop li ul {
-  display: block !important;
   height: auto;
+}
+
+#NavDrop.drop ul {
+  -webkit-animation-name: moveDown;
+          animation-name: moveDown;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #SDD {
@@ -240,8 +264,8 @@ html {
 }
 
 #logo {
-  padding: 0 0;
-  margin: 0 0;
+  padding: 0;
+  margin: 0;
 }
 
 #logo img {
@@ -581,6 +605,7 @@ html {
 #intro {
   color: white;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: 25px;
   -webkit-box-shadow: 5px;
           box-shadow: 5px;
@@ -589,7 +614,6 @@ html {
   display: grid;
   -ms-grid-columns: 50vw auto;
       grid-template-columns: 50vw auto;
-  margin-bottom: 20px;
   background-color: #4d4d4d;
 }
 
@@ -690,16 +714,24 @@ html {
 }
 
 @-webkit-keyframes moveDown {
+  from {
+    top: 0px !important;
+    opacity: 0 !important;
+  }
   to {
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px);
+    top: 200px !important;
+    opacity: 1 !important;
   }
 }
 
 @keyframes moveDown {
+  from {
+    top: 0px !important;
+    opacity: 0 !important;
+  }
   to {
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px);
+    top: 200px !important;
+    opacity: 1 !important;
   }
 }
 
@@ -788,10 +820,6 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  #NavDrop ul {
-    -webkit-animation: moveDown 2s ease-in-out 0.1s 1 linear !important;
-            animation: moveDown 2s ease-in-out 0.1s 1 linear !important;
   }
   #header {
     -ms-grid-columns: 100px auto 0fr 200px !important;
