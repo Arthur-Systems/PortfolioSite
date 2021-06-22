@@ -5,10 +5,10 @@ $(window).scroll(function() {
         document.getElementById("head").style.top = "-150px";
         document.getElementById("header").classList.remove("social");
         document.getElementById("arrow").classList.remove("flip");
+        document.getElementById("arrow1").classList.remove("flip");
         document.getElementById("NavDrop").classList.remove("drop");
         document.getElementById("arrownav").classList.remove("flip");
-
-
+        document.getElementById("arrownav1").classList.remove("flip");
     } else if (document.documentElement.scrollTop < 0) {
         document.getElementById("head").style.top = "0px";
 
@@ -30,12 +30,9 @@ if (isChrome) {
 }
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    // true for mobile device
     console.log("Oh No! Mobile device! Sound the Alarms!!!");
     alert("It looks like you are using a mobile device. I have NOT optimized this site for mobile usage. Rest assured, mobile optimization is one of my top priorities. For now, please use a desktop computer to view this site! ");
-
-
 } else {
-    // false for not mobile device
+    // not mobile device
     console.log("not mobile device");
 }
