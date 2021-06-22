@@ -320,6 +320,10 @@ html {
 
 #SocialDrop li ul {
   visibility: hidden;
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
 }
 
 #SocialDrop ul {
@@ -331,7 +335,7 @@ html {
   left: 0;
   padding: 0;
   position: absolute;
-  top: -500px;
+  top: -200px;
   z-index: -999;
 }
 
@@ -615,7 +619,8 @@ html {
 }
 
 #splash {
-  padding: 9.375%;
+  padding-top: 9.375%;
+  padding-bottom: 9.375%;
   padding-left: 0;
   padding-right: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("https://dsm01pap002files.storage.live.com/y4mM6OxOmTMT6zlTZfsadYm8C2jHCVRNEAvIgDaQ22J1XWTgGI8ITGt8b_v_EHUyjgbV-FRvd0JL6YdczLa-s5Q9VO7RDjgDxvRJpUPw5YDxQHJJm8UckjrYyLZ_pPh_UOBN5Rjn20TbtRvXjv2qyxxwUOiuI4RHb5ej4tvBgtoWeOQCFYSrCf0rWFl13kFbrvc?width=1836&height=1032&cropmode=none");
@@ -1015,7 +1020,13 @@ html {
             box-shadow: 0 0 2vh #eb311f, inset 0 0 2vh #eb311f;
   }
   #SocialDrop {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #SocialDrop ul li {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
   }
   #SocialTurn {
     display: none;
@@ -1048,6 +1059,19 @@ html {
   #header #NavDrop ul {
     -webkit-transform: translateY(-40px);
             transform: translateY(-40px);
+  }
+  #header #SocialDrop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
   }
   #header.social {
     -ms-grid-columns: auto auto !important;
