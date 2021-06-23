@@ -1,28 +1,5 @@
 <!DOCTYPE html>
 <html>
-<script>
-    function goBack() {
-        window.history.back();
-    }
-
-    function social() {
-        var x = document.getElementById("header");
-        if (x.classList.contains("social")) {
-            x.classList.remove("social");
-        } else {
-            x.classList.add("social");
-        }
-    }
-
-    function Flip() {
-        var x = document.getElementById("arrow");
-        if (x.classList.contains("flip")) {
-            x.classList.remove("flip");
-        } else {
-            x.classList.add("flip");
-        }
-    }
-</script>
 
 <head>
     <!--Info -->
@@ -38,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/Arthur-Systems/PortfolioSite/main/src/Css/404.css">
+    <link rel="stylesheet" type="text/css" href="/src/Css/404.css">
     <link rel="stylesheet" href="/src/Css/azonix.css">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <!--Scripts-->
@@ -53,20 +31,13 @@
             <img src="https://gitcdn.xyz/repo/Arthur-Systems/PortfolioSite/main/src/Images/Public/X.svg">
         </div>
         <div id="Navlist">
-            <a href="/index.html">About</a>
-            <a href="/src/Html/Qualifications.html">Qualifications</a>
-            <a href="#intro">Achievements</a>
+            <a href="/">Home</a>
+            <a href="/">Qualifications</a>
+            <a href="/">Achievements</a>
         </div>
-        <div id="social">
-            <a href="https://twitter.com/WeiHaichuan" class="fa fa-twitter"></a>
-            <a href="https://www.instagram.com/real_arthur_wei/" class="fa fa-instagram"></a>
-            <a href="https://www.linkedin.com/in/haichuanwei/" class="fa fa-linkedin"></a>
-            <a href="https://t.me/ArthurWei1" class="fa fa-telegram"></a>
-            <a href="https://www.facebook.com/HaichuanWei/" class="fa fa-facebook"></a>
-            <a href="https://github.com/Arthur-Systems" class="fa fa-github"></a>
-        </div>
-        <div id="SDD">
-            <p onclick="social(); Flip()"><i id="arrow" class="fa fa-angle-right"></i>&nbsp;Social Media </p>
+
+        <div id="logo1">
+            <img src="https://gitcdn.xyz/repo/Arthur-Systems/PortfolioSite/main/src/Images/Public/X.svg">
         </div>
     </div>
 </header>
@@ -74,7 +45,7 @@
 <body>
     <div id="box">
         <div id="Error">
-            <h1>Page Not Found</h1>
+            <h1>404! Page Not Found!</h1>
             <p>Looks like you've followed a broken link or entered a URL that doesn't exist on this site. If there was expected content here, please message me. </p>
             <div id="back">
                 <a onclick="goBack()" href="#"><i onclick="goBack()" class="fa fa-arrow-left"></i>&nbsp; Click Here To Go Back To The Prevous Page </a></div>
