@@ -278,7 +278,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   list-style: none;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
@@ -327,20 +326,18 @@ html {
 }
 
 #SocialDrop ul {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: auto;
   list-style: none;
   background: none;
-  left: 0;
+  right: 0;
   padding: 0;
   position: absolute;
-  top: -200px;
+  top: -300px;
   z-index: -999;
 }
 
 #SocialDrop ul li {
-  background: none;
+  background: #434343;
   padding-top: 0;
   padding-left: auto;
   padding-right: auto;
@@ -355,16 +352,16 @@ html {
 #SocialDrop.drop ul li {
   -webkit-animation-name: moveDown;
           animation-name: moveDown;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: calc(var(--order)*200ms);
-          animation-delay: calc(var(--order)*200ms);
+  -webkit-animation-delay: calc(var(--order)*100ms);
+          animation-delay: calc(var(--order)*100ms);
 }
 
 #logo {
@@ -455,6 +452,7 @@ html {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  position: relative;
 }
 
 #header.social {
@@ -1014,6 +1012,10 @@ html {
     -webkit-animation-name: turn !important;
             animation-name: turn !important;
   }
+  .fa {
+    margin-left: 1vw !important;
+    margin-right: 1vw !important;
+  }
   #border {
     border: 0.8vh #eb311f solid;
     -webkit-box-shadow: 0 0 2vh #eb311f, inset 0 0 2vh #eb311f;
@@ -1023,10 +1025,6 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  #SocialDrop ul li {
-    -webkit-transform: translateY(200px);
-            transform: translateY(200px);
   }
   #SocialTurn {
     display: none;
@@ -1073,9 +1071,19 @@ html {
     margin: 0;
     padding: 0;
   }
+  #header #SocialDrop ul {
+    top: -350px;
+  }
+  #header #SocialDrop li ul {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
   #header.social {
     -ms-grid-columns: auto auto !important;
         grid-template-columns: auto auto !important;
+  }
+  .fa {
+    margin-all: 0;
   }
   #navtext {
     display: none;

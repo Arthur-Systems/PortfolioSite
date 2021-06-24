@@ -241,7 +241,6 @@ font-family: 'Nunito Sans', sans-serif;
         z-index: 0;
         display: none;
         align-items: center;
-        position: relative;
         list-style: none;
         transition: all 1s ease-in-out;
         p {
@@ -272,16 +271,17 @@ font-family: 'Nunito Sans', sans-serif;
             grid-template-columns: auto auto auto;
         }
         ul {
-            width: fit-content;
+            width: auto;
             list-style: none;
             background: none;
-            left: 0;
+            right: 0;
             padding: 0;
             position: absolute;
-            top: -200px;
+            top: -300px;
             z-index: -999;
             li {
-                background: none;
+                background: #434343;
+                ;
                 padding: {
                     top: 0;
                     left: auto;
@@ -298,11 +298,11 @@ font-family: 'Nunito Sans', sans-serif;
             ul li {
                 animation: {
                     name: moveDown;
-                    duration: 0.6s;
+                    duration: 0.4s;
                     iteration-count: 1;
                     timing-function: ease;
                     fill-mode: forwards;
-                    delay: calc(var(--order)*200ms);
+                    delay: calc(var(--order)*100ms);
                 }
             }
         }
@@ -383,6 +383,7 @@ font-family: 'Nunito Sans', sans-serif;
         transition: grid-template-columns 0.4s;
         grid-auto-rows: auto;
         user-select: none;
+        position: relative;
         &.social {
             grid-template-columns: 100px auto 0.6fr 200px;
             transition: grid-template-columns 1s;
@@ -718,15 +719,18 @@ font-family: 'Nunito Sans', sans-serif;
                 animation-name: turn !important;
             }
         }
+        .fa {
+            margin: {
+                left: 1vw !important;
+                right: 1vw !important;
+            }
+        }
         #border {
             border: 0.8vh #eb311f solid;
             box-shadow: 0 0 2vh #eb311f, inset 0 0 2vh #eb311f;
         }
         #SocialDrop {
             display: flex;
-            ul li {
-                transform: translateY(200px);
-            }
         }
         #SocialTurn {
             display: none;
@@ -751,10 +755,21 @@ font-family: 'Nunito Sans', sans-serif;
             #SocialDrop {
                 @include center();
                 @include zero();
+                ul {
+                    top: -350px;
+                }
+                li ul {
+                    grid-template-columns: auto auto;
+                }
             }
             grid-template-columns: auto auto !important;
             &.social {
                 grid-template-columns: auto auto !important;
+            }
+        }
+        .fa {
+            margin: {
+                all: 0;
             }
         }
         #navtext {
