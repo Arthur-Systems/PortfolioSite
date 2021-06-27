@@ -9,11 +9,10 @@ $(window).scroll(function() {
         document.getElementById("NavDrop").classList.remove("drop");
         document.getElementById("arrownav").classList.remove("flip");
         document.getElementById("arrownav1").classList.remove("flip");
+        document.getElementById("SocialDrop").classList.remove("drop");
     } else if (document.documentElement.scrollTop < 0) {
         document.getElementById("head").style.top = "0px";
-
     } else {
-
         document.getElementById("head").style.top = "0px";
     }
     position = scroll;

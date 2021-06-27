@@ -390,7 +390,7 @@ font-family: 'Nunito Sans', sans-serif;
         }
     }
     
-    .fa {
+    .fab {
         color: white;
         @include center;
         text-align: center;
@@ -408,6 +408,18 @@ font-family: 'Nunito Sans', sans-serif;
                 color: $i;
                 @include socialhover();
             }
+        }
+    }
+    
+    .fas {
+        color: white;
+        @include center;
+        text-align: center;
+        &.fa-quote-left {
+            display: inline-block !important;
+        }
+        &.fa-quote-right {
+            display: inline-block !important;
         }
         &.fa-angle-right {
             display: inline-block;
@@ -512,20 +524,25 @@ font-family: 'Nunito Sans', sans-serif;
         }
     }
     
-    #intro {
+    #Quote {
+        @include center();
         color: white;
         margin: {
-            top: 20px;
-            bottom: 20px;
+            top: 0;
         }
-        padding-left: 25px;
+        padding-left: 0;
         box-shadow: 5px;
         width: 100%;
         display: grid;
         grid-template-columns: 50vw auto;
         background-color: lighten($backgroud,
         10%);
+        text-align: justify;
         p {
+            margin: {
+                top: 30px !important;
+                bottom: 30px !important;
+            }
             font: {
                 family: 'Khula', sans-serif;
                 size: 25px;
@@ -533,14 +550,8 @@ font-family: 'Nunito Sans', sans-serif;
             padding: 0;
             display: inline-block;
             margin: 0;
-        }
-        h1 {
-            font-family: 'Nunito Sans', sans-serif;
-            margin: 0;
-            left: 0;
-            margin: auto;
-            display: inline-block;
-            padding: 0;
+            text-align: center;
+            width: 100%;
         }
         img {
             height: auto;
