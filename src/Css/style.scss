@@ -6,28 +6,27 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Nunito Sans', sans-serif;
 
 */
-
+    
     // !Start Mixins
     @mixin socialsize {
         font-size: 25px;
         margin: 5px 15px;
         padding: 20px;
-
         height: 25px;
         width: 25px;
     }
-
+    
     @mixin socialhover {
         transition: ease-out 0.5s;
         background: white;
     }
-
+    
     @mixin center {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-
+    
     @mixin underline {
         content: "";
         position: absolute;
@@ -37,17 +36,26 @@ font-family: 'Nunito Sans', sans-serif;
         border-radius: 100px;
         height: 3px;
     }
-
+    
     @mixin zero {
         margin: 0;
         padding: 0;
     }
-
+    
+    @mixin flip {
+        animation: {
+            name: rotate;
+            duration: 0.6s;
+            iteration-count: 1;
+            timing-function: ease;
+            fill-mode: forwards;
+        }
+    }
+    
     //!Varables start
     $backgroud:#333333;
     $navlistcolor:#FF8235;
     $Socallogo: ("telegram": #0088CC, "instagram":#833ab4, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
-
     //!main body start
     body,
     html {
@@ -56,7 +64,7 @@ font-family: 'Nunito Sans', sans-serif;
         font-family: 'Montserrat', sans-serif;
         overflow-x: hidden;
     }
-
+    
     #head {
         background: #667db6;
         background: linear-gradient(to right, #000000, #434343);
@@ -68,40 +76,35 @@ font-family: 'Nunito Sans', sans-serif;
         transition: top 0.7s;
         z-index: 1;
     }
-
+    
     #footer {
         background-color: black;
         margin: 0;
         padding-top: 100px;
         width: 100%;
-
         P {
             @include zero();
         }
     }
-
+    
     //classes and ID's
     #Navlist {
         display: flex;
         align-items: center;
         margin: 0;
         padding: 0;
-
         a {
             margin: 0px 50px 0 0;
             font-size: 100%;
             color: white;
             position: relative;
             text-decoration: none;
-
             &::after {
                 bottom: 0;
                 @include underline();
             }
-
             &:hover {
                 color: $navlistcolor;
-
                 &::after {
                     left: 0%;
                     right: 0%;
@@ -110,7 +113,7 @@ font-family: 'Nunito Sans', sans-serif;
             }
         }
     }
-
+    
     #NavDrop {
         z-index: 0;
         display: none;
@@ -120,7 +123,6 @@ font-family: 'Nunito Sans', sans-serif;
         list-style: none;
         width: 15vw;
         transition: all 1s ease-in-out;
-
         p {
             cursor: pointer;
             margin: 0;
@@ -128,20 +130,16 @@ font-family: 'Nunito Sans', sans-serif;
             color: white;
             position: relative;
             text-decoration: none;
-
             &::after {
                 margin-top: 27px;
                 @include underline();
             }
-
             &:hover {
                 i {
                     cursor: pointer;
                     color: $navlistcolor;
                 }
-
                 color: $navlistcolor;
-
                 &::after {
                     left: 0%;
                     right: 0%;
@@ -149,13 +147,11 @@ font-family: 'Nunito Sans', sans-serif;
                 }
             }
         }
-
         li {
             ul {
                 visibility: hidden;
             }
         }
-
         ul {
             list-style: none;
             background: none;
@@ -164,19 +160,15 @@ font-family: 'Nunito Sans', sans-serif;
             position: absolute;
             top: -300px;
             z-index: -999;
-
             li {
                 background: #090909;
-
                 padding: {
                     top: 2vw;
                     left: 4vw;
                     right: 4vw;
                     bottom: 2vw;
                 }
-
                 position: relative;
-
                 &::before {
                     @include underline();
                     top: 0;
@@ -184,7 +176,6 @@ font-family: 'Nunito Sans', sans-serif;
                     right: 0;
                     background-color: white;
                 }
-
                 a {
                     @include center();
                     width: auto !important;
@@ -193,16 +184,13 @@ font-family: 'Nunito Sans', sans-serif;
                     text-align: left;
                     color: white;
                     position: relative;
-
                     &::after {
                         @include underline();
                         bottom: 0;
                     }
-
                     &:hover {
                         cursor: pointer;
                         color: $navlistcolor;
-
                         &::after {
                             left: 15%;
                             right: 15%;
@@ -212,7 +200,6 @@ font-family: 'Nunito Sans', sans-serif;
                 }
             }
         }
-
         &.drop {
             li {
                 ul {
@@ -220,7 +207,6 @@ font-family: 'Nunito Sans', sans-serif;
                     visibility: visible;
                 }
             }
-
             ul li {
                 animation: {
                     name: moveDown;
@@ -233,29 +219,25 @@ font-family: 'Nunito Sans', sans-serif;
             }
         }
     }
-
+    
     #SocialTurn {
         color: white;
         position: relative;
         @include center();
         margin: 0;
         padding: 0;
-
         p {
             &::after {
                 margin-top: 30px;
                 @include underline();
             }
-
             &:hover {
                 cursor: pointer;
                 color: $navlistcolor;
-
                 i {
                     cursor: pointer;
                     color: $navlistcolor;
                 }
-
                 &::after {
                     left: 15%;
                     right: 10%;
@@ -264,33 +246,28 @@ font-family: 'Nunito Sans', sans-serif;
             }
         }
     }
-
+    
     #SocialDrop {
         z-index: 0;
         display: none;
         align-items: center;
         list-style: none;
         transition: all 1s ease-in-out;
-
         p {
             cursor: pointer;
             color: white;
             position: relative;
             text-decoration: none;
-
             &::after {
                 margin-top: 27px;
                 @include underline();
             }
-
             &:hover {
                 i {
                     cursor: pointer;
                     color: $navlistcolor;
                 }
-
                 color: $navlistcolor;
-
                 &::after {
                     left: 0%;
                     right: 0%;
@@ -298,13 +275,11 @@ font-family: 'Nunito Sans', sans-serif;
                 }
             }
         }
-
         li ul {
             visibility: hidden;
             display: grid !important;
             grid-template-columns: auto auto auto;
         }
-
         ul {
             width: auto;
             list-style: none;
@@ -314,11 +289,9 @@ font-family: 'Nunito Sans', sans-serif;
             position: absolute;
             top: -300px;
             z-index: -999;
-
             li {
                 background: #434343;
                 ;
-
                 padding: {
                     top: 0;
                     left: auto;
@@ -327,13 +300,11 @@ font-family: 'Nunito Sans', sans-serif;
                 }
             }
         }
-
         &.drop {
             li ul {
                 height: auto;
                 visibility: visible;
             }
-
             ul li {
                 animation: {
                     name: moveDown;
@@ -346,70 +317,44 @@ font-family: 'Nunito Sans', sans-serif;
             }
         }
     }
-
+    
     #logo {
         padding: 0;
         margin: 0;
-
         img {
             height: 100px;
         }
     }
-
+    
     #arrow {
         &.flip {
-            animation: {
-                name: rotate;
-                duration: 0.6s;
-                iteration-count: 1;
-                timing-function: ease;
-                fill-mode: forwards;
-            }
+            @include flip();
         }
     }
-
+    
     #arrow1 {
         &.flip {
-            animation: {
-                name: turn;
-                duration: 0.6s;
-                iteration-count: 1;
-                timing-function: ease;
-                fill-mode: forwards;
-            }
+            @include flip();
         }
     }
-
+    
     #navtext {
         #arrownav {
             &.flip {
-                animation: {
-                    name: turn;
-                    duration: 0.6s;
-                    iteration-count: 1;
-                    timing-function: ease;
-                    fill-mode: forwards;
-                }
+                @include flip();
             }
         }
     }
-
+    
     #navtext1 {
         display: none;
-
         #arrownav1 {
             &.flip {
-                animation: {
-                    name: turn;
-                    duration: 0.6s;
-                    iteration-count: 1;
-                    timing-function: ease;
-                    fill-mode: forwards;
-                }
+                @include flip();
             }
         }
     }
-
+    
     #social {
         display: grid;
         padding: 7px;
@@ -417,7 +362,7 @@ font-family: 'Nunito Sans', sans-serif;
         grid-template-columns: repeat(6, auto);
         grid-auto-rows: auto;
     }
-
+    
     #header {
         display: grid;
         grid-template-columns: 100px auto 0fr 200px;
@@ -425,19 +370,17 @@ font-family: 'Nunito Sans', sans-serif;
         grid-auto-rows: auto;
         user-select: none;
         position: relative;
-
         &.social {
             grid-template-columns: 100px auto 0.6fr 200px;
             transition: grid-template-columns 1s;
         }
     }
-
+    
     .fab {
         color: white;
         @include center;
         text-align: center;
         text-decoration: none;
-
         @each $logo,
         $i in $Socallogo {
             &.fa-#{$logo} {
@@ -445,7 +388,6 @@ font-family: 'Nunito Sans', sans-serif;
                 @include socialsize();
             }
         }
-
         @each $logo,
         $i in $Socallogo {
             &.fa-#{$logo}:hover {
@@ -454,29 +396,24 @@ font-family: 'Nunito Sans', sans-serif;
             }
         }
     }
-
+    
     .fas {
         color: white;
         @include center;
         text-align: center;
-
         &.fa-quote-left {
             display: inline-block !important;
         }
-
         &.fa-quote-right {
             display: inline-block !important;
         }
-
         &.fa-angle-right {
             display: inline-block;
         }
-
         &.fa-chevron-down {
             padding: 0;
             margin: 0;
             font-size: 25px;
-
             animation: {
                 name: bounce;
                 duration: 1.5s;
@@ -485,16 +422,19 @@ font-family: 'Nunito Sans', sans-serif;
                 delay: calc(var(--order)*300ms);
             }
         }
+        &.fa-corner {
+            display: inline-block !important;
+        }
     }
-
+    
     #placeholder {
         margin-bottom: 1000px;
     }
-
+    
     #Title {
         @include center();
     }
-
+    
     #splash {
         padding: {
             top: (56.25%)/6;
@@ -502,7 +442,6 @@ font-family: 'Nunito Sans', sans-serif;
             left: 0;
             right: 0;
         }
-
         background: {
             image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://dsm01pap002files.storage.live.com/y4mM6OxOmTMT6zlTZfsadYm8C2jHCVRNEAvIgDaQ22J1XWTgGI8ITGt8b_v_EHUyjgbV-FRvd0JL6YdczLa-s5Q9VO7RDjgDxvRJpUPw5YDxQHJJm8UckjrYyLZ_pPh_UOBN5Rjn20TbtRvXjv2qyxxwUOiuI4RHb5ej4tvBgtoWeOQCFYSrCf0rWFl13kFbrvc?width=1836&height=1032&cropmode=none");
             attachment: fixed;
@@ -510,29 +449,25 @@ font-family: 'Nunito Sans', sans-serif;
             repeat: no-repeat;
             size: 120%;
         }
-
         user-select: none;
-
         p {
             color: white;
             font-size: 3vw;
             @include center();
             margin: 0;
         }
-
         h1 {
             color: white;
             @include center();
             padding-top: 4vh;
             margin: 0;
-
             font: {
                 size: 8vw;
                 family: 'Space Grotesk', sans-serif;
             }
         }
     }
-
+    
     #border {
         box-sizing: border-box;
         background: transparent;
@@ -543,171 +478,151 @@ font-family: 'Nunito Sans', sans-serif;
         overflow: hidden;
         transition: ease-in-out all 2s;
     }
-
+    
     #square {
         position: relative;
         height: 20vw;
         width: 20vw;
         margin: auto;
         @include center;
-
         img {
             width: 20vw;
             height: 20vw;
         }
-
         * {
             position: absolute;
             height: 100%;
             width: 100%;
         }
     }
-
+    
     #blend {
         mix-blend-mode: multiply;
-
         * {
             position: absolute;
             height: 100%;
             width: 100%;
         }
     }
-
+    
     #grid {
         display: grid;
         grid: repeat(2, 1fr) / repeat(2, 1fr);
-
         span {
             position: relative;
         }
     }
-
+    
     #Quote {
         @include center();
         color: white;
-
         margin: {
             top: 0;
         }
-
         padding-left: 0;
         box-shadow: 5px;
         width: 100%;
         display: grid;
         grid-template-columns: 50vw auto;
         background-color: lighten($backgroud,
-            10%);
+        10%);
         text-align: justify;
         position: relative;
-
         p {
             margin: {
                 top: 30px !important;
                 bottom: 30px !important;
                 left: 0;
             }
-
             font: {
                 family: 'Khula', sans-serif;
                 size: 25px;
             }
-
             padding: 0;
             display: inline-block;
             margin: 0;
             text-align: center;
             width: 100%;
         }
-
         img {
             height: auto;
             width: 20%;
         }
     }
-
+    
     //!start keyframes
     @keyframes rotate {
         to {
             transform: rotate(180deg);
         }
     }
-
+    
     @keyframes turn {
         to {
             transform: rotate(90deg);
         }
     }
-
+    
     @keyframes bounce {
         0% {
             opacity: 1;
             transform: translateY(0px) scale(1);
         }
-
         25% {
             opacity: 0;
             transform: translateY(10px) scale(0.9);
         }
-
         26% {
             opacity: 0;
             transform: translateY(-10px) scale(0.9);
         }
-
         55% {
             opacity: 1;
             transform: translateY(0px) scale(1);
         }
     }
-
+    
     @keyframes moveDown {
         to {
             transform: translateY(400px);
         }
     }
-
+    
     //!start Media
     @media (max-width:1800px) {
         #header {
             grid-template-columns: 100px auto 0 200px !important;
-
             &.social {
                 grid-template-columns: 100px auto 40vw 200px !important;
             }
         }
-
         #social {
             overflow: hidden;
             grid-template-columns: repeat(6, auto);
         }
     }
-
+    
     @media (max-width:1500px) {
         #square>* {
             margin-top: 10vh;
         }
-
         #header {
             grid-template-columns: 100px auto 0fr 200px !important;
-
             &.social {
                 grid-template-columns: 100px auto 1fr 200px !important;
             }
         }
-
         #social {
             a {
                 margin-right: -30px !important;
             }
         }
-
         #splash {
             p {
                 font-size: 3vw;
                 padding-top: 2vh;
                 margin: 0;
             }
-
             h1 {
                 padding-top: 6vh;
                 font-size: 8vw;
@@ -715,13 +630,12 @@ font-family: 'Nunito Sans', sans-serif;
             }
         }
     }
-
+    
     @media(max-width:1300px) {
         #Navlist {
             display: flex;
             align-items: center;
             @include zero();
-
             a {
                 margin-right: 20px !important;
                 font-size: 100%;
@@ -730,69 +644,56 @@ font-family: 'Nunito Sans', sans-serif;
                 text-decoration: none;
             }
         }
-
         #square>* {
             margin-bottom: auto !important;
         }
-
         #splash {
             background-size: 150%;
-
             p {
                 font-size: 3vw;
             }
-
             h1 {
                 padding-top: 50px;
                 font-size: 8vw;
             }
         }
     }
-
+    
     @media(max-width:1100px) {
         #Navlist {
             display: none !important;
         }
-
         #NavDrop {
             width: auto;
             display: flex;
         }
-
         #header {
             grid-template-columns: 100px auto 0fr 200px !important;
-
             &.social {
                 grid-template-columns: 100px auto 2fr 200px !important;
             }
         }
-
         #square>* {
             margin-bottom: auto;
             margin-top: 100px;
         }
-
         #splash {
             background-attachment: scroll;
-
             h1 {
                 padding-top: auto;
             }
-
             p {
                 padding-top: 0;
             }
         }
-
         #SplashAD {
             padding-top: 30px !important;
-
             * {
                 font-size: 10px !important;
             }
         }
     }
-
+    
     @media(max-width:900px) {
         #SocialTurn {
             color: white;
@@ -800,103 +701,82 @@ font-family: 'Nunito Sans', sans-serif;
             @include center();
             @include zero();
         }
-
         #splash {
             background-size: 170%;
         }
-
         #social {
             display: none !important;
         }
-
         #header {
             grid-template-columns: 100px auto 150px !important;
-
             &.social {
                 grid-template-columns: 100px auto 150px !important;
             }
         }
-
         #NavDrop {
             padding: 1%;
         }
-
         #arrow {
             &.flip {
                 animation-name: turn !important;
             }
         }
-
         .fa {
             margin: {
                 left: 1vw !important;
                 right: 1vw !important;
             }
         }
-
         #border {
             border: 0.8vh #eb311f solid;
             box-shadow: 0 0 2vh #eb311f, inset 0 0 2vh #eb311f;
         }
-
         #SocialDrop {
             display: flex;
         }
-
         #SocialTurn {
             display: none;
         }
     }
-
+    
     @media(max-width:400px) {
         #header {
             #logo {
                 display: none;
-
                 img {
                     height: 50px;
                     width: 50px;
                 }
             }
-
             #NavDrop {
                 @include center();
-
                 ul {
                     transform: translateY(-40px);
                 }
             }
-
             #SocialDrop {
                 @include center();
                 @include zero();
-
                 ul {
                     top: -350px;
                 }
-
                 li ul {
                     grid-template-columns: auto auto;
                 }
             }
-
             grid-template-columns: auto auto !important;
-
             &.social {
                 grid-template-columns: auto auto !important;
             }
         }
-
         .fa {
             margin: {
                 all: 0;
             }
         }
-
         #navtext {
             display: none;
         }
-
         #navtext1 {
             display: block;
         }

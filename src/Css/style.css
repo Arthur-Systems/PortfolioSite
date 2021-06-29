@@ -387,8 +387,8 @@ html {
 }
 
 #arrow1.flip {
-  -webkit-animation-name: turn;
-          animation-name: turn;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-iteration-count: 1;
@@ -400,8 +400,8 @@ html {
 }
 
 #navtext #arrownav.flip {
-  -webkit-animation-name: turn;
-          animation-name: turn;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-iteration-count: 1;
@@ -417,8 +417,8 @@ html {
 }
 
 #navtext1 #arrownav1.flip {
-  -webkit-animation-name: turn;
-          animation-name: turn;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-iteration-count: 1;
@@ -620,6 +620,10 @@ html {
           animation-timing-function: linear;
   -webkit-animation-delay: calc(var(--order)*300ms);
           animation-delay: calc(var(--order)*300ms);
+}
+
+.fas.fa-corner {
+  display: inline-block !important;
 }
 
 #placeholder {
