@@ -1,5 +1,5 @@
 <div align = "center">
-<img src="https://dsm01pap002files.storage.live.com/y4m1yMQTz6mK9r9BrqjXx4PQsi1SiUb-bLcUGdviZqYBNgSr4qP33tuqMO8wFlKlcL_-0cRP7DigWnFDBUmwCX-HJg12QoY1MqS9dQSlLV0h5I0_dTPcIkLZ6ZAdwbjWzc4_R3-_XpeSL5zpZ2UVifr7XlciMTnkk5BPQ6PXIrMsssgy2BJaVeUyp36oliPH7qb?width=945&height=214&cropmode=none" style = "width:100%;">
+<img src="https://dsm01pap002files.storage.live.com/y4mhXjC5AERnEOWxV0WJ9a6TGEYHmR1bAATBAEpw0LrFeNWIfm2oy-HqAcCHcI5AOXsL_nyOBsodQW9DDpOq0YbVqQQ2f9ZNENTqNFSQ35ibHkYrpjOnZjJUQwlWswoigBu7BR8D7yYxtVWNjfWV9efs-ijtR0PBJGPj3ZF8ktmCPXpjOgUs7xapHVGPdWv5gTC?width=945&height=214&cropmode=none" style = "width:100%;">
 <h2> My Portfoilo Project</h2>
 <p> Thank you for checking out my projects! This is the current only coding project that I am working on. Work is still ongoing. Since this website will be showcasing my collective skills, I want it to be perfect. Due to this, noticeable changes will be slow. I am learning as I go. Thank you for understanding. </p>
 </div>
