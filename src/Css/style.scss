@@ -371,7 +371,7 @@ html {
     user-select: none;
     position: relative;
     &.social {
-        grid-template-columns: 100px auto 1fr 200px;
+        grid-template-columns: 100px auto 0.6fr 200px;
         transition: grid-template-columns 1s;
     }
 }
