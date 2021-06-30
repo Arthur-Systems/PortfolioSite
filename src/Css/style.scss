@@ -1,10 +1,9 @@
 //!fonts
 
 /*
+
 font-family: 'Khula', sans-serif;
 font-family: 'Space Grotesk', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
 */
 
 // !Start Mixins
@@ -53,6 +52,8 @@ font-family: 'Nunito Sans', sans-serif;
 }
 
 //!Varables start
+$headfont:'Space Grotesk',
+sans-serif;
 $backgroud:#333333;
 $navlistcolor:#FF8235;
 $Socallogo: ("telegram": #0088CC, "instagram":#833ab4, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
@@ -61,7 +62,7 @@ body,
 html {
     margin: 0px;
     background-color: $backgroud;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Khula', sans-serif;
     overflow-x: hidden;
 }
 
