@@ -223,8 +223,8 @@ html {
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: calc(var(--order)*200ms);
-          animation-delay: calc(var(--order)*200ms);
+  -webkit-animation-delay: calc(var(--order)*150ms);
+          animation-delay: calc(var(--order)*150ms);
 }
 
 #SocialTurn {
@@ -359,8 +359,8 @@ html {
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: calc(var(--order)*100ms);
-          animation-delay: calc(var(--order)*100ms);
+  -webkit-animation-delay: calc(var(--order)*200ms);
+          animation-delay: calc(var(--order)*200ms);
 }
 
 #logo {
@@ -396,9 +396,11 @@ html {
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-name: turn !important;
+          animation-name: turn !important;
 }
 
-#navtext #arrownav.flip {
+#arrownav.flip {
   -webkit-animation-name: rotate;
           animation-name: rotate;
   -webkit-animation-duration: 0.6s;
@@ -426,6 +428,8 @@ html {
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-name: turn !important;
+          animation-name: turn !important;
 }
 
 #social {
@@ -441,8 +445,8 @@ html {
 #header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px auto 0fr 200px;
-      grid-template-columns: 100px auto 0fr 200px;
+  -ms-grid-columns: 100px auto 0fr 200px !important;
+      grid-template-columns: 100px auto 0fr 200px !important;
   -webkit-transition: grid-template-columns 0.4s;
   transition: grid-template-columns 0.4s;
   transition: grid-template-columns 0.4s, -ms-grid-columns 0.4s;
@@ -455,8 +459,8 @@ html {
 }
 
 #header.social {
-  -ms-grid-columns: 100px auto 0.6fr 200px;
-      grid-template-columns: 100px auto 0.6fr 200px;
+  -ms-grid-columns: 100px auto 5px 200px !important;
+      grid-template-columns: 100px auto 5px 200px !important;
   -webkit-transition: grid-template-columns 1s;
   transition: grid-template-columns 1s;
   transition: grid-template-columns 1s, -ms-grid-columns 1s;
@@ -475,6 +479,8 @@ html {
           justify-content: center;
   text-align: center;
   text-decoration: none;
+  margin-right: 0 !important;
+  margin-left: 5px;
 }
 
 .fab.fa-telegram {
@@ -631,7 +637,7 @@ html {
   font-size: 50px;
 }
 
-#placeholder {
+#body {
   margin-bottom: 1000px;
   position: relative;
   width: 100%;
@@ -783,12 +789,8 @@ html {
   margin-top: 0;
   padding-left: 0;
   width: calc(100% - (2*$border));
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50vw auto;
-      grid-template-columns: 50vw auto;
   background-color: #4d4d4d;
-  text-align: justify;
+  text-align: center;
   position: relative;
   border: 7px solid white;
 }
@@ -820,7 +822,6 @@ html {
 }
 
 #Quote p {
-  z-index: 0;
   margin-top: 30px !important;
   margin-bottom: 30px !important;
   margin-left: 0;
@@ -828,14 +829,24 @@ html {
   font-size: 25px;
   padding: 0;
   display: inline-block;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  width: 100%;
+  width: 60%;
 }
 
 #Quote img {
   height: auto;
   width: 20%;
+}
+
+#intro {
+  color: white;
+  margin-top: 0;
+  padding-top: 0;
+  background-color: #4d4d4d;
+  display: -ms-grid;
+  display: grid;
 }
 
 @-webkit-keyframes rotate {
@@ -1074,13 +1085,19 @@ html {
   #NavDrop {
     padding: 1%;
   }
-  #arrow.flip {
+  #arrownav.flip {
+    -webkit-animation-name: rotate;
+            animation-name: rotate;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
     -webkit-animation-name: turn !important;
             animation-name: turn !important;
-  }
-  .fa {
-    margin-left: 1vw !important;
-    margin-right: 1vw !important;
   }
   #border {
     border: 0.8vh #eb311f solid;
@@ -1094,6 +1111,10 @@ html {
   }
   #SocialTurn {
     display: none;
+  }
+  .fab {
+    margin-left: 10px !important;
+    margin-bottom: 10px;
   }
 }
 
@@ -1148,8 +1169,8 @@ html {
     -ms-grid-columns: auto auto !important;
         grid-template-columns: auto auto !important;
   }
-  .fa {
-    margin-all: 0;
+  .fab {
+    margin-left: 10px !important;
   }
   #navtext {
     display: none;

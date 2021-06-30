@@ -214,7 +214,7 @@ html {
                 iteration-count: 1;
                 timing-function: ease;
                 fill-mode: forwards;
-                delay: calc(var(--order)*200ms);
+                delay: calc(var(--order)*150ms);
             }
         }
     }
@@ -312,7 +312,7 @@ html {
                 iteration-count: 1;
                 timing-function: ease;
                 fill-mode: forwards;
-                delay: calc(var(--order)*100ms);
+                delay: calc(var(--order)*200ms);
             }
         }
     }
@@ -335,14 +335,13 @@ html {
 #arrow1 {
     &.flip {
         @include flip();
+        animation-name: turn !important
     }
 }
 
-#navtext {
-    #arrownav {
-        &.flip {
-            @include flip();
-        }
+#arrownav {
+    &.flip {
+        @include flip();
     }
 }
 
@@ -351,6 +350,7 @@ html {
     #arrownav1 {
         &.flip {
             @include flip();
+            animation-name: turn !important
         }
     }
 }
@@ -365,13 +365,13 @@ html {
 
 #header {
     display: grid;
-    grid-template-columns: 100px auto 0fr 200px;
+    grid-template-columns: 100px auto 0fr 200px !important;
     transition: grid-template-columns 0.4s;
     grid-auto-rows: auto;
     user-select: none;
     position: relative;
     &.social {
-        grid-template-columns: 100px auto 0.6fr 200px;
+        grid-template-columns: 100px auto 5px 200px !important;
         transition: grid-template-columns 1s;
     }
 }
@@ -381,6 +381,10 @@ html {
     @include center;
     text-align: center;
     text-decoration: none;
+    margin: {
+        right: 0 !important;
+        left: 5px;
+    }
     @each $logo,
     $i in $Socallogo {
         &.fa-#{$logo} {
@@ -434,7 +438,7 @@ html {
     }
 }
 
-#placeholder {
+#body {
     margin-bottom: 1000px;
     position: relative;
     width: 100%;
@@ -530,10 +534,8 @@ html {
     margin-top: 0;
     padding-left: 0;
     width: calc(100% - (2*$border));
-    display: grid;
-    grid-template-columns: 50vw auto;
     background-color: lighten($backgroud, 10%);
-    text-align: justify;
+    text-align: center;
     position: relative;
     border: $border solid white;
     &::before {
@@ -561,7 +563,6 @@ html {
         border-radius: 20px;
     }
     p {
-        z-index: 0;
         margin: {
             top: 30px !important;
             bottom: 30px !important;
@@ -573,14 +574,25 @@ html {
         }
         padding: 0;
         display: inline-block;
-        margin: 0;
+        margin: {
+            left: auto;
+            right: auto;
+        }
         text-align: center;
-        width: 100%;
+        width: 60%;
     }
     img {
         height: auto;
         width: 20%;
     }
+}
+
+#intro {
+    color: white;
+    margin-top: 0;
+    padding-top: 0;
+    background-color: lighten($backgroud, 10%);
+    display: grid;
 }
 
 //!start keyframes
@@ -749,15 +761,10 @@ html {
     #NavDrop {
         padding: 1%;
     }
-    #arrow {
+    #arrownav {
         &.flip {
+            @include flip();
             animation-name: turn !important;
-        }
-    }
-    .fa {
-        margin: {
-            left: 1vw !important;
-            right: 1vw !important;
         }
     }
     #border {
@@ -769,6 +776,12 @@ html {
     }
     #SocialTurn {
         display: none;
+    }
+    .fab {
+        margin: {
+            left: 10px !important;
+            bottom: 10px;
+        }
     }
 }
 
@@ -802,9 +815,9 @@ html {
             grid-template-columns: auto auto !important;
         }
     }
-    .fa {
+    .fab {
         margin: {
-            all: 0;
+            left: 10px !important;
         }
     }
     #navtext {
