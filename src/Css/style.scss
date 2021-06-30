@@ -365,13 +365,13 @@ html {
 
 #header {
     display: grid;
-    grid-template-columns: 100px auto 0fr 200px !important;
+    grid-template-columns: 100px auto 0fr 200px;
     transition: grid-template-columns 0.4s;
     grid-auto-rows: auto;
     user-select: none;
     position: relative;
     &.social {
-        grid-template-columns: 100px auto 5px 200px !important;
+        grid-template-columns: 100px auto 1fr 200px;
         transition: grid-template-columns 1s;
     }
 }
