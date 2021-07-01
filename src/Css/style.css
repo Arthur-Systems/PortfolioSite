@@ -17,9 +17,9 @@ html {
   background: linear-gradient(to right, #000000, #434343);
   font-family: 'Space Grotesk', sans-serif;
   font-size: 20px;
-  position: fixed;
   top: 0px;
   width: 100%;
+  position: fixed;
   -webkit-transition: top 0.7s;
   transition: top 0.7s;
   z-index: 1;
@@ -655,6 +655,10 @@ html {
 }
 
 #splash {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
   padding-top: 9.375%;
   padding-bottom: 9.375%;
   padding-left: 0;
@@ -998,7 +1002,7 @@ html {
     text-decoration: none;
   }
   #square > * {
-    margin-bottom: auto !important;
+    margin-bottom: 10% !important;
   }
   #splash {
     background-size: 150%;
@@ -1044,10 +1048,11 @@ html {
     padding-top: 0;
   }
   #SplashAD {
-    padding-top: 30px !important;
+    padding-top: 0 !important;
   }
-  #SplashAD * {
-    font-size: 10px !important;
+  #Quote p {
+    font-size: 2.5vw;
+    width: 90%;
   }
 }
 
@@ -1115,6 +1120,13 @@ html {
     margin-left: 10px !important;
     margin-bottom: 10px;
   }
+  #Quote p {
+    font-size: 2.5vw;
+    width: 80%;
+  }
+  #SplashAD {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1176,6 +1188,10 @@ html {
   }
   #navtext1 {
     display: block;
+  }
+  #Quote p {
+    font-size: 5vw;
+    width: 70vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

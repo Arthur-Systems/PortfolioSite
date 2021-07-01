@@ -71,9 +71,9 @@ html {
     background: linear-gradient(to right, #000000, #434343);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 20px;
-    position: fixed;
     top: 0px;
     width: 100%;
+    position: fixed;
     transition: top 0.7s;
     z-index: 1;
 }
@@ -450,6 +450,8 @@ html {
 }
 
 #splash {
+    display: grid;
+    grid-template-rows: auto auto auto;
     padding: {
         top: (56.25%)/6;
         bottom: (56.25%)/6;
@@ -691,7 +693,7 @@ html {
         }
     }
     #square>* {
-        margin-bottom: auto !important;
+        margin-bottom: 10% !important;
     }
     #splash {
         background-size: 150%;
@@ -733,9 +735,12 @@ html {
         }
     }
     #SplashAD {
-        padding-top: 30px !important;
-        * {
-            font-size: 10px !important;
+        padding-top: 0 !important;
+    }
+    #Quote {
+        p {
+            font-size: 2.5vw;
+            width: 90%;
         }
     }
 }
@@ -784,6 +789,15 @@ html {
             bottom: 10px;
         }
     }
+    #Quote {
+        p {
+            font-size: 2.5vw;
+            width: 80%;
+        }
+    }
+    #SplashAD {
+        display: none;
+    }
 }
 
 @media(max-width:400px) {
@@ -826,5 +840,11 @@ html {
     }
     #navtext1 {
         display: block;
+    }
+    #Quote {
+        p {
+            font-size: 5vw;
+            width: 70vw;
+        }
     }
 }
