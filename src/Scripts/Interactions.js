@@ -1,31 +1,24 @@
 function social() {
 
-    var x = document.getElementById("header");
-    x.classList.toggle("social");
+    document.getElementById("header").classList.toggle("social");
 
 }
 
 function Drop() {
-    var x = document.getElementById("NavDrop");
-    x.classList.toggle("drop");
+    document.getElementById("NavDrop").classList.toggle("drop");
 }
 
 function Socialdrop() {
-    var x = document.getElementById("SocialDrop");
-    x.classList.toggle("drop");
+    document.getElementById("SocialDrop").classList.toggle("drop");
 }
 
 function Flip() {
-    var x = document.getElementById("arrow");
-    var y = document.getElementById("arrow1");
-    x.classList.toggle("flip");
-    y.classList.toggle("flip");
+    document.getElementById("arrow").classList.toggle("flip");
+    document.getElementById("arrow1").classList.toggle("flip");
 }
 
 function NavFlip() {
-    var x = document.getElementById("arrownav");
-    var y = document.getElementById("arrownav1");
-    x.classList.toggle("flip");
-    y.classList.toggle("flip");
+    document.getElementById("arrownav").classList.toggle("flip");
+    document.getElementById("arrownav1").classList.toggle("flip");
 
 }

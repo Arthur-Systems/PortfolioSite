@@ -1047,6 +1047,9 @@ html {
 }
 
 @media (max-width: 900px) {
+  #head {
+    position: relative;
+  }
   #SocialTurn {
     color: white;
     position: relative;

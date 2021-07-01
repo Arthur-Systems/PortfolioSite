@@ -746,6 +746,9 @@ html {
 }
 
 @media(max-width:900px) {
+    #head {
+        position: relative;
+    }
     #SocialTurn {
         color: white;
         position: relative;
@@ -799,6 +802,8 @@ html {
         display: none;
     }
 }
+
+@media (max-width:600px) {}
 
 @media(max-width:400px) {
     #header {
