@@ -663,8 +663,8 @@ html {
   padding-bottom: 9.375%;
   padding-left: 0;
   padding-right: 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("https://dsm01pap002files.storage.live.com/y4mT_2nLEwxPBqVdFUTqCsqJOlyvT_qpF6cM_Nxx2Ie4iEJ6UISytJMbnUcV976sh9c98kYQrVYz0iKx9iklFGM7aW7g0vutOzF1X5Gli-I8XDdoKCPsbuhY84CU7yJeUPq0yLRkmhSiSwI9Gw1bIUHV7A_-MM2gIErzRM8KWokZF2kFioMlKjZeIbLiMIoyvS9?width=1836&height=1032&cropmode=none");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://dsm01pap002files.storage.live.com/y4mT_2nLEwxPBqVdFUTqCsqJOlyvT_qpF6cM_Nxx2Ie4iEJ6UISytJMbnUcV976sh9c98kYQrVYz0iKx9iklFGM7aW7g0vutOzF1X5Gli-I8XDdoKCPsbuhY84CU7yJeUPq0yLRkmhSiSwI9Gw1bIUHV7A_-MM2gIErzRM8KWokZF2kFioMlKjZeIbLiMIoyvS9?width=1836&height=1032&cropmode=none");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/src/Images/Public/IMG_1183 (2)-min.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/Images/Public/IMG_1183 (2)-min.JPG");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -734,16 +734,10 @@ html {
   position: relative;
   height: 20vw;
   width: 20vw;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 #square img {
@@ -957,9 +951,6 @@ html {
 }
 
 @media (max-width: 1500px) {
-  #square > * {
-    margin-top: 10vh;
-  }
   #header {
     -ms-grid-columns: 100px auto 0fr 200px !important;
         grid-template-columns: 100px auto 0fr 200px !important;
@@ -1002,7 +993,7 @@ html {
     text-decoration: none;
   }
   #square > * {
-    margin-bottom: 10% !important;
+    margin-top: 30px;
   }
   #splash {
     background-size: 150%;
@@ -1035,8 +1026,7 @@ html {
         grid-template-columns: 100px auto 2fr 200px !important;
   }
   #square > * {
-    margin-bottom: auto;
-    margin-top: 100px;
+    margin-top: 40px;
   }
   #splash {
     background-attachment: scroll;
