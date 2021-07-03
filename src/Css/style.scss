@@ -453,7 +453,7 @@ html {
     display: grid;
     grid-template-rows: auto auto auto;
     padding: {
-        top: (56.25%)/6;
+        top: 0;
         bottom: (56.25%)/6;
         left: 0;
         right: 0;
@@ -461,9 +461,9 @@ html {
     background: {
         image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/Images/Public/IMG_1183 (2)-min.JPG");
         attachment: fixed;
-        position: center;
+        position: relative;
         repeat: no-repeat;
-        size: 120%;
+        size: 100%;
     }
     user-select: none;
     p {
@@ -837,10 +837,12 @@ html {
     }
     #splash {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 5px;
         padding: {
-            top: 0;
-            bottom: 0;
+            top: 50px;
+            bottom: 50px;
             left: 0;
             right: 0;
         }
@@ -853,14 +855,17 @@ html {
         }
         user-select: none;
         p {
+            padding: {
+                top: 50px
+            }
             color: white;
             font-size: 3vw;
-            @include center();
             margin: 0;
+            text-align: left;
+            grid-column: 2 / span 1;
         }
         h1 {
             color: white;
-            @include center();
             margin: 0;
             font: {
                 size: 8vw;

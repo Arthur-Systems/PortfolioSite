@@ -659,16 +659,16 @@ html {
   display: grid;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
-  padding-top: 9.375%;
+  padding-top: 0;
   padding-bottom: 9.375%;
   padding-left: 0;
   padding-right: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/src/Images/Public/IMG_1183 (2)-min.JPG");
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/Images/Public/IMG_1183 (2)-min.JPG");
   background-attachment: fixed;
-  background-position: center;
+  background-position: relative;
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1176,10 +1176,13 @@ html {
   #splash {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto auto auto;
-        grid-template-columns: auto auto auto;
-    padding-top: 0;
-    padding-bottom: 0;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    grid-gap: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     padding-left: 0;
     padding-right: 0;
     background-image: #333333 !important;
@@ -1193,30 +1196,17 @@ html {
             user-select: none;
   }
   #splash p {
+    padding-top: 50px;
     color: white;
     font-size: 3vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin: 0;
+    text-align: left;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / span 1;
   }
   #splash h1 {
     color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     margin: 0;
     font-size: 8vw;
     font-family: 'Space Grotesk', sans-serif;
