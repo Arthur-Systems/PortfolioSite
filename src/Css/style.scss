@@ -835,6 +835,39 @@ html {
             grid-template-columns: auto auto !important;
         }
     }
+    #splash {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        background: {
+            image: $backgroud !important;
+            attachment: fixed;
+            position: center;
+            repeat: no-repeat;
+            size: 120%;
+        }
+        user-select: none;
+        p {
+            color: white;
+            font-size: 3vw;
+            @include center();
+            margin: 0;
+        }
+        h1 {
+            color: white;
+            @include center();
+            margin: 0;
+            font: {
+                size: 8vw;
+                family: 'Space Grotesk', sans-serif;
+            }
+        }
+    }
     .fab {
         margin: {
             left: 10px !important;
