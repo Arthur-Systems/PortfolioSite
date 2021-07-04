@@ -3,9 +3,9 @@
 <h2> My Portfoilo Project</h2>
 <p> Thank you for checking out my projects! This is the current only coding project that I am working on. Work is still ongoing. Since this website will be showcasing my collective skills, I want it to be perfect. Due to this, noticeable changes will be slow. I am learning as I go. Thank you for understanding. </p>
 </div>
-<h3> View The Timeline For This Project: </h3>
+<h3> The Timeline For This Project: </h3>
 <div align="left"> 
-<a href="https://1v5ymx3zt3y73fq5gy23rtnc-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/gitkraken-logo-dark-hz.png" target="_blank"> <img src="https://1v5ymx3zt3y73fq5gy23rtnc-wpengine.netdna-ssl.com/wp-content/uploads/2021/03/gitkraken-logo-light-hz-1.png" alt="Html5" width="auto" height="auto"/> </a> 
+<a href="https://timelines.gitkraken.com/timeline/cc530cf2d448402182e0c76049afd70f" target="_blank"> <img src="https://1v5ymx3zt3y73fq5gy23rtnc-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/gitkraken-logo-dark-hz.png" alt="Html5" width="auto" height="auto"/> </a> 
 </div>
 
 <h3> What I am using for this project</h3>
