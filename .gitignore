@@ -9,6 +9,6 @@ dist-ssr
 *.local
 dist
 src/Images/100CANON
-src/Models
-
-
+src/Models/
+Gulpfile.js
+src/Fonts/
