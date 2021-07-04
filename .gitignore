@@ -1,6 +1,7 @@
 src/images/Face Photos
 src/images/China
 src/Scripts/Three.js
+src/Css/azonix.css
 node_modules
 .DS_Store
 dist
@@ -9,4 +10,5 @@ dist-ssr
 dist
 src/Images/100CANON
 src/Models
+
 
