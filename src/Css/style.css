@@ -707,16 +707,13 @@ html {
 }
 
 #border {
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 1.5s;
-          transition-duration: 1.5s;
+  transition-transform: rotate;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
-  -webkit-transition-delay: none;
-          transition-delay: none;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
   background: transparent;
   position: relative;
 }
@@ -728,7 +725,7 @@ html {
   left: 0;
   width: 0;
   height: 0;
-  border: 15px #eb311f solid;
+  border: 12px #eb311f solid;
   border-right: none;
   border-top: none;
   -webkit-box-sizing: border-box;
@@ -738,15 +735,15 @@ html {
 #border::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  right: 0;
   width: 0;
   height: 0;
-  border: 15px #eb311f solid;
+  border: 12px #eb311f solid;
   border-left: none;
   border-bottom: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  bottom: 0;
+  right: 0;
 }
 
 #border.animate {
@@ -764,8 +761,8 @@ html {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
   transition-direction: initial;
-  -webkit-transition-delay: 1.5s, 2s;
-          transition-delay: 1.5s, 2s;
+  -webkit-transition-delay: 1s, 1.5s;
+          transition-delay: 1s, 1.5s;
 }
 
 #border.animate::after {
@@ -778,13 +775,53 @@ html {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
   transition-direction: initial;
-  -webkit-transition-delay: 2.5s, 3s;
-          transition-delay: 2.5s, 3s;
+  -webkit-transition-delay: none;
+          transition-delay: none;
+  -webkit-transition-delay: 1s, 1.5s;
+          transition-delay: 1s, 1.5s;
 }
 
 #border.turn {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+#border.turn::before {
+  border: 10px white solid;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  border-right: none;
+  border-bottom: none;
+  -webkit-transition-property: height, width;
+  transition-property: height, width;
+  -webkit-transition-duration: 0.5s, 0.5s;
+          transition-duration: 0.5s, 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  transition-direction: initial;
+  -webkit-transition-delay: 1s, 1.5s;
+          transition-delay: 1s, 1.5s;
+}
+
+#border.turn::after {
+  border: 10px white solid;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  border-left: none;
+  border-top: none;
+  -webkit-transition-property: height, width;
+  transition-property: height, width;
+  -webkit-transition-duration: 0.5s, 0.5s;
+          transition-duration: 0.5s, 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  transition-direction: initial;
+  -webkit-transition-delay: 1s, 1.5s;
+          transition-delay: 1s, 1.5s;
 }
 
 #square {

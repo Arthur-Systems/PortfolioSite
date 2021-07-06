@@ -51,11 +51,10 @@ font-family: 'Space Grotesk', sans-serif;
 }
 
 //!Varables start
-$headfont: "Space Grotesk",
+$Mainfont: "Space Grotesk",
 sans-serif;
 $backgroud: #333333;
 $navlistcolor: #ff8235;
-$Socallogo: ( "telegram": #0088cc, "instagram": #833ab4, "twitter": #1da1f2, "facebook": #1778f2, "github": #211f1f, "linkedin": #0e76a8, );
 //!main body start
 body,
 html {
@@ -68,7 +67,7 @@ html {
 #head {
     background: #667db6;
     background: linear-gradient(to right, #000000, #434343);
-    font-family: "Space Grotesk", sans-serif;
+    font-family: $Mainfont;
     font-size: 20px;
     top: 0px;
     width: 100%;
@@ -376,6 +375,7 @@ html {
 }
 
 .fab {
+    $Socallogo: ( "telegram": #0088cc, "instagram": #833ab4, "twitter": #1da1f2, "facebook": #1778f2, "github": #211f1f, "linkedin": #0e76a8, );
     color: white;
     @include center;
     text-align: center;
@@ -477,31 +477,31 @@ html {
         margin: 0;
         font: {
             size: 8vw;
-            family: "Space Grotesk", sans-serif;
+            family: $Mainfont;
         }
     }
 }
 
 #border {
-    $turn: 1.5s;
+    $turn: 1s;
+    $duration: 0.5s;
     transition: {
-        property: all;
+        transform: rotate;
         duration: $turn;
         timing-function: ease;
-        delay: none;
+        delay: 0s;
     }
-    transform: scale(0.8);
     background: transparent;
     position: relative;
     &::before {
-        // box-shadow: 0px 0px 20px #eb311f, inset 0 0 20px #eb311f;
+        //box-shadow: 0px 0px 20px #eb311f, inset 0 0 20px #eb311f;
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 0;
         height: 0;
-        border: 15px #eb311f solid;
+        border: 12px #eb311f solid;
         border-right: none;
         border-top: none;
         box-sizing: border-box;
@@ -509,18 +509,17 @@ html {
     &::after {
         content: "";
         position: absolute;
-        bottom: 0;
-        right: 0;
         width: 0;
         height: 0;
-        border: 15px #eb311f solid;
+        border: 12px #eb311f solid;
         border-left: none;
         border-bottom: none;
         box-sizing: border-box;
+        bottom: 0;
+        right: 0;
     }
     &.animate {
         transform: rotate(225deg);
-        $duration: 0.5s;
         &::before {
             width: 100%;
             height: 100%;
@@ -540,12 +539,45 @@ html {
                 duration: $duration, $duration;
                 timing-function: ease;
                 direction: initial;
-                delay: $turn + $duration * 2, $turn + $duration * 3;
+                delay: none;
+                delay: $turn, $turn + $duration;
             }
         }
     }
     &.turn {
         transform: rotate(180deg);
+        &::before {
+            border: 10px white solid;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            border-right: none;
+            border-bottom: none;
+            transition: {
+                property: height, width;
+                duration: $duration, $duration;
+                timing-function: ease;
+                direction: initial;
+                delay: $turn, $turn + $duration;
+            }
+        }
+        &::after {
+            border: 10px white solid;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 50%;
+            border-left: none;
+            border-top: none;
+            transition: {
+                property: height, width;
+                duration: $duration, $duration;
+                timing-function: ease;
+                direction: initial;
+                delay: $turn, $turn + $duration;
+            }
+        }
     }
 }
 
@@ -729,7 +761,7 @@ html {
         h1 {
             padding-top: 6vh;
             font-size: 8vw;
-            font-family: "Space Grotesk", sans-serif;
+            font-family: $Mainfont;
         }
     }
 }
@@ -923,7 +955,7 @@ html {
             margin: 0;
             font: {
                 size: 8vw;
-                family: "Space Grotesk", sans-serif;
+                family: $Mainfont;
             }
         }
     }

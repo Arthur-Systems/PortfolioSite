@@ -7,12 +7,14 @@ $(window).scroll(function() {
             document.getElementById("header").classList.remove("social");
             document.getElementById("arrow").classList.remove("flip");
             document.getElementById("arrow1").classList.remove("flip");
-            document.getElementById("NavDrop").classList.remove("drop");
             document.getElementById("arrownav").classList.remove("flip");
             document.getElementById("arrownav1").classList.remove("flip");
-            document.getElementById("SocialDrop").classList.remove("drop");
-            document.getElementById("border").classList.remove("animate");
-            document.getElementById("border").classList.add("turn");
+            $("#NavDrop").removeClass("drop");
+            $("#SocialDrop").removeClass("drop");
+            $("#border").removeClass("animate");
+            setTimeout(function() {
+                $("#border").addClass("turn");
+            }, 1000);
         } else if (scroll < position) {
             document.getElementById("head").style.top = "0px";
         } else if (scroll == position) {
@@ -25,13 +27,14 @@ $(window).scroll(function() {
     var position = $(window).scrollTop();
     if (position <= 1) {
         document.getElementById("head").style.top = "0px";
-        document.getElementById("border").classList.add("animate");
+        $("#border").delay(6000).addClass("animate");
         document.getElementById("border").classList.remove("turn");
     }
 });
 
 $(document).ready(function() {
     document.getElementById("border").classList.toggle("animate");
+    document.getElementById("border").classList.remove("turn");
 });
 
 /*$(window).on('resize', function() {
