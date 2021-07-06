@@ -1,7 +1,5 @@
 function social() {
-
     document.getElementById("header").classList.toggle("social");
-
 }
 
 function Drop() {
@@ -20,5 +18,4 @@ function Flip() {
 function NavFlip() {
     document.getElementById("arrownav").classList.toggle("flip");
     document.getElementById("arrownav1").classList.toggle("flip");
-
 }

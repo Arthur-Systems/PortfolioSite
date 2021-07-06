@@ -11,7 +11,8 @@ $(window).scroll(function() {
             document.getElementById("arrownav").classList.remove("flip");
             document.getElementById("arrownav1").classList.remove("flip");
             document.getElementById("SocialDrop").classList.remove("drop");
-
+            document.getElementById("border").classList.remove("animate");
+            document.getElementById("border").classList.add("turn");
         } else if (scroll < position) {
             document.getElementById("head").style.top = "0px";
         } else if (scroll == position) {
@@ -24,8 +25,15 @@ $(window).scroll(function() {
     var position = $(window).scrollTop();
     if (position <= 1) {
         document.getElementById("head").style.top = "0px";
+        document.getElementById("border").classList.add("animate");
+        document.getElementById("border").classList.remove("turn");
     }
 });
+
+$(document).ready(function() {
+    document.getElementById("border").classList.toggle("animate");
+});
+
 /*$(window).on('resize', function() {
     if ($(window).width() >= 300) {
         document.getElementById("SocialMedia").innerHTML = "Testing"
