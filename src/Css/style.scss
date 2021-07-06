@@ -1,7 +1,6 @@
 //!fonts
 
 /*
-
 font-family: 'Khula', sans-serif;
 font-family: 'Space Grotesk', sans-serif;
 */
@@ -52,24 +51,24 @@ font-family: 'Space Grotesk', sans-serif;
 }
 
 //!Varables start
-$headfont:'Space Grotesk',
+$headfont: "Space Grotesk",
 sans-serif;
-$backgroud:#333333;
-$navlistcolor:#FF8235;
-$Socallogo: ("telegram": #0088CC, "instagram":#833ab4, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
+$backgroud: #333333;
+$navlistcolor: #ff8235;
+$Socallogo: ( "telegram": #0088cc, "instagram": #833ab4, "twitter": #1da1f2, "facebook": #1778f2, "github": #211f1f, "linkedin": #0e76a8, );
 //!main body start
 body,
 html {
     margin: 0px;
     background-color: $backgroud;
-    font-family: 'Khula', sans-serif;
+    font-family: "Khula", sans-serif;
     overflow-x: hidden;
 }
 
 #head {
     background: #667db6;
     background: linear-gradient(to right, #000000, #434343);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     font-size: 20px;
     top: 0px;
     width: 100%;
@@ -215,7 +214,7 @@ html {
                 iteration-count: 1;
                 timing-function: ease;
                 fill-mode: forwards;
-                delay: calc(var(--order)*150ms);
+                delay: calc(var(--order) * 150ms);
             }
         }
     }
@@ -292,7 +291,6 @@ html {
         z-index: -999;
         li {
             background: #434343;
-            ;
             padding: {
                 top: 0;
                 left: auto;
@@ -313,7 +311,7 @@ html {
                 iteration-count: 1;
                 timing-function: ease;
                 fill-mode: forwards;
-                delay: calc(var(--order)*200ms);
+                delay: calc(var(--order) * 200ms);
             }
         }
     }
@@ -336,7 +334,7 @@ html {
 #arrow1 {
     &.flip {
         @include flip();
-        animation-name: turn !important
+        animation-name: turn !important;
     }
 }
 
@@ -351,7 +349,7 @@ html {
     #arrownav1 {
         &.flip {
             @include flip();
-            animation-name: turn !important
+            animation-name: turn !important;
         }
     }
 }
@@ -424,7 +422,7 @@ html {
             duration: 1.5s;
             iteration-count: infinite;
             timing-function: linear;
-            delay: calc(var(--order)*300ms);
+            delay: calc(var(--order) * 300ms);
         }
     }
     &.fa-corner {
@@ -454,7 +452,7 @@ html {
     grid-template-rows: auto auto auto;
     padding: {
         top: 0;
-        bottom: (56.25%)/6;
+        bottom: (56.25%)/ 6;
         left: 0;
         right: 0;
     }
@@ -479,7 +477,7 @@ html {
         margin: 0;
         font: {
             size: 8vw;
-            family: 'Space Grotesk', sans-serif;
+            family: "Space Grotesk", sans-serif;
         }
     }
 }
@@ -540,13 +538,13 @@ html {
     color: white;
     margin-top: 0;
     padding-left: 0;
-    width: calc(100% - (2*$border));
+    width: calc(100% - (2 * $border));
     background-color: lighten($backgroud, 10%);
     text-align: center;
     position: relative;
     border: $border solid white;
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: $border * 3;
         left: -$border;
@@ -558,7 +556,7 @@ html {
         border-radius: 20px;
     }
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: -$border;
         bottom: -$border;
@@ -566,7 +564,7 @@ html {
         right: $border * 3;
         border: $border solid lighten($backgroud, 10%);
         height: 100%;
-        width: calc(100% - (2*$border));
+        width: calc(100% - (2 * $border));
         border-radius: 20px;
     }
     p {
@@ -576,7 +574,7 @@ html {
             left: 0;
         }
         font: {
-            family: 'Khula', sans-serif;
+            family: "Khula", sans-serif;
             size: 25px;
         }
         padding: 0;
@@ -641,7 +639,7 @@ html {
 }
 
 //!start Media
-@media (max-width:1800px) {
+@media (max-width: 1800px) {
     #header {
         grid-template-columns: 100px auto 0 200px !important;
         &.social {
@@ -654,7 +652,7 @@ html {
     }
 }
 
-@media (max-width:1500px) {
+@media (max-width: 1500px) {
     #header {
         grid-template-columns: 100px auto 0fr 200px !important;
         &.social {
@@ -675,12 +673,12 @@ html {
         h1 {
             padding-top: 6vh;
             font-size: 8vw;
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: "Space Grotesk", sans-serif;
         }
     }
 }
 
-@media(max-width:1300px) {
+@media (max-width: 1300px) {
     #Navlist {
         display: flex;
         align-items: center;
@@ -708,7 +706,7 @@ html {
     }
 }
 
-@media(max-width:1100px) {
+@media (max-width: 1100px) {
     #Navlist {
         display: none !important;
     }
@@ -745,7 +743,7 @@ html {
     }
 }
 
-@media(max-width:900px) {
+@media (max-width: 900px) {
     #head {
         position: relative;
     }
@@ -803,9 +801,9 @@ html {
     }
 }
 
-@media (max-width:600px) {}
+@media (max-width: 600px) {}
 
-@media(max-width:400px) {
+@media (max-width: 400px) {
     #header {
         #logo {
             display: none;
@@ -856,7 +854,7 @@ html {
         user-select: none;
         p {
             padding: {
-                top: 50px
+                top: 50px;
             }
             color: white;
             font-size: 3vw;
@@ -869,7 +867,7 @@ html {
             margin: 0;
             font: {
                 size: 8vw;
-                family: 'Space Grotesk', sans-serif;
+                family: "Space Grotesk", sans-serif;
             }
         }
     }

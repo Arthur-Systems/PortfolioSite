@@ -1,5 +1,4 @@
 /*
-
 font-family: 'Khula', sans-serif;
 font-family: 'Space Grotesk', sans-serif;
 */
@@ -7,7 +6,7 @@ body,
 html {
   margin: 0px;
   background-color: #333333;
-  font-family: 'Khula', sans-serif;
+  font-family: "Khula", sans-serif;
   overflow-x: hidden;
 }
 
@@ -15,7 +14,7 @@ html {
   background: #667db6;
   background: -webkit-gradient(linear, left top, right top, from(#000000), to(#434343));
   background: linear-gradient(to right, #000000, #434343);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
   top: 0px;
   width: 100%;
@@ -62,13 +61,13 @@ html {
   position: absolute;
   left: 100%;
   right: 100%;
-  background-color: #FF8235;
+  background-color: #ff8235;
   border-radius: 100px;
   height: 3px;
 }
 
 #Navlist a:hover {
-  color: #FF8235;
+  color: #ff8235;
 }
 
 #Navlist a:hover::after {
@@ -107,18 +106,18 @@ html {
   position: absolute;
   left: 100%;
   right: 100%;
-  background-color: #FF8235;
+  background-color: #ff8235;
   border-radius: 100px;
   height: 3px;
 }
 
 #NavDrop p:hover {
-  color: #FF8235;
+  color: #ff8235;
 }
 
 #NavDrop p:hover i {
   cursor: pointer;
-  color: #FF8235;
+  color: #ff8235;
 }
 
 #NavDrop p:hover::after {
@@ -156,7 +155,7 @@ html {
   position: absolute;
   left: 100%;
   right: 100%;
-  background-color: #FF8235;
+  background-color: #ff8235;
   border-radius: 100px;
   height: 3px;
   top: 0;
@@ -188,7 +187,7 @@ html {
   position: absolute;
   left: 100%;
   right: 100%;
-  background-color: #FF8235;
+  background-color: #ff8235;
   border-radius: 100px;
   height: 3px;
   bottom: 0;
@@ -196,7 +195,7 @@ html {
 
 #NavDrop ul li a:hover {
   cursor: pointer;
-  color: #FF8235;
+  color: #ff8235;
 }
 
 #NavDrop ul li a:hover::after {
@@ -222,8 +221,8 @@ html {
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: calc(var(--order)*150ms);
-          animation-delay: calc(var(--order)*150ms);
+  -webkit-animation-delay: calc(var(--order) * 150ms);
+          animation-delay: calc(var(--order) * 150ms);
 }
 
 #SocialTurn {
@@ -248,19 +247,19 @@ html {
   position: absolute;
   left: 100%;
   right: 100%;
-  background-color: #FF8235;
+  background-color: #ff8235;
   border-radius: 100px;
   height: 3px;
 }
 
 #SocialTurn p:hover {
   cursor: pointer;
-  color: #FF8235;
+  color: #ff8235;
 }
 
 #SocialTurn p:hover i {
   cursor: pointer;
-  color: #FF8235;
+  color: #ff8235;
 }
 
 #SocialTurn p:hover::after {
@@ -294,18 +293,18 @@ html {
   position: absolute;
   left: 100%;
   right: 100%;
-  background-color: #FF8235;
+  background-color: #ff8235;
   border-radius: 100px;
   height: 3px;
 }
 
 #SocialDrop p:hover {
-  color: #FF8235;
+  color: #ff8235;
 }
 
 #SocialDrop p:hover i {
   cursor: pointer;
-  color: #FF8235;
+  color: #ff8235;
 }
 
 #SocialDrop p:hover::after {
@@ -358,8 +357,8 @@ html {
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: calc(var(--order)*200ms);
-          animation-delay: calc(var(--order)*200ms);
+  -webkit-animation-delay: calc(var(--order) * 200ms);
+          animation-delay: calc(var(--order) * 200ms);
 }
 
 #logo {
@@ -483,8 +482,8 @@ html {
 }
 
 .fab.fa-telegram {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0088CC));
-  background: linear-gradient(#0088CC);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0088cc));
+  background: linear-gradient(#0088cc);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
@@ -503,8 +502,8 @@ html {
 }
 
 .fab.fa-twitter {
-  background: -webkit-gradient(linear, left top, left bottom, from(#1DA1F2));
-  background: linear-gradient(#1DA1F2);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1da1f2));
+  background: linear-gradient(#1da1f2);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
@@ -513,8 +512,8 @@ html {
 }
 
 .fab.fa-facebook {
-  background: -webkit-gradient(linear, left top, left bottom, from(#1778F2));
-  background: linear-gradient(#1778F2);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1778f2));
+  background: linear-gradient(#1778f2);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
@@ -523,8 +522,8 @@ html {
 }
 
 .fab.fa-github {
-  background: -webkit-gradient(linear, left top, left bottom, from(#211F1F));
-  background: linear-gradient(#211F1F);
+  background: -webkit-gradient(linear, left top, left bottom, from(#211f1f));
+  background: linear-gradient(#211f1f);
   font-size: 25px;
   margin: 5px 15px;
   padding: 20px;
@@ -543,7 +542,7 @@ html {
 }
 
 .fab.fa-telegram:hover {
-  color: #0088CC;
+  color: #0088cc;
   -webkit-transition: ease-out 0.5s;
   transition: ease-out 0.5s;
   background: white;
@@ -557,21 +556,21 @@ html {
 }
 
 .fab.fa-twitter:hover {
-  color: #1DA1F2;
+  color: #1da1f2;
   -webkit-transition: ease-out 0.5s;
   transition: ease-out 0.5s;
   background: white;
 }
 
 .fab.fa-facebook:hover {
-  color: #1778F2;
+  color: #1778f2;
   -webkit-transition: ease-out 0.5s;
   transition: ease-out 0.5s;
   background: white;
 }
 
 .fab.fa-github:hover {
-  color: #211F1F;
+  color: #211f1f;
   -webkit-transition: ease-out 0.5s;
   transition: ease-out 0.5s;
   background: white;
@@ -622,8 +621,8 @@ html {
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
-  -webkit-animation-delay: calc(var(--order)*300ms);
-          animation-delay: calc(var(--order)*300ms);
+  -webkit-animation-delay: calc(var(--order) * 300ms);
+          animation-delay: calc(var(--order) * 300ms);
 }
 
 .fas.fa-corner {
@@ -704,7 +703,7 @@ html {
   padding-top: 4vh;
   margin: 0;
   font-size: 8vw;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 #border {
@@ -785,7 +784,7 @@ html {
   color: white;
   margin-top: 0;
   padding-left: 0;
-  width: calc(100% - (2*$border));
+  width: calc(100% - (2 * $border));
   background-color: #4d4d4d;
   text-align: center;
   position: relative;
@@ -793,7 +792,7 @@ html {
 }
 
 #Quote::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 21px;
   left: -7px;
@@ -806,7 +805,7 @@ html {
 }
 
 #Quote::after {
-  content: '';
+  content: "";
   position: absolute;
   top: -7px;
   bottom: -7px;
@@ -814,7 +813,7 @@ html {
   right: 21px;
   border: 7px solid #4d4d4d;
   height: 100%;
-  width: calc(100% - (2*$border));
+  width: calc(100% - (2 * $border));
   border-radius: 20px;
 }
 
@@ -822,7 +821,7 @@ html {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
   margin-left: 0;
-  font-family: 'Khula', sans-serif;
+  font-family: "Khula", sans-serif;
   font-size: 25px;
   padding: 0;
   display: inline-block;
@@ -970,7 +969,7 @@ html {
   #splash h1 {
     padding-top: 6vh;
     font-size: 8vw;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: "Space Grotesk", sans-serif;
   }
 }
 
@@ -1209,7 +1208,7 @@ html {
     color: white;
     margin: 0;
     font-size: 8vw;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: "Space Grotesk", sans-serif;
   }
   .fab {
     margin-left: 10px !important;
