@@ -545,7 +545,7 @@ html {
         }
     }
     &.turn {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
         &::before {
             border: 10px white solid;
             top: 0;
@@ -559,7 +559,7 @@ html {
                 duration: $duration, $duration;
                 timing-function: ease;
                 direction: initial;
-                delay: $turn, $turn + $duration;
+                delay: $turn, $duration;
             }
         }
         &::after {
@@ -575,7 +575,7 @@ html {
                 duration: $duration, $duration;
                 timing-function: ease;
                 direction: initial;
-                delay: $turn, $turn + $duration;
+                delay: $turn, $duration;
             }
         }
     }
@@ -829,6 +829,14 @@ html {
             width: 90%;
         }
     }
+    #NavText {
+        #arrownav1 {
+            &.flip {
+                @include flip();
+                animation-name: turn !important;
+            }
+        }
+    }
 }
 
 @media (max-width: 900px) {
@@ -861,10 +869,6 @@ html {
             @include flip();
             animation-name: turn !important;
         }
-    }
-    #border {
-        border: 0.8vh #eb311f solid;
-        box-shadow: 0 0 2vh #eb311f, inset 0 0 2vh #eb311f;
     }
     #SocialDrop {
         display: flex;

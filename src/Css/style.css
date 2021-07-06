@@ -782,8 +782,8 @@ html {
 }
 
 #border.turn {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 #border.turn::before {
@@ -801,8 +801,8 @@ html {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
   transition-direction: initial;
-  -webkit-transition-delay: 1s, 1.5s;
-          transition-delay: 1s, 1.5s;
+  -webkit-transition-delay: 1s, 0.5s;
+          transition-delay: 1s, 0.5s;
 }
 
 #border.turn::after {
@@ -820,8 +820,8 @@ html {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
   transition-direction: initial;
-  -webkit-transition-delay: 1s, 1.5s;
-          transition-delay: 1s, 1.5s;
+  -webkit-transition-delay: 1s, 0.5s;
+          transition-delay: 1s, 0.5s;
 }
 
 #square {
@@ -1138,6 +1138,20 @@ html {
     font-size: 2.5vw;
     width: 90%;
   }
+  #NavText #arrownav1.flip {
+    -webkit-animation-name: rotate;
+            animation-name: rotate;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-name: turn !important;
+            animation-name: turn !important;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1189,11 +1203,6 @@ html {
             animation-fill-mode: forwards;
     -webkit-animation-name: turn !important;
             animation-name: turn !important;
-  }
-  #border {
-    border: 0.8vh #eb311f solid;
-    -webkit-box-shadow: 0 0 2vh #eb311f, inset 0 0 2vh #eb311f;
-            box-shadow: 0 0 2vh #eb311f, inset 0 0 2vh #eb311f;
   }
   #SocialDrop {
     display: -webkit-box;

@@ -3,22 +3,35 @@ $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if ($(window).width() > 1024) {
         if (scroll > position) {
-            document.getElementById("head").style.top = "-150px";
-            document.getElementById("header").classList.remove("social");
-            document.getElementById("arrow").classList.remove("flip");
-            document.getElementById("arrow1").classList.remove("flip");
-            document.getElementById("arrownav").classList.remove("flip");
-            document.getElementById("arrownav1").classList.remove("flip");
-            $("#NavDrop").removeClass("drop");
-            $("#SocialDrop").removeClass("drop");
-            $("#border").removeClass("animate");
+            var items = {
+                "#header": "social",
+                "#arrow": "flip",
+                "#arrow1": "flip",
+                "#arrownav": "flip",
+                "#arrownav1": "flip",
+                "#NavDrop": "drop",
+                "#SocialDrop": "drop",
+                "#border": "animate",
+            };
+            Object.keys(items).forEach(function(key) {
+                $(key).removeClass(items[key]);
+            });
+            $("#head").css("top", "-150px");
+            //$("#header").removeClass("social");
+            // $("#arrow").removeClass("flip");
+            // $("#arrow1").removeClass("flip");
+            // $("#arrownav").removeClass("flip");
+            // $("#arrownav1").removeClass("flip");
+            //$("#NavDrop").removeClass("drop");
+            //$("#SocialDrop").removeClass("drop");
+
             setTimeout(function() {
                 $("#border").addClass("turn");
             }, 1000);
         } else if (scroll < position) {
-            document.getElementById("head").style.top = "0px";
+            $("#head").css("top", "0px");
         } else if (scroll == position) {
-            document.getElementById("head").style.top = "0px";
+            $("#head").css("top", "0px");
         }
         position = scroll;
     }
@@ -26,15 +39,12 @@ $(window).scroll(function() {
 $(window).scroll(function() {
     var position = $(window).scrollTop();
     if (position <= 1) {
-        document.getElementById("head").style.top = "0px";
-        $("#border").delay(6000).addClass("animate");
-        document.getElementById("border").classList.remove("turn");
+        $("#head").css("top", "0px");
     }
 });
 
 $(document).ready(function() {
-    document.getElementById("border").classList.toggle("animate");
-    document.getElementById("border").classList.remove("turn");
+    $("#border").addClass("animate").removeClass("turn");
 });
 
 /*$(window).on('resize', function() {
