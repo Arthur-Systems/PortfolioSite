@@ -318,8 +318,8 @@ html {
   visibility: hidden;
   display: -ms-grid !important;
   display: grid !important;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
 }
 
 #SocialDrop ul {
@@ -329,7 +329,6 @@ html {
   right: 0;
   padding: 0;
   position: absolute;
-  top: -300px;
   z-index: -999;
 }
 
@@ -339,6 +338,10 @@ html {
   padding-left: auto;
   padding-right: auto;
   padding-bottom: 0;
+}
+
+#SocialDrop ul li p {
+  font-family: "Space Grotesk", sans-serif;
 }
 
 #SocialDrop.drop li ul {
@@ -413,6 +416,11 @@ html {
 
 #navtext1 {
   display: none;
+}
+
+#navtext1 #arrownav1 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 #navtext1 #arrownav1.flip {
@@ -1155,6 +1163,9 @@ html {
 }
 
 @media (max-width: 900px) {
+  .fab {
+    width: auto !important;
+  }
   #head {
     position: relative;
   }
@@ -1226,6 +1237,9 @@ html {
 }
 
 @media (max-width: 400px) {
+  #head {
+    background: #434343;
+  }
   #header {
     -ms-grid-columns: auto auto !important;
         grid-template-columns: auto auto !important;

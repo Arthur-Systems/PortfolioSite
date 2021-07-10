@@ -11,13 +11,13 @@ $(window).scroll(function() {
                 "#arrownav1": "flip",
                 "#NavDrop": "drop",
                 "#SocialDrop": "drop",
-                "#border": "animate",
             };
             Object.keys(items).forEach(function(key) {
                 $(key).removeClass(items[key]);
+                // document.querySelector(key).classList.remove(items[key]);
             });
             setTimeout(function() {
-                $("#border").addClass("turn");
+                $("#border").addClass("turn").removeClass("animate");
             }, 1000);
             $("#head").css("top", "-150px");
         } else if (scroll < position) {
@@ -32,22 +32,26 @@ $(window).scroll(function() {
     var position = $(window).scrollTop();
     if (position <= 1) {
         $("#head").css("top", "0px");
+        $("#border").removeClass("turn");
+        setTimeout(function() {
+            $("#border").removeClass("turn").addClass("animate");
+        }, 1000);
     }
 });
 $(document).ready(function() {
     $("#border").addClass("animate").removeClass("turn");
 });
+//find the height of a div
+var height = $("#SocialDrop").outerHeight();
+$("#SocialDrop").css("top", height);
+
 $("#navtext").click(function() {
     $("#arrownav").toggleClass("flip");
     $("#arrownav1").toggleClass("flip");
-    $("#arrow").toggleClass("flip");
-    $("#arrow1").toggleClass("flip");
 });
 $("#navtext1").click(function() {
     $("#arrownav").toggleClass("flip");
     $("#arrownav1").toggleClass("flip");
-    $("#arrow").toggleClass("flip");
-    $("#arrow1").toggleClass("flip");
 });
 $("#SocialMedia").click(function() {
     $("#header").toggleClass("social");

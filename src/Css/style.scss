@@ -277,7 +277,7 @@ html {
     li ul {
         visibility: hidden;
         display: grid !important;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto;
     }
     ul {
         width: auto;
@@ -286,7 +286,6 @@ html {
         right: 0;
         padding: 0;
         position: absolute;
-        top: -300px;
         z-index: -999;
         li {
             background: #434343;
@@ -295,6 +294,9 @@ html {
                 left: auto;
                 right: auto;
                 bottom: 0;
+            }
+            p {
+                font-family: $Mainfont;
             }
         }
     }
@@ -346,6 +348,7 @@ html {
 #navtext1 {
     display: none;
     #arrownav1 {
+        transform: rotate(180deg);
         &.flip {
             @include flip();
             animation-name: turn !important;
@@ -840,6 +843,9 @@ html {
 }
 
 @media (max-width: 900px) {
+    .fab {
+        width: auto !important;
+    }
     #head {
         position: relative;
     }
@@ -893,9 +899,10 @@ html {
     }
 }
 
-@media (max-width: 600px) {}
-
 @media (max-width: 400px) {
+    #head {
+        background: #434343;
+    }
     #header {
         #logo {
             display: none;
