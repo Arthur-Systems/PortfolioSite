@@ -14,10 +14,10 @@ $(window).scroll(function() {
             };
             Object.keys(items).forEach(function(key) {
                 $(key).removeClass(items[key]);
-                // document.querySelector(key).classList.remove(items[key]);
             });
+            $("#border").removeClass("animate");
             setTimeout(function() {
-                $("#border").addClass("turn").removeClass("animate");
+                $("#border").addClass("turn");
             }, 1000);
             $("#head").css("top", "-150px");
         } else if (scroll < position) {
@@ -40,10 +40,8 @@ $(window).scroll(function() {
 });
 $(document).ready(function() {
     $("#border").addClass("animate").removeClass("turn");
+    $("#ulheight").css("top", -$("#ulheight").outerHeight());
 });
-//find the height of a div
-var height = $("#SocialDrop").outerHeight();
-$("#SocialDrop").css("top", height);
 
 $("#navtext").click(function() {
     $("#arrownav").toggleClass("flip");
