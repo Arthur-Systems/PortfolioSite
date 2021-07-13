@@ -32,15 +32,18 @@ $(window).scroll(function() {
     var position = $(window).scrollTop();
     if (position <= 1) {
         $("#head").css("top", "0px");
-        $("#border").removeClass("turn");
-        setTimeout(function() {
-            $("#border").removeClass("turn").addClass("animate");
-        }, 1000);
     }
 });
 $(document).ready(function() {
     $("#border").addClass("animate").removeClass("turn");
     $("#ulheight").css("top", -$("#ulheight").outerHeight());
+    $("#splash").css("background-size", $(window).width());
+});
+$(window).resize(function() {
+    $("#splash").css("background-size", $(window).width());
+    if ($(window).width() < 1024) {
+        $("#ulheight").css("top", -$("#ulheight").outerHeight());
+    }
 });
 
 $("#navtext").click(function() {

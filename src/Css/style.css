@@ -271,7 +271,9 @@ html {
 
 #SocialDrop {
   z-index: 0;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -318,8 +320,8 @@ html {
   visibility: hidden;
   display: -ms-grid !important;
   display: grid !important;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
 }
 
 #SocialDrop ul {
@@ -438,24 +440,11 @@ html {
           animation-name: turn !important;
 }
 
-#social {
-  display: -ms-grid;
-  display: grid;
-  padding: 7px;
-  overflow: hidden;
-  -ms-grid-columns: (auto)[6];
-      grid-template-columns: repeat(6, auto);
-  grid-auto-rows: auto;
-}
-
 #header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px auto 0fr 200px;
-      grid-template-columns: 100px auto 0fr 200px;
-  -webkit-transition: grid-template-columns 0.4s;
-  transition: grid-template-columns 0.4s;
-  transition: grid-template-columns 0.4s, -ms-grid-columns 0.4s;
+  -ms-grid-columns: 100px auto auto;
+      grid-template-columns: 100px auto auto;
   grid-auto-rows: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -465,11 +454,8 @@ html {
 }
 
 #header.social {
-  -ms-grid-columns: 100px auto 0.6fr 200px;
-      grid-template-columns: 100px auto 0.6fr 200px;
-  -webkit-transition: grid-template-columns 1s;
-  transition: grid-template-columns 1s;
-  transition: grid-template-columns 1s, -ms-grid-columns 1s;
+  -ms-grid-columns: 100px auto auto;
+      grid-template-columns: 100px auto auto;
 }
 
 .fab {
@@ -666,16 +652,14 @@ html {
   display: grid;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
-  padding-top: 0;
-  padding-bottom: 9.375%;
-  padding-left: 0;
-  padding-right: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url("/src/Images/Public/IMG_1183 (2)-min.JPG");
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/src/Images/Public/IMG_1183 (2)-min.JPG");
   background-attachment: fixed;
   background-position: relative;
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: center;
+  height: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1024,46 +1008,19 @@ html {
 
 @-webkit-keyframes moveDown {
   to {
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px);
+    -webkit-transform: translateY(550px);
+            transform: translateY(550px);
   }
 }
 
 @keyframes moveDown {
   to {
-    -webkit-transform: translateY(400px);
-            transform: translateY(400px);
-  }
-}
-
-@media (max-width: 1800px) {
-  #header {
-    -ms-grid-columns: 100px auto 0 200px !important;
-        grid-template-columns: 100px auto 0 200px !important;
-  }
-  #header.social {
-    -ms-grid-columns: 100px auto 40vw 200px !important;
-        grid-template-columns: 100px auto 40vw 200px !important;
-  }
-  #social {
-    overflow: hidden;
-    -ms-grid-columns: (auto)[6];
-        grid-template-columns: repeat(6, auto);
+    -webkit-transform: translateY(550px);
+            transform: translateY(550px);
   }
 }
 
 @media (max-width: 1500px) {
-  #header {
-    -ms-grid-columns: 100px auto 0fr 200px !important;
-        grid-template-columns: 100px auto 0fr 200px !important;
-  }
-  #header.social {
-    -ms-grid-columns: 100px auto 1fr 200px !important;
-        grid-template-columns: 100px auto 1fr 200px !important;
-  }
-  #social a {
-    margin-right: -30px !important;
-  }
   #splash p {
     font-size: 3vw;
     padding-top: 2vh;
@@ -1096,9 +1053,6 @@ html {
   }
   #square > * {
     margin-top: 30px;
-  }
-  #splash {
-    background-size: 150%;
   }
   #splash p {
     font-size: 3vw;
@@ -1184,9 +1138,6 @@ html {
     margin: 0;
     padding: 0;
   }
-  #splash {
-    background-size: 170%;
-  }
   #social {
     display: none !important;
   }
@@ -1197,6 +1148,9 @@ html {
   #header.social {
     -ms-grid-columns: 100px auto 150px !important;
         grid-template-columns: 100px auto 150px !important;
+  }
+  #splash {
+    background-image: none !important;
   }
   #NavDrop {
     padding: 1%;
@@ -1298,15 +1252,6 @@ html {
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
     grid-gap: 5px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 0;
-    padding-right: 0;
-    background-image: #333333 !important;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 120%;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
