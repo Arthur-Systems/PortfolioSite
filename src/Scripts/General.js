@@ -37,13 +37,16 @@ $(window).scroll(function() {
 $(document).ready(function() {
     $("#border").addClass("animate").removeClass("turn");
     $("#ulheight").css("top", -$("#ulheight").outerHeight());
-    $("#splash").css("background-size", $(window).width());
+    $("#splash").css({
+        "background-size": $(window).width() + $(window).height(),
+        "padding-bottom": $("#Quote").height(),
+    });
 });
 $(window).resize(function() {
-    $("#splash").css("background-size", $(window).width());
     if ($(window).width() < 1024) {
         $("#ulheight").css("top", -$("#ulheight").outerHeight());
     }
+    $("#splash").css("background-size", $(window).width() + $(window).height());
 });
 
 $("#navtext").click(function() {

@@ -448,10 +448,8 @@ html {
         attachment: fixed;
         position: relative;
         repeat: no-repeat;
-        size: 100%;
-        position: center;
     }
-    height: 100%;
+    background-position-x: center;
     user-select: none;
     p {
         color: white;
@@ -721,6 +719,7 @@ html {
         p {
             font-size: 3vw;
             padding-top: 2vh;
+            padding-bottom: 50px;
             margin: 0;
         }
         h1 {
