@@ -481,14 +481,13 @@ html {
     background: transparent;
     position: relative;
     &::before {
-        //box-shadow: 0px 0px 20px #eb311f, inset 0 0 20px #eb311f;
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 0;
         height: 0;
-        border: 12px #eb311f solid;
+        border: 10px #eb311f solid;
         border-right: none;
         border-top: none;
         box-sizing: border-box;
@@ -498,7 +497,7 @@ html {
         position: absolute;
         width: 0;
         height: 0;
-        border: 12px #eb311f solid;
+        border: 10px #eb311f solid;
         border-left: none;
         border-bottom: none;
         box-sizing: border-box;
@@ -534,7 +533,7 @@ html {
     &.turn {
         transform: rotate(0deg);
         &::before {
-            border: 10px white solid;
+            border: 5px white solid;
             top: 0;
             left: 0;
             width: 50%;
@@ -550,7 +549,7 @@ html {
             }
         }
         &::after {
-            border: 10px white solid;
+            border: 5px white solid;
             bottom: 0;
             right: 0;
             width: 50%;
