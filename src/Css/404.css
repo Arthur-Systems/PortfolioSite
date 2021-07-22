@@ -2,7 +2,7 @@ body,
 html {
   margin: 0px;
   background-color: #333333;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
 }
 
@@ -16,7 +16,7 @@ html {
   background: #667db6;
   background: -webkit-gradient(linear, left top, right top, from(#000000), to(#434343));
   background: linear-gradient(to right, #000000, #434343);
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
   top: 0px;
   width: 100%;
@@ -53,13 +53,13 @@ html {
   position: absolute;
   left: 100%;
   right: 100%;
-  background-color: #FF8235;
+  background-color: #ff8235;
   border-radius: 100px;
   height: 3px;
 }
 
 #Navlist a:hover {
-  color: #FF8235;
+  color: #ff8235;
 }
 
 #Navlist a:hover::after {
@@ -123,7 +123,7 @@ html {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   display: inline-block;
 }
 
@@ -148,7 +148,7 @@ html {
   margin: 0;
   font-size: 30px;
   text-align: left;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding: 10px;
   padding-top: 50px;
 }
@@ -157,22 +157,88 @@ html {
   color: black;
   padding: 10px;
   margin-top: 0;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
 }
 
-#Error button {
+#Error a {
   color: black;
   background-color: transparent;
-  padding: 15px 5px;
+  padding: 0;
   margin: 10px 5px;
-  text-align: center;
   text-overflow: clip;
   -webkit-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
-#Error button:hover {
-  background-color: gold;
+#Error a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+  #box {
+    padding: 0;
+  }
+  #Error {
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+  }
+  #Error h1 {
+    text-align: center !important;
+  }
+  #Error p {
+    padding: 0;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #Error h1 {
+    font-size: 3vw;
+  }
+  #Error p {
+    font-size: 2vw;
+  }
+  #Error a {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 700px) {
+  #box {
+    width: 100%;
+    height: 50%;
+  }
+  #Navlist a {
+    margin: 0px 20px 0 0;
+  }
+  #Error {
+    height: 100%;
+  }
+  #Error h1 {
+    font-size: 6vw;
+  }
+  #Error p {
+    padding-top: 50px;
+    font-size: 4vw;
+  }
+  #Error a {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 500px) {
+  #Navlist {
+    display: none;
+  }
+  #logo1 {
+    display: none;
+  }
 }
 /*# sourceMappingURL=404.css.map */

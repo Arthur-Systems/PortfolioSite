@@ -15,15 +15,15 @@
 }
 
 //!Varables start
-$backgroud:#333333;
-$navlistcolor:#FF8235;
-$Socallogo: ("telegram": #0088CC, "instagram":#833ab4, "twitter":#1DA1F2, "facebook":#1778F2, "github":#211F1F, "linkedin":#0e76a8);
+$backgroud: #333333;
+$navlistcolor: #ff8235;
+$Socallogo: ( "telegram": #0088cc, "instagram": #833ab4, "twitter": #1da1f2, "facebook": #1778f2, "github": #211f1f, "linkedin": #0e76a8, );
 //!main body start
 body,
 html {
     margin: 0px;
     background-color: $backgroud;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
 }
 
@@ -32,7 +32,7 @@ html {
     justify-content: center;
     background: #667db6;
     background: linear-gradient(to right, #000000, #434343);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     font-size: 20px;
     top: 0px;
     width: 100%;
@@ -110,7 +110,7 @@ html {
     a {
         text-decoration: none;
         justify-content: left;
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         display: inline-block;
         &:visited {
             text-decoration: none;
@@ -132,7 +132,7 @@ html {
         margin: 0;
         font-size: 30px;
         text-align: left;
-        font-family: 'Open Sans', sans-serif;
+        font-family: "Open Sans", sans-serif;
         padding: 10px;
         padding-top: 50px;
     }
@@ -140,21 +140,90 @@ html {
         color: black;
         padding: 10px;
         margin-top: 0;
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         font-size: 20px;
     }
-    button {
+    a {
         color: black;
         background-color: transparent;
-        padding: 15px 5px;
+        padding: 0;
         margin: 10px 5px;
-        text-align: center;
         text-overflow: clip;
         transition: background-color 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
         &:hover {
-            background-color: gold;
+            transform: scale(1.1);
         }
     }
 }
 
 //!start Media
+@media (max-width: 1000px) {
+    #box {
+        padding: 0;
+    }
+    #Error {
+        padding: {
+            left: 30px;
+            bottom: 30px;
+            right: 30px;
+        }
+        h1 {
+            text-align: center !important;
+        }
+        p {
+            padding: 0;
+            text-align: center !important;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #Error {
+        h1 {
+            font-size: 3vw;
+        }
+        p {
+            font-size: 2vw;
+        }
+        a {
+            font-size: 1.5vw;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    #box {
+        width: 100%;
+        height: 50%;
+    }
+    #Navlist {
+        a {
+            margin: 0px 20px 0 0;
+        }
+    }
+    #Error {
+        height: 100%;
+        h1 {
+            font-size: 6vw;
+        }
+        p {
+            padding: {
+                top: 50px;
+            }
+            font-size: 4vw;
+        }
+        a {
+            font-size: 4vw;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #Navlist {
+        display: none;
+    }
+    #logo1 {
+        display: none;
+    }
+}
