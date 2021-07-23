@@ -249,7 +249,7 @@ html {
 #SocialDrop {
     z-index: 0;
     display: flex;
-    align-items: center;
+    align-items: right;
     list-style: none;
     transition: all 1s ease-in-out;
     p {
@@ -358,12 +358,12 @@ html {
 
 #header {
     display: grid;
-    grid-template-columns: 100px auto auto;
+    grid-template-columns: 100px auto 200px;
     grid-auto-rows: auto;
     user-select: none;
     position: relative;
     &.social {
-        grid-template-columns: 100px auto auto;
+        grid-template-columns: 100px auto 300px;
     }
 }
 
@@ -373,6 +373,7 @@ html {
     @include center;
     text-align: center;
     text-decoration: none;
+    width: auto;
     margin: {
         right: 0 !important;
         left: 5px;
@@ -764,12 +765,6 @@ html {
         width: auto;
         display: flex;
     }
-    #header {
-        grid-template-columns: 100px auto 0fr 200px !important;
-        &.social {
-            grid-template-columns: 100px auto 2fr 200px !important;
-        }
-    }
     #square>* {
         margin-top: 40px;
     }
@@ -817,12 +812,6 @@ html {
     #social {
         display: none !important;
     }
-    #header {
-        grid-template-columns: 100px auto 150px !important;
-        &.social {
-            grid-template-columns: 100px auto 150px !important;
-        }
-    }
     #splash {
         background-image: none !important;
     }
@@ -864,27 +853,16 @@ html {
     }
     #header {
         #logo {
-            display: none;
             img {
                 height: 50px;
                 width: 50px;
             }
         }
         #NavDrop {
-            @include center();
-            ul {
-                transform: translateY(-40px);
-            }
+            display: none;
         }
         #SocialDrop {
-            @include center();
-            @include zero();
-            ul {
-                top: -350px;
-            }
-            li ul {
-                grid-template-columns: auto auto;
-            }
+            display: none;
         }
         grid-template-columns: auto auto !important;
         &.social {
