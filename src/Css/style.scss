@@ -257,27 +257,11 @@ html {
         color: white;
         position: relative;
         text-decoration: none;
-        &::after {
-            margin-top: 27px;
-            @include underline();
-        }
-        &:hover {
-            i {
-                cursor: pointer;
-                color: $navlistcolor;
-            }
-            color: $navlistcolor;
-            &::after {
-                left: 0%;
-                right: 0%;
-                transition: all 0.5s;
-            }
-        }
     }
     li ul {
         visibility: hidden;
         display: grid !important;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto;
     }
     ul {
         width: auto;
@@ -292,11 +276,20 @@ html {
             padding: {
                 top: 0;
                 left: auto;
-                right: auto;
+                right: 20px;
                 bottom: 0;
             }
             p {
                 font-family: $Mainfont;
+            }
+            a {
+                width: 100%;
+                left: 20px;
+            }
+             :hover {
+                p {
+                    color: black;
+                }
             }
         }
     }
@@ -312,7 +305,7 @@ html {
                 iteration-count: 1;
                 timing-function: ease;
                 fill-mode: forwards;
-                delay: calc(var(--order) * 200ms);
+                delay: calc(var(--order) * 80ms);
             }
         }
     }

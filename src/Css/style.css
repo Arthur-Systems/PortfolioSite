@@ -289,39 +289,12 @@ html {
   text-decoration: none;
 }
 
-#SocialDrop p::after {
-  margin-top: 27px;
-  content: "";
-  position: absolute;
-  left: 100%;
-  right: 100%;
-  background-color: #ff8235;
-  border-radius: 100px;
-  height: 3px;
-}
-
-#SocialDrop p:hover {
-  color: #ff8235;
-}
-
-#SocialDrop p:hover i {
-  cursor: pointer;
-  color: #ff8235;
-}
-
-#SocialDrop p:hover::after {
-  left: 0%;
-  right: 0%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
 #SocialDrop li ul {
   visibility: hidden;
   display: -ms-grid !important;
   display: grid !important;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
 }
 
 #SocialDrop ul {
@@ -338,12 +311,21 @@ html {
   background: #434343;
   padding-top: 0;
   padding-left: auto;
-  padding-right: auto;
+  padding-right: 20px;
   padding-bottom: 0;
 }
 
 #SocialDrop ul li p {
   font-family: "Space Grotesk", sans-serif;
+}
+
+#SocialDrop ul li a {
+  width: 100%;
+  left: 20px;
+}
+
+#SocialDrop ul li :hover p {
+  color: black;
 }
 
 #SocialDrop.drop li ul {
@@ -362,8 +344,8 @@ html {
           animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: calc(var(--order) * 200ms);
-          animation-delay: calc(var(--order) * 200ms);
+  -webkit-animation-delay: calc(var(--order) * 80ms);
+          animation-delay: calc(var(--order) * 80ms);
 }
 
 #logo {
