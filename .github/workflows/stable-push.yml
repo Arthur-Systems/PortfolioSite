@@ -18,3 +18,7 @@ jobs:
           script: |
             cd ~/arthur_systems
             git pull
+            docker start vite_builder_stable -a
+            docker run -d --rm --name clone_dummy -v arthur_systems:/root alpine tail -f /dev/null
+            docker cp clone_dummy:/root ./dist/
+            docker stop clone_dummy
