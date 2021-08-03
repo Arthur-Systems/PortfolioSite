@@ -1,0 +1,20 @@
+name: Put stable code on server
+on:
+  push:
+    branches:
+      - stable
+jobs:
+  build:
+    name: Push stable code to server
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd ~/arthur_systems
+            git pull
