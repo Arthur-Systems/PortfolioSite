@@ -11,9 +11,7 @@ html {
 }
 
 #head {
-  background: #667db6;
-  background: -webkit-gradient(linear, left top, right top, from(#000000), to(#434343));
-  background: linear-gradient(to right, #000000, #434343);
+  background: transparent;
   font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
   top: 0px;
@@ -43,12 +41,16 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0;
   padding: 0;
 }
 
+#Navlist margin {
+  left: 50px;
+  right: 50px;
+}
+
 #Navlist a {
-  margin: 0px 50px 0 0;
+  margin: 0 50px 0 0;
   font-size: 100%;
   color: white;
   position: relative;
@@ -271,15 +273,11 @@ html {
 
 #SocialDrop {
   z-index: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
   list-style: none;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  text-align: right;
+  padding-right: 15px;
 }
 
 #SocialDrop p {
@@ -349,12 +347,17 @@ html {
 }
 
 #logo {
-  padding: 0;
-  margin: 0;
+  position: absolute;
+  width: auto;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
 }
 
 #logo img {
-  height: 100px;
+  height: 150px;
+  width: 150px;
 }
 
 #arrow.flip {
@@ -425,19 +428,13 @@ html {
 #header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px auto 200px;
-      grid-template-columns: 100px auto 200px;
-  grid-auto-rows: auto;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   position: relative;
-}
-
-#header.social {
-  -ms-grid-columns: 100px auto 300px;
-      grid-template-columns: 100px auto 300px;
 }
 
 .fab {
