@@ -65,8 +65,7 @@ html {
 }
 
 #head {
-    background: #667db6;
-    background: linear-gradient(to right, #000000, #434343);
+    background: transparent;
     font-family: $Mainfont;
     font-size: 20px;
     top: 0px;
@@ -90,10 +89,13 @@ html {
 #Navlist {
     display: flex;
     align-items: center;
-    margin: 0;
+    margin {
+        left: 50px;
+        right: 50px;
+    }
     padding: 0;
     a {
-        margin: 0px 50px 0 0;
+        margin: 0 50px 0 0;
         font-size: 100%;
         color: white;
         position: relative;
@@ -248,10 +250,10 @@ html {
 
 #SocialDrop {
     z-index: 0;
-    display: flex;
-    align-items: right;
     list-style: none;
     transition: all 1s ease-in-out;
+    text-align: right;
+    padding-right: 15px;
     p {
         cursor: pointer;
         color: white;
@@ -312,10 +314,15 @@ html {
 }
 
 #logo {
-    padding: 0;
-    margin: 0;
+    position: absolute;
+    width: auto;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
     img {
-        height: 100px;
+        height: 150px;
+        width: 150px;
     }
 }
 
@@ -351,13 +358,9 @@ html {
 
 #header {
     display: grid;
-    grid-template-columns: 100px auto 200px;
-    grid-auto-rows: auto;
+    grid-template-columns: 50% 50%;
     user-select: none;
     position: relative;
-    &.social {
-        grid-template-columns: 100px auto 300px;
-    }
 }
 
 .fab {

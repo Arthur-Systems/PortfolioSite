@@ -24,15 +24,20 @@ $(window).scroll(function() {
             $("#head").css("top", "0px");
         } else if (scroll == position) {
             $("#head").css("top", "0px");
+        } else if (scroll < body) {
+            $("#head").css("top", "0px");
         }
         position = scroll;
     }
 });
 $(window).scroll(function() {
     var position = $(window).scrollTop();
+    var body = $("#body").scrollTop();
     if (position <= 1) {
         $("#head").css("top", "0px");
+        $("#head").css("background", "transparent");
     }
+    if (position < body) {}
 });
 $(document).ready(function() {
     $("#border").addClass("animate").removeClass("turn");
@@ -41,7 +46,16 @@ $(document).ready(function() {
         "background-size": $(window).width() + $(window).height(),
         "padding-bottom": $("#Quote").height(),
     });
+    if ($(window).width() > 500) {
+        var FA = document.createElement("link");
+        FA.href = "https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css";
+        FA.rel = "stylesheet";
+        FA.crossorigin = "anonymous";
+        FA.referrerpolicy = "no-referrer";
+        $(document).find("head").append(FA);
+    }
 });
+
 $(window).resize(function() {
     if ($(window).width() < 1024) {
         $("#ulheight").css("top", -$("#ulheight").outerHeight());
@@ -67,20 +81,3 @@ $("#SocialMedia1").click(function() {
     $("#arrow").toggleClass("flip");
     $("#arrow1").toggleClass("flip");
 });
-
-/*$(window).on('resize', function() {
-    if ($(window).width() >= 300) {
-        document.getElementById("SocialMedia").innerHTML = "Testing"
-    }
-});
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-if (isChrome) {
-}*/
-
-/*if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    console.log("Oh No! Mobile device! Sound the Alarms!!!");
-    alert("It looks like you are using a mobile device. I have NOT optimized this site for mobile usage. Rest assured, mobile optimization is one of my top priorities. For now, please use a desktop computer to view this site! ");
-} else {
-    // not mobile device
-    console.log("not mobile device");
-};*/
