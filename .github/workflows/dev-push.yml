@@ -7,10 +7,10 @@ jobs:
   build:
     name: Push dev code to server
     runs-on: ubuntu-latest
-     timeout-minutes: 10
     steps:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
+        timeout-minutes: 20
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
