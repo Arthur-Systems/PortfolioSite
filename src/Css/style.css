@@ -41,12 +41,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0;
-}
-
-#Navlist margin {
-  left: 50px;
-  right: 50px;
+  padding-left: 50px;
 }
 
 #Navlist a {

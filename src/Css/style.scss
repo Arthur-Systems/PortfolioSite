@@ -89,11 +89,7 @@ html {
 #Navlist {
     display: flex;
     align-items: center;
-    margin {
-        left: 50px;
-        right: 50px;
-    }
-    padding: 0;
+    padding-left: 50px;
     a {
         margin: 0 50px 0 0;
         font-size: 100%;

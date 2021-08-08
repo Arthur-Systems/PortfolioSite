@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
-        timeout-minutes: 20
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
