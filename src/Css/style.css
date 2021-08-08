@@ -11,7 +11,6 @@ html {
 }
 
 #head {
-  background: transparent;
   font-family: "Space Grotesk", sans-serif;
   font-size: 20px;
   top: 0px;
@@ -343,7 +342,6 @@ html {
 
 #logo {
   position: absolute;
-  width: auto;
   left: 50%;
   margin-left: -50px;
   top: 50%;
@@ -355,7 +353,8 @@ html {
   width: 150px;
 }
 
-#arrow.flip {
+#arrow.flip,
+#arrownav.flip {
   -webkit-animation-name: rotate;
           animation-name: rotate;
   -webkit-animation-duration: 0.6s;
@@ -381,19 +380,6 @@ html {
           animation-fill-mode: forwards;
   -webkit-animation-name: turn !important;
           animation-name: turn !important;
-}
-
-#arrownav.flip {
-  -webkit-animation-name: rotate;
-          animation-name: rotate;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 #navtext1 {
@@ -566,16 +552,8 @@ html {
   text-align: center;
 }
 
-.fas.fa-quote-left {
+.fas.fa-quote-left, .fas.fa-quote-right, .fas.fa-angle-right {
   display: inline-block !important;
-}
-
-.fas.fa-quote-right {
-  display: inline-block !important;
-}
-
-.fas.fa-angle-right {
-  display: inline-block;
 }
 
 .fas.fa-chevron-down {
@@ -683,7 +661,7 @@ html {
   position: relative;
 }
 
-#border::before {
+#border::before, #border::after {
   content: "";
   position: absolute;
   top: 0;
@@ -697,26 +675,12 @@ html {
           box-sizing: border-box;
 }
 
-#border::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border: 10px #eb311f solid;
-  border-left: none;
-  border-bottom: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  bottom: 0;
-  right: 0;
-}
-
 #border.animate {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
 }
 
-#border.animate::before {
+#border.animate::before, #border.animate::after {
   width: 100%;
   height: 100%;
   -webkit-transition-property: height, width;
@@ -726,22 +690,6 @@ html {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
   transition-direction: initial;
-  -webkit-transition-delay: 1s, 1.5s;
-          transition-delay: 1s, 1.5s;
-}
-
-#border.animate::after {
-  width: 100%;
-  height: 100%;
-  -webkit-transition-property: height, width;
-  transition-property: height, width;
-  -webkit-transition-duration: 0.5s, 0.5s;
-          transition-duration: 0.5s, 0.5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  transition-direction: initial;
-  -webkit-transition-delay: none;
-          transition-delay: none;
   -webkit-transition-delay: 1s, 1.5s;
           transition-delay: 1s, 1.5s;
 }
@@ -751,7 +699,7 @@ html {
           transform: rotate(0deg);
 }
 
-#border.turn::before {
+#border.turn::before, #border.turn::after {
   border: 5px white solid;
   top: 0;
   left: 0;
@@ -759,25 +707,6 @@ html {
   height: 50%;
   border-right: none;
   border-bottom: none;
-  -webkit-transition-property: height, width;
-  transition-property: height, width;
-  -webkit-transition-duration: 0.5s, 0.5s;
-          transition-duration: 0.5s, 0.5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  transition-direction: initial;
-  -webkit-transition-delay: 1s, 0.5s;
-          transition-delay: 1s, 0.5s;
-}
-
-#border.turn::after {
-  border: 5px white solid;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  border-left: none;
-  border-top: none;
   -webkit-transition-property: height, width;
   transition-property: height, width;
   -webkit-transition-duration: 0.5s, 0.5s;
@@ -878,8 +807,8 @@ html {
 }
 
 #Quote p {
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
+  margin-top: 30px;
+  margin-bottom: 30px;
   margin-left: 0;
   font-family: "Khula", sans-serif;
   font-size: 25px;
@@ -1008,23 +937,6 @@ html {
 }
 
 @media (max-width: 1300px) {
-  #Navlist {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  #Navlist a {
-    margin-right: 20px !important;
-    font-size: 100%;
-    color: white;
-    position: relative;
-    text-decoration: none;
-  }
   #square > * {
     margin-top: 30px;
   }
@@ -1049,6 +961,17 @@ html {
   }
   #square > * {
     margin-top: 40px;
+  }
+  #logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+  }
+  #logo img {
+    height: 150px;
+    width: 150px;
   }
   #splash {
     background-attachment: scroll;
@@ -1083,6 +1006,15 @@ html {
 }
 
 @media (max-width: 900px) {
+  #social,
+  #Navlist,
+  #SocialTurn,
+  #NavDrop,
+  #SocialDrop,
+  #SplashAD,
+  #logo {
+    display: none;
+  }
   .fab {
     width: auto !important;
   }
@@ -1104,36 +1036,11 @@ html {
     margin: 0;
     padding: 0;
   }
-  #social {
-    display: none !important;
-  }
   #splash {
-    background-image: none !important;
+    background-image: none;
   }
   #NavDrop {
     padding: 1%;
-  }
-  #arrownav.flip {
-    -webkit-animation-name: rotate;
-            animation-name: rotate;
-    -webkit-animation-duration: 0.6s;
-            animation-duration: 0.6s;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-name: turn !important;
-            animation-name: turn !important;
-  }
-  #SocialDrop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  #SocialTurn {
-    display: none;
   }
   .fab {
     margin-left: 10px !important;
@@ -1143,32 +1050,19 @@ html {
     font-size: 2.5vw;
     width: 80%;
   }
-  #SplashAD {
-    display: none;
-  }
 }
 
 @media (max-width: 400px) {
   #head {
     background: #434343;
   }
-  #header {
-    -ms-grid-columns: auto auto !important;
-        grid-template-columns: auto auto !important;
-  }
   #header #logo img {
     height: 50px;
     width: 50px;
   }
-  #header #NavDrop {
-    display: none;
-  }
+  #header #NavDrop,
   #header #SocialDrop {
     display: none;
-  }
-  #header.social {
-    -ms-grid-columns: auto auto !important;
-        grid-template-columns: auto auto !important;
   }
   #splash {
     display: -ms-grid;

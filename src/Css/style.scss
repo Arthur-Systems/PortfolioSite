@@ -65,7 +65,6 @@ html {
 }
 
 #head {
-    background: transparent;
     font-family: $Mainfont;
     font-size: 20px;
     top: 0px;
@@ -284,10 +283,8 @@ html {
                 width: 100%;
                 left: 20px;
             }
-             :hover {
-                p {
-                    color: black;
-                }
+             :hover p {
+                color: black;
             }
         }
     }
@@ -311,7 +308,6 @@ html {
 
 #logo {
     position: absolute;
-    width: auto;
     left: 50%;
     margin-left: -50px;
     top: 50%;
@@ -322,7 +318,8 @@ html {
     }
 }
 
-#arrow {
+#arrow,
+#arrownav {
     &.flip {
         @include flip();
     }
@@ -332,12 +329,6 @@ html {
     &.flip {
         @include flip();
         animation-name: turn !important;
-    }
-}
-
-#arrownav {
-    &.flip {
-        @include flip();
     }
 }
 
@@ -390,14 +381,10 @@ html {
     color: white;
     @include center;
     text-align: center;
-    &.fa-quote-left {
-        display: inline-block !important;
-    }
-    &.fa-quote-right {
-        display: inline-block !important;
-    }
+    &.fa-quote-left,
+    &.fa-quote-right,
     &.fa-angle-right {
-        display: inline-block;
+        display: inline-block !important;
     }
     &.fa-chevron-down {
         padding: 0;
@@ -473,7 +460,8 @@ html {
     }
     background: transparent;
     position: relative;
-    &::before {
+    &::before,
+    &::after {
         content: "";
         position: absolute;
         top: 0;
@@ -485,31 +473,9 @@ html {
         border-top: none;
         box-sizing: border-box;
     }
-    &::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 0;
-        border: 10px #eb311f solid;
-        border-left: none;
-        border-bottom: none;
-        box-sizing: border-box;
-        bottom: 0;
-        right: 0;
-    }
     &.animate {
         transform: rotate(225deg);
-        &::before {
-            width: 100%;
-            height: 100%;
-            transition: {
-                property: height, width;
-                duration: $duration, $duration;
-                timing-function: ease;
-                direction: initial;
-                delay: $turn, $turn + $duration;
-            }
-        }
+        &::before,
         &::after {
             width: 100%;
             height: 100%;
@@ -518,14 +484,14 @@ html {
                 duration: $duration, $duration;
                 timing-function: ease;
                 direction: initial;
-                delay: none;
                 delay: $turn, $turn + $duration;
             }
         }
     }
     &.turn {
         transform: rotate(0deg);
-        &::before {
+        &::before,
+        &::after {
             border: 5px white solid;
             top: 0;
             left: 0;
@@ -533,22 +499,6 @@ html {
             height: 50%;
             border-right: none;
             border-bottom: none;
-            transition: {
-                property: height, width;
-                duration: $duration, $duration;
-                timing-function: ease;
-                direction: initial;
-                delay: $turn, $duration;
-            }
-        }
-        &::after {
-            border: 5px white solid;
-            bottom: 0;
-            right: 0;
-            width: 50%;
-            height: 50%;
-            border-left: none;
-            border-top: none;
             transition: {
                 property: height, width;
                 duration: $duration, $duration;
@@ -636,8 +586,8 @@ html {
     }
     p {
         margin: {
-            top: 30px !important;
-            bottom: 30px !important;
+            top: 30px;
+            bottom: 30px;
             left: 0;
         }
         font: {
@@ -723,18 +673,6 @@ html {
 }
 
 @media (max-width: 1300px) {
-    #Navlist {
-        display: flex;
-        align-items: center;
-        @include zero();
-        a {
-            margin-right: 20px !important;
-            font-size: 100%;
-            color: white;
-            position: relative;
-            text-decoration: none;
-        }
-    }
     #square>* {
         margin-top: 30px;
     }
@@ -759,6 +697,17 @@ html {
     }
     #square>* {
         margin-top: 40px;
+    }
+    #logo {
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        top: 50%;
+        margin-top: -50px;
+        img {
+            height: 150px;
+            width: 150px;
+        }
     }
     #splash {
         background-attachment: scroll;
@@ -789,6 +738,15 @@ html {
 }
 
 @media (max-width: 900px) {
+    #social,
+    #Navlist,
+    #SocialTurn,
+    #NavDrop,
+    #SocialDrop,
+    #SplashAD,
+    #logo {
+        display: none;
+    }
     .fab {
         width: auto !important;
     }
@@ -801,26 +759,11 @@ html {
         @include center();
         @include zero();
     }
-    #social {
-        display: none !important;
-    }
     #splash {
-        background-image: none !important;
+        background-image: none;
     }
     #NavDrop {
         padding: 1%;
-    }
-    #arrownav {
-        &.flip {
-            @include flip();
-            animation-name: turn !important;
-        }
-    }
-    #SocialDrop {
-        display: flex;
-    }
-    #SocialTurn {
-        display: none;
     }
     .fab {
         margin: {
@@ -833,9 +776,6 @@ html {
             font-size: 2.5vw;
             width: 80%;
         }
-    }
-    #SplashAD {
-        display: none;
     }
 }
 
@@ -850,15 +790,9 @@ html {
                 width: 50px;
             }
         }
-        #NavDrop {
-            display: none;
-        }
+        #NavDrop,
         #SocialDrop {
             display: none;
-        }
-        grid-template-columns: auto auto !important;
-        &.social {
-            grid-template-columns: auto auto !important;
         }
     }
     #splash {

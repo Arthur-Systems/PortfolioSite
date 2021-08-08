@@ -35,9 +35,13 @@ $(window).scroll(function() {
     var body = $("#body").scrollTop();
     if (position <= 1) {
         $("#head").css("top", "0px");
-        $("#head").css("background", "transparent");
     }
-    if (position < body) {}
+    if ($(document).scrollTop() >= $("#body").position().top) {
+        $("#head").css("background-color", "rgba(0, 0, 0, 0.5)");
+    }
+    if ($(document).scrollTop() < $("#body").position().top || position <= 1) {
+        $("#head").css("background-color", "transparent");
+    }
 });
 $(document).ready(function() {
     $("#border").addClass("animate").removeClass("turn");
