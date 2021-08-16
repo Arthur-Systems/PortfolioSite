@@ -11,15 +11,14 @@ $(window).scroll(function() {
                 "#arrownav1": "flip",
                 "#NavDrop": "drop",
                 "#SocialDrop": "drop",
+                ".fa-caret-down": "turn",
             };
             Object.keys(items).forEach(function(key) {
                 $(key).removeClass(items[key]);
             });
-            $("#border").removeClass("animate");
-            setTimeout(function() {
-                $("#border").addClass("turn");
-            }, 1000);
-            $("#head").css("top", "-150px");
+            $("#head").css(
+                "top", -$("#header").height() - $("#logo").height() + "px"
+            );
         } else if (scroll < position) {
             $("#head").css("top", "0px");
         } else if (scroll == position) {
@@ -39,13 +38,13 @@ $(window).scroll(function() {
     if ($(document).scrollTop() >= $("#body").position().top) {
         $("#head").css("background-color", "rgba(0, 0, 0, 0.5)");
     }
-    if ($(document).scrollTop() < $("#body").position().top || position <= 1) {
+    if ($(document).scrollTop() < $("#body").position().top && position <= 1) {
         $("#head").css("background-color", "transparent");
     }
 });
 $(document).ready(function() {
     $("#border").addClass("animate").removeClass("turn");
-    $("#ulheight").css("top", -$("#ulheight").outerHeight());
+
     $("#splash").css({
         "background-size": $(window).width() + $(window).height(),
         "padding-bottom": $("#Quote").height(),
@@ -61,9 +60,7 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-    if ($(window).width() < 1024) {
-        $("#ulheight").css("top", -$("#ulheight").outerHeight());
-    }
+    if ($(window).width() < 1024) {}
     $("#splash").css("background-size", $(window).width() + $(window).height());
 });
 
@@ -71,17 +68,9 @@ $("#navtext").click(function() {
     $("#arrownav").toggleClass("flip");
     $("#arrownav1").toggleClass("flip");
 });
-$("#navtext1").click(function() {
-    $("#arrownav").toggleClass("flip");
-    $("#arrownav1").toggleClass("flip");
-});
-$("#SocialMedia").click(function() {
-    $("#header").toggleClass("social");
-    $("#arrow").toggleClass("flip");
-    $("#arrow1").toggleClass("flip");
-});
-$("#SocialMedia1").click(function() {
-    $("#SocialDrop").toggleClass("drop");
-    $("#arrow").toggleClass("flip");
-    $("#arrow1").toggleClass("flip");
+$("#SocialDrop").click(function() {
+    $(".fa-caret-down").toggleClass("turn");
+    // $("#SocialDrop").toggleClass("drop");
+    $("#SocialDrop.drop ul").css("top", "0px");
+    $("#SocialDrop ul").slideToggle(1000);
 });

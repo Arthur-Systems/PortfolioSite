@@ -143,10 +143,8 @@ html {
             }
         }
     }
-    li {
-        ul {
-            visibility: hidden;
-        }
+    li ul {
+        visibility: show;
     }
     ul {
         list-style: none;
@@ -154,7 +152,7 @@ html {
         left: 0;
         padding: 0;
         position: absolute;
-        top: -300px;
+        top: -400px;
         z-index: -999;
         li {
             background: #090909;
@@ -256,11 +254,11 @@ html {
         text-decoration: none;
     }
     li ul {
-        visibility: hidden;
         display: grid !important;
         grid-template-columns: auto;
     }
     ul {
+        display: none;
         width: auto;
         list-style: none;
         background: none;
@@ -406,6 +404,13 @@ html {
         @include zero();
         font: {
             size: 50px;
+        }
+    }
+    &.fa-caret-down {
+        transform: rotate(-90deg);
+        transition: all 0.5s;
+        &.turn {
+            transform: rotate(0deg);
         }
     }
 }
@@ -651,7 +656,7 @@ html {
 
 @keyframes moveDown {
     to {
-        transform: translateY(550px);
+        transform: translateY(1px);
     }
 }
 
