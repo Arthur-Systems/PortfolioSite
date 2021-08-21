@@ -6,8 +6,12 @@ $.keyframe.define([{
     "60%": { height: "30px" },
     "100%": { height: "10px" },
 }, ]);
+$.keyframe.define([{
+    name: "moveDown1",
+    to: { transform: "translateY(630px)" },
+}, ]);
 
-$(".fa-caret-down").playKeyframe({
+$().playKeyframe({
     name: "trapdoor-sequence", // name of the keyframe you want to bind to the selected element
     duration: "4s", // [optional, default: 0, in ms] how long you want it to last in milliseconds
     timingFunction: "linear", // [optional, default: ease] specifies the speed curve of the animation

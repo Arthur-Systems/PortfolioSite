@@ -74,6 +74,7 @@ $("#navtext").click(function() {
 $("#SocialDrop").click(function() {
     $(".fa-caret-down").toggleClass("turn");
     $("#SocialDrop").toggleClass("drop");
+
     // $("#SocialDrop.drop li ul").css("top", "0px");
     // $("#SocialDrop ul").slideToggle(1000);
 });
