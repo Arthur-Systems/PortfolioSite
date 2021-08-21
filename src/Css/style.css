@@ -124,7 +124,7 @@ html {
 }
 
 #NavDrop li ul {
-  visibility: show;
+  visibility: hidden;
 }
 
 #NavDrop ul {
@@ -266,57 +266,55 @@ html {
 }
 
 #SocialDrop {
-  z-index: 0;
   list-style: none;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  text-align: right;
-  padding-right: 15px;
 }
 
 #SocialDrop p {
-  cursor: pointer;
   color: white;
-  position: relative;
+  cursor: pointer;
   text-decoration: none;
+  width: 170px;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 #SocialDrop li ul {
-  display: -ms-grid !important;
-  display: grid !important;
+  display: -ms-grid;
+  display: grid;
+  visibility: hidden;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
-}
-
-#SocialDrop ul {
-  display: none;
-  width: auto;
   list-style: none;
-  background: none;
-  right: 0;
-  padding: 0;
   position: absolute;
-  z-index: -999;
+  right: 0;
 }
 
-#SocialDrop ul li {
+#SocialDrop li ul li {
   background: #434343;
-  padding-top: 0;
-  padding-left: auto;
-  padding-right: 20px;
-  padding-bottom: 0;
+  padding-right: 0;
+  right: 0;
 }
 
-#SocialDrop ul li p {
+#SocialDrop li ul li p {
   font-family: "Space Grotesk", sans-serif;
 }
 
-#SocialDrop ul li a {
-  width: 100%;
-  left: 20px;
+#SocialDrop li ul li a {
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#SocialDrop ul li :hover p {
+#SocialDrop li ul li :hover p {
   color: black;
 }
 
@@ -409,8 +407,8 @@ html {
 #header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  -ms-grid-columns: 50% auto;
+      grid-template-columns: 50% auto;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -420,20 +418,8 @@ html {
 
 .fab {
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: center;
   text-decoration: none;
-  width: auto;
-  margin-right: 0 !important;
-  margin-left: 5px;
 }
 
 .fab.fa-telegram {
@@ -549,7 +535,6 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
 }
 
 .fas.fa-quote-left, .fas.fa-quote-right, .fas.fa-angle-right {
@@ -922,15 +907,15 @@ html {
 
 @-webkit-keyframes moveDown {
   to {
-    -webkit-transform: translateY(1px);
-            transform: translateY(1px);
+    -webkit-transform: translateY(530px);
+            transform: translateY(530px);
   }
 }
 
 @keyframes moveDown {
   to {
-    -webkit-transform: translateY(1px);
-            transform: translateY(1px);
+    -webkit-transform: translateY(530px);
+            transform: translateY(530px);
   }
 }
 

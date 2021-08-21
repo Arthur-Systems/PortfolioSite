@@ -144,7 +144,7 @@ html {
         }
     }
     li ul {
-        visibility: show;
+        visibility: hidden;
     }
     ul {
         list-style: none;
@@ -242,44 +242,37 @@ html {
 }
 
 #SocialDrop {
-    z-index: 0;
     list-style: none;
     transition: all 1s ease-in-out;
-    text-align: right;
-    padding-right: 15px;
     p {
-        cursor: pointer;
         color: white;
-        position: relative;
+        cursor: pointer;
         text-decoration: none;
+        width: 170px;
+        margin: {
+            left: auto;
+            right: 0;
+        }
     }
     li ul {
-        display: grid !important;
+        display: grid;
+        visibility: hidden;
         grid-template-columns: auto;
-    }
-    ul {
-        display: none;
-        width: auto;
         list-style: none;
-        background: none;
-        right: 0;
-        padding: 0;
         position: absolute;
-        z-index: -999;
+        right: 0;
         li {
             background: #434343;
-            padding: {
-                top: 0;
-                left: auto;
-                right: 20px;
-                bottom: 0;
-            }
+            padding-right: 0;
+            right: 0;
             p {
                 font-family: $Mainfont;
             }
             a {
-                width: 100%;
-                left: 20px;
+                width: 75%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
              :hover p {
                 color: black;
@@ -343,7 +336,7 @@ html {
 
 #header {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% auto;
     user-select: none;
     position: relative;
 }
@@ -351,14 +344,8 @@ html {
 .fab {
     $Socallogo: ( "telegram": #0088cc, "instagram": #833ab4, "twitter": #1da1f2, "facebook": #1778f2, "github": #211f1f, "linkedin": #0e76a8, );
     color: white;
-    @include center;
     text-align: center;
     text-decoration: none;
-    width: auto;
-    margin: {
-        right: 0 !important;
-        left: 5px;
-    }
     @each $logo,
     $i in $Socallogo {
         &.fa-#{$logo} {
@@ -378,7 +365,6 @@ html {
 .fas {
     color: white;
     @include center;
-    text-align: center;
     &.fa-quote-left,
     &.fa-quote-right,
     &.fa-angle-right {
@@ -656,7 +642,7 @@ html {
 
 @keyframes moveDown {
     to {
-        transform: translateY(1px);
+        transform: translateY(530px);
     }
 }
 

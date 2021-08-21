@@ -37,14 +37,17 @@ $(window).scroll(function() {
     }
     if ($(document).scrollTop() >= $("#body").position().top) {
         $("#head").css("background-color", "rgba(0, 0, 0, 0.5)");
+        $("#head").css("background-color", "black");
     }
     if ($(document).scrollTop() < $("#body").position().top && position <= 1) {
         $("#head").css("background-color", "transparent");
     }
 });
 $(document).ready(function() {
-    $("#border").addClass("animate").removeClass("turn");
-
+    $("#SocialDrop li ul").css(
+        "top",
+        "-" + $("#SocialDrop li ul").outerHeight() + "px"
+    );
     $("#splash").css({
         "background-size": $(window).width() + $(window).height(),
         "padding-bottom": $("#Quote").height(),
@@ -70,7 +73,7 @@ $("#navtext").click(function() {
 });
 $("#SocialDrop").click(function() {
     $(".fa-caret-down").toggleClass("turn");
-    // $("#SocialDrop").toggleClass("drop");
-    $("#SocialDrop.drop ul").css("top", "0px");
-    $("#SocialDrop ul").slideToggle(1000);
+    $("#SocialDrop").toggleClass("drop");
+    // $("#SocialDrop.drop li ul").css("top", "0px");
+    // $("#SocialDrop ul").slideToggle(1000);
 });
