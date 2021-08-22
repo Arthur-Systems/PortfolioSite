@@ -11,6 +11,8 @@
         "vite": "^2.4.4"
     },
     "dependencies": {
+        "@keyframes/core": "^2.0.10",
+        "@popperjs/core": "^2.9.3",
         "aos": "^2.3.4",
         "npm": "^7.20.3",
         "postcss-discard-comments": "^5.0.1",

@@ -11,15 +11,14 @@ $(window).scroll(function() {
                 "#arrownav1": "flip",
                 "#NavDrop": "drop",
                 "#SocialDrop": "drop",
+                ".fa-caret-down": "turn",
             };
             Object.keys(items).forEach(function(key) {
                 $(key).removeClass(items[key]);
             });
-            $("#border").removeClass("animate");
-            setTimeout(function() {
-                $("#border").addClass("turn");
-            }, 1000);
-            $("#head").css("top", "-150px");
+            $("#head").css(
+                "top", -$("#header").height() - $("#logo").height() + "px"
+            );
         } else if (scroll < position) {
             $("#head").css("top", "0px");
         } else if (scroll == position) {
@@ -35,17 +34,21 @@ $(window).scroll(function() {
     var body = $("#body").scrollTop();
     if (position <= 1) {
         $("#head").css("top", "0px");
-        $("#head").css("background", "transparent");
     }
-    if (position < body) {}
+    if ($(document).scrollTop() >= $("#body").position().top) {
+        $("#head").css("background-color", "rgba(0, 0, 0, 0.5)");
+        $("#head").css("background-color", "black");
+    }
+    if ($(document).scrollTop() < $("#body").position().top && position <= 1) {
+        $("#head").css("background-color", "transparent");
+    }
 });
 $(document).ready(function() {
-    $("#border").addClass("animate").removeClass("turn");
-    $("#ulheight").css("top", -$("#ulheight").outerHeight());
-    $("#splash").css({
-        "background-size": $(window).width() + $(window).height(),
-        "padding-bottom": $("#Quote").height(),
-    });
+    $("#SocialDrop li ul").css(
+        "top",
+        "-" + $("#SocialDrop li ul").outerHeight() + "px"
+    );
+
     if ($(window).width() > 500) {
         var FA = document.createElement("link");
         FA.href = "https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css";
@@ -57,27 +60,18 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-    if ($(window).width() < 1024) {
-        $("#ulheight").css("top", -$("#ulheight").outerHeight());
-    }
-    $("#splash").css("background-size", $(window).width() + $(window).height());
+    if ($(window).width() < 1024) {}
+    // $("#splash").css("background-size", $(window).width() + $(window).height());
 });
 
 $("#navtext").click(function() {
     $("#arrownav").toggleClass("flip");
     $("#arrownav1").toggleClass("flip");
 });
-$("#navtext1").click(function() {
-    $("#arrownav").toggleClass("flip");
-    $("#arrownav1").toggleClass("flip");
-});
-$("#SocialMedia").click(function() {
-    $("#header").toggleClass("social");
-    $("#arrow").toggleClass("flip");
-    $("#arrow1").toggleClass("flip");
-});
-$("#SocialMedia1").click(function() {
+$("#SocialDrop").click(function() {
+    $(".fa-caret-down").toggleClass("turn");
     $("#SocialDrop").toggleClass("drop");
-    $("#arrow").toggleClass("flip");
-    $("#arrow1").toggleClass("flip");
+
+    // $("#SocialDrop.drop li ul").css("top", "0px");
+    // $("#SocialDrop ul").slideToggle(1000);
 });

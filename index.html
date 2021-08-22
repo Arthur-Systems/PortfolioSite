@@ -16,7 +16,7 @@
     </script>
     <!--!embed Data-->
     <title>
-        Haichaun Wei : A student wanting to make a difference in the world
+        Haichaun Wei
     </title>
     <meta name="description" content="A 17-year-old High school Computer Scientist currently taking college-level courses studying cybersecurity, data center management, and advanced computer science." />
     <meta name="theme-color" content="#0000FF" />
@@ -33,6 +33,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Haichaun Wei: A student wanting to make a difference in the world" />
     <meta name="google-site-verification" content="dHMPGqpbt7SSuVh2TX2HIgM1C_Ljy4P9CF_Cjgd83eA" />
+
     <!--!Info -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,9 +45,10 @@
     <link rel="stylesheet" type="text/css" href="/src/Css/style.css" />
     <link rel="icon" type="image/svg+xml" href="/src/Images/Public/favicon.svg" />
     <!-- !Scripts-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src='/src/Scripts/jquery.keyframes.min.js'></script>
+    <script type="module" src='/src/Scripts/KeyframeAnimations.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="module" src="/src/Scripts/General.js"></script>
 </head>
 <header id="head">
@@ -54,7 +56,8 @@
         <div id="Navlist">
             <a href="/">Home</a>
             <a href="/">Qualifications</a>
-            <a href="/">Achievements</a>
+            <a href="/">Contact</a>
+            <a href="/">About Me</a>
         </div>
         <div id="logo">
             <img loading="lazy" src="/src/Images/Public/Mission.png" />
@@ -67,20 +70,20 @@
                 <ul>
                     <li style="--order: 1"><a href="#">Home</a></li>
                     <li style="--order: 2"><a href="#">Qualifications</a></li>
-                    <li style="--order: 3"><a href="#">Achievements</a></li>
+                    <li style="--order: 3"><a href="#">About Me</a></li>
                 </ul>
             </li>
         </ul>
         <ul id="SocialDrop">
+            <p id="Title"><i class="fas fa-caret-down"></i>&nbsp; Social Media</p>
             <li>
-                <p id="SocialMedia1">
-                    <i id="arrow1" class="fas fa-angle-right"></i>&nbsp;Social Media
-                </p>
-                <ul id="ulheight">
+
+                <ul>
                     <li style="--order: 1">
                         <a href="https://twitter.com/WeiHaichuan" class="fab fa-twitter" target="_blank">
                             <p>&nbsp;Twitter</p>
                         </a>
+
                     </li>
                     <li style="--order: 2">
                         <a href="https://www.instagram.com/real_arthur_wei/" class="fab fa-instagram" target="_blank">
@@ -115,31 +118,15 @@
 
 <body>
     <div id="splash">
-        <!-- <div id="square" data-aos="fade-up-right" data-aos-once="true">
-            <img src="/src/Images/Public/IMG_1009-min.JPG" />
-            <div id="border"></div>
-            <div id="grid">
-                <span></span>
-                <span style="background-color: white"></span>
-                <span style="background-color: white"></span>
-                <span></span>
-            </div>
-            <div id="blend">
-                <img src="/src/Images/Public/IMG_1009-min.JPG" />
-                <div id="grid">
-                    <span style="background-color: white"></span>
-                    <span></span>
-                    <span></span>
-                    <span style="background-color: white"></span>
-                </div>
-            </div>
-        </div> -->
-        <!-- <h1>Haichuan Wei</h1>
-        <p>Full Stack Developer, Graphic Designer, and Musician</p>
-        <div id="SplashAD" data-aos-offset="100" data-aos="zoom-in-up" data-aos-mirror="true">
-            <i class="fas fa-chevron-down" style="--order: 1"></i>
-            <i class="fas fa-chevron-down" style="--order: 2"></i>
-        </div> -->
+        <div id="Faceimage" data-tilt data-tilt-full-page-listening>
+            <img src="https://dsm01pap002files.storage.live.com/y4m96efAe1DDnE5m8NLEGCTFwuxd1CV3_KonTmpC5bM8EuRmZ-Jp_BmKm-OcwVYUSl1nbDAUKDG8yxLKYs4kDw1pX2s3NbioWsCJpSGoW0Eypl1zZIiVXlpIM56y6DK_q3WGD2bSY7bUDqsFvo9Zy2DppDTjMzLFfg3FJRT1seIJC40sQtVYMAgt1v1pbkYPJNx?width=256&height=256&cropmode=none"
+            />
+        </div>
+        <h1>Haichuan Wei</h1>
+        <div class="typeout about-heading">
+            <p>Full Stack Developer, Computer Scientist,</p>
+            <p>and Highschool Student</p>
+        </div>
     </div>
     <div id="body">
         <div id="Quote" data-aos="zoom-in" data-aso-mirror="true" data-aso-easing="ease-in-out">
@@ -155,14 +142,15 @@
         <div id="intro">
             <!--<img src="https://dsm01pap002files.storage.live.com/y4m08YOMxAQ8JhWwfua9W2nGdNLEAH-XA2JG5P6klOg7f9U9FYuzTZxRbNTibMwU8-Nf3EehftYHucVI1kfHS51cGEXciB2KWfDFO07frfVXfCJ9pjsbx5xcyDD3rl3r78m2SAR-dcfSu4X4xXDi8VvdE3XrvxvSohaEoTIr2-pIRxFeAfYTqVqYEoVHKPDVAsa?width=3020&height=3397&cropmode=none">
             -->
-            <h1>Who Am I?</h1>
-            <p>Hello! Bla bla bla placeholder</p>
+            <h1>:)</h1>
+            <p>Bla bla bla placeholder</p>
         </div>
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script type="text/javascript" src="/src/Scripts/vanilla-tilt.js"></script>
 </body>
 <footer id="footer">
     <div>
