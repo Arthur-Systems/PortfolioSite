@@ -48,10 +48,7 @@ $(document).ready(function() {
         "top",
         "-" + $("#SocialDrop li ul").outerHeight() + "px"
     );
-    $("#splash").css({
-        "background-size": $(window).width() + $(window).height(),
-        "padding-bottom": $("#Quote").height(),
-    });
+
     if ($(window).width() > 500) {
         var FA = document.createElement("link");
         FA.href = "https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css";
@@ -64,7 +61,7 @@ $(document).ready(function() {
 
 $(window).resize(function() {
     if ($(window).width() < 1024) {}
-    $("#splash").css("background-size", $(window).width() + $(window).height());
+    // $("#splash").css("background-size", $(window).width() + $(window).height());
 });
 
 $("#navtext").click(function() {

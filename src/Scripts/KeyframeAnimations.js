@@ -6,10 +6,25 @@ $.keyframe.define([{
     "60%": { height: "30px" },
     "100%": { height: "10px" },
 }, ]);
+
 $.keyframe.define([{
-    name: "moveDown1",
-    to: { transform: "translateY(630px)" },
-}, ]);
+        name: "typewriter",
+        "0%": {
+            width: "0",
+            "border-right": "1px solid ",
+        },
+        "100%": {
+            width: "24em",
+            "border-right": "0px",
+        },
+    },
+    {
+        name: "blinkTextCursor",
+        "0%": { "border-color": "transparent" },
+        "50%": { "border-color": "rgba(255, 255, 255, .75)" },
+        "100%": { "border-color": "transparent" },
+    },
+]);
 
 $().playKeyframe({
     name: "trapdoor-sequence", // name of the keyframe you want to bind to the selected element
