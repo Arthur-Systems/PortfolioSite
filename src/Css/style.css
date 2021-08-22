@@ -8,6 +8,8 @@ html {
   background-color: #333333;
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
 }
 
 #head {
@@ -646,11 +648,9 @@ html {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 57, 57, 0.6)), to(rgba(0, 0, 0, 0.6))), url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
   background-image: linear-gradient(rgba(90, 57, 57, 0.6), rgba(0, 0, 0, 0.6)), url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
   background-attachment: fixed;
-  background-position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  background-position-y: center;
 }
 
 #splash .about-heading {
@@ -670,17 +670,22 @@ html {
   font-family: "Space Grotesk", sans-serif;
 }
 
-#splash img {
-  width: 350px;
-  aspect-ratio: 1/1;
-  border-radius: 20%;
-  margin-left: auto;
-  margin-right: 100px;
+#splash #Faceimage {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1/ span 2;
   -ms-grid-column: 1;
   grid-column: 1;
+  margin-left: auto;
+  margin-right: 100px;
+  -webkit-perspective: 40px;
+          perspective: 40px;
+}
+
+#splash img {
+  width: 350px;
+  aspect-ratio: 1/1;
+  border-radius: 20%;
 }
 
 .typeout p {
