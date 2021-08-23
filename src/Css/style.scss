@@ -62,7 +62,7 @@ font-family: 'Space Grotesk', sans-serif;
         font-family: "Khula", sans-serif;
         overflow-x: hidden;
         width: 100%;
-        min-height: 100vh;
+        min-height: 100%;
     }
     
     #head {
@@ -75,11 +75,13 @@ font-family: 'Space Grotesk', sans-serif;
         z-index: 1;
     }
     
-    #footer {
+    body footer {
         background-color: black;
         margin: 0;
-        padding-top: 100px;
         width: 100%;
+        bottom: 0;
+        height: 200px;
+        left: 0;
         P {
             @include zero();
         }
@@ -418,8 +420,7 @@ font-family: 'Space Grotesk', sans-serif;
     }
     
     #body {
-        margin-bottom: 1000px;
-        position: relative;
+        margin-bottom: 2000px;
         width: 100%;
     }
     
@@ -434,11 +435,11 @@ font-family: 'Space Grotesk', sans-serif;
         grid-gap: 5px;
         justify-content: center;
         align-content: center;
-        aspect-ratio: 10/5;
         user-select: none;
+        width: auto;
+        min-height: 100vh;
         background: {
             image: linear-gradient(rgba(90, 57, 57, 0.6), rgba(0, 0, 0, 0.6)), url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
-            attachment: fixed;
             repeat: no-repeat;
             size: cover;
             position: bottom;
@@ -475,6 +476,19 @@ font-family: 'Space Grotesk', sans-serif;
             width: 350px;
             aspect-ratio: 1/1;
             border-radius: 20%;
+        }
+        .scrollarrows {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100px;
+            width: auto;
+            i {
+                font-size: 50px;
+                display: inline-block;
+                animation: backInDown 3s infinite;
+            }
         }
     }
     

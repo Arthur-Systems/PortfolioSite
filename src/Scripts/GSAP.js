@@ -21,6 +21,7 @@ ScrollTrigger.create({
     end: "+=200%",
     scrub: true,
     pin: true,
+    pinSpacing: true,
     markers: true,
     toggleActions: "restart reverse reset reset",
 });
