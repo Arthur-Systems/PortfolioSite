@@ -699,8 +699,8 @@ html {
 }
 
 .typeout p:nth-child(1) {
-  -webkit-animation: typewriter 4s steps(50) 1s normal both, blinkTextCursor 500ms infinite normal;
-          animation: typewriter 4s steps(50) 1s normal both, blinkTextCursor 500ms infinite normal;
+  -webkit-animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
+          animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
   position: relative;
   margin: 0 auto;
 }
@@ -708,10 +708,10 @@ html {
 .typeout p:nth-child(2) {
   width: 0;
   text-align: center;
-  -webkit-animation: typewriter 4s steps(50) 1s normal both, blinkTextCursor 500ms infinite normal;
-          animation: typewriter 4s steps(50) 1s normal both, blinkTextCursor 500ms infinite normal;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  -webkit-animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
+          animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   margin: 0 auto;
@@ -838,40 +838,14 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
+  color: black;
   margin-top: 0;
   padding-left: 0;
   width: calc(100% - (2 * $border));
-  background-color: #4d4d4d;
+  background-color: #cccccc;
   text-align: center;
   position: relative;
-  border: 7px solid white;
-}
-
-#Quote::before {
-  content: "";
-  position: absolute;
-  top: 21px;
-  left: -7px;
-  right: 0;
-  bottom: 21px;
-  border: 7px solid #4d4d4d;
-  height: calc(100% - $border);
-  width: 100%;
-  border-radius: 20px;
-}
-
-#Quote::after {
-  content: "";
-  position: absolute;
-  top: -7px;
-  bottom: -7px;
-  left: 21px;
-  right: 21px;
-  border: 7px solid #4d4d4d;
-  height: 100%;
-  width: calc(100% - (2 * $border));
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 #Quote p {

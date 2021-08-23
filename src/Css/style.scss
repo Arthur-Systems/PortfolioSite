@@ -488,15 +488,15 @@ font-family: 'Space Grotesk', sans-serif;
             white-space: nowrap;
             letter-spacing: .15em;
             &:nth-child(1) {
-                animation: typewriter 4s steps(50) 1s normal both, blinkTextCursor 500ms infinite normal;
+                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
                 position: relative;
                 margin: 0 auto;
             }
             &:nth-child(2) {
                 width: 0;
                 text-align: center;
-                animation: typewriter 4s steps(50) 1s normal both, blinkTextCursor 500ms infinite normal;
-                animation-delay: 5s;
+                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
+                animation-delay: 3s;
                 animation-fill-mode: forwards;
                 margin: 0 auto;
             }
@@ -606,38 +606,14 @@ font-family: 'Space Grotesk', sans-serif;
         $border: 7px;
         position: relative;
         @include center();
-        color: white;
+        color: black;
         margin-top: 0;
         padding-left: 0;
         width: calc(100% - (2 * $border));
-        background-color: lighten($background, 10%);
+        background-color: darken($color: white, $amount: 20%);
         text-align: center;
         position: relative;
-        border: $border solid white;
-        &::before {
-            content: "";
-            position: absolute;
-            top: $border * 3;
-            left: -$border;
-            right: 0;
-            bottom: $border * 3;
-            border: $border solid lighten($background, 10%);
-            height: calc(100% - $border);
-            width: 100%;
-            border-radius: 20px;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            top: -$border;
-            bottom: -$border;
-            left: $border * 3;
-            right: $border * 3;
-            border: $border solid lighten($background, 10%);
-            height: 100%;
-            width: calc(100% - (2 * $border));
-            border-radius: 20px;
-        }
+        border-radius: 25px;
         p {
             margin: {
                 top: 30px;
