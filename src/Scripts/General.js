@@ -59,9 +59,9 @@ $(document).ready(function() {
     }
 });
 
-$(window).resize(function() {
+$(window).on("load ready", function() {
     if ($(window).width() < 1024) {}
-    // $("#splash").css("background-size", $(window).width() + $(window).height());
+    // $("#splash").css("min-height", $(document).height() + "px");
 });
 
 $("#navtext").click(function() {

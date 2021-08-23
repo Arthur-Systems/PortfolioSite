@@ -62,7 +62,7 @@ font-family: 'Space Grotesk', sans-serif;
         font-family: "Khula", sans-serif;
         overflow-x: hidden;
         width: 100%;
-        min-height: 100vh;
+        min-height: 100%;
     }
     
     #head {
@@ -75,11 +75,13 @@ font-family: 'Space Grotesk', sans-serif;
         z-index: 1;
     }
     
-    #footer {
+    body footer {
         background-color: black;
         margin: 0;
-        padding-top: 100px;
         width: 100%;
+        bottom: 0;
+        height: 200px;
+        left: 0;
         P {
             @include zero();
         }
@@ -418,8 +420,7 @@ font-family: 'Space Grotesk', sans-serif;
     }
     
     #body {
-        margin-bottom: 1000px;
-        position: relative;
+        margin-bottom: 2000px;
         width: 100%;
     }
     
@@ -434,11 +435,11 @@ font-family: 'Space Grotesk', sans-serif;
         grid-gap: 5px;
         justify-content: center;
         align-content: center;
-        aspect-ratio: 10/5;
         user-select: none;
+        width: auto;
+        min-height: 100vh;
         background: {
             image: linear-gradient(rgba(90, 57, 57, 0.6), rgba(0, 0, 0, 0.6)), url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
-            attachment: fixed;
             repeat: no-repeat;
             size: cover;
             position: bottom;
@@ -476,6 +477,19 @@ font-family: 'Space Grotesk', sans-serif;
             aspect-ratio: 1/1;
             border-radius: 20%;
         }
+        .scrollarrows {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100px;
+            width: auto;
+            i {
+                font-size: 50px;
+                display: inline-block;
+                animation: backInDown 3s infinite;
+            }
+        }
     }
     
     .typeout {
@@ -488,15 +502,15 @@ font-family: 'Space Grotesk', sans-serif;
             white-space: nowrap;
             letter-spacing: .15em;
             &:nth-child(1) {
-                animation: typewriter 4s steps(50) 1s normal both, blinkTextCursor 500ms infinite normal;
+                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
                 position: relative;
                 margin: 0 auto;
             }
             &:nth-child(2) {
                 width: 0;
                 text-align: center;
-                animation: typewriter 4s steps(50) 1s normal both, blinkTextCursor 500ms infinite normal;
-                animation-delay: 5s;
+                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
+                animation-delay: 3s;
                 animation-fill-mode: forwards;
                 margin: 0 auto;
             }
@@ -606,38 +620,14 @@ font-family: 'Space Grotesk', sans-serif;
         $border: 7px;
         position: relative;
         @include center();
-        color: white;
+        color: black;
         margin-top: 0;
         padding-left: 0;
         width: calc(100% - (2 * $border));
-        background-color: lighten($background, 10%);
+        background-color: darken($color: white, $amount: 20%);
         text-align: center;
         position: relative;
-        border: $border solid white;
-        &::before {
-            content: "";
-            position: absolute;
-            top: $border * 3;
-            left: -$border;
-            right: 0;
-            bottom: $border * 3;
-            border: $border solid lighten($background, 10%);
-            height: calc(100% - $border);
-            width: 100%;
-            border-radius: 20px;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            top: -$border;
-            bottom: -$border;
-            left: $border * 3;
-            right: $border * 3;
-            border: $border solid lighten($background, 10%);
-            height: 100%;
-            width: calc(100% - (2 * $border));
-            border-radius: 20px;
-        }
+        border-radius: 25px;
         p {
             margin: {
                 top: 30px;
