@@ -36,11 +36,12 @@ $(window).scroll(function() {
         $("#head").css("top", "0px");
     }
     if ($(document).scrollTop() >= $("#body").position().top) {
-        $("#head").css("background-color", "rgba(0, 0, 0, 0.5)");
-        $("#head").css("background-color", "black");
+        $("#head").addClass("color")
+        $("#head").removeClass("attop")
     }
     if ($(document).scrollTop() < $("#body").position().top && position <= 1) {
-        $("#head").css("background-color", "transparent");
+        $("#head").removeClass("color")
+        $("#head").addClass("attop")
     }
 });
 $(document).ready(function() {

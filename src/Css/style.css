@@ -5,7 +5,7 @@ font-family: 'Space Grotesk', sans-serif;
 body,
 html {
   margin: 0px;
-  background-color: #333333;
+  background-color: #343a40;
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
   width: 100%;
@@ -14,6 +14,8 @@ html {
 
 #head {
   font-family: "Space Grotesk", sans-serif;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
   font-size: 20px;
   top: 0px;
   width: 100%;
@@ -21,6 +23,18 @@ html {
   -webkit-transition: top 0.7s;
   transition: top 0.7s;
   z-index: 1;
+}
+
+#head.color {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background-color: #4b545c;
+  -webkit-box-shadow: 10px 5px 50px white;
+          box-shadow: 10px 5px 50px white;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 body footer {
@@ -845,53 +859,54 @@ body footer P {
   position: relative;
 }
 
-#Quote {
-  position: relative;
+#AboutMe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 100px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 0;
+}
+
+#AboutMe h1 {
+  word-wrap: none;
+  color: white;
+  font-size: 5vw;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+#AboutMe p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5vw;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 5vw;
+  margin-right: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: black;
-  margin-top: 0;
-  padding-left: 0;
-  width: calc(100% - (2 * $border));
-  background-color: #cccccc;
   text-align: center;
-  position: relative;
-  border-radius: 25px;
-}
-
-#Quote p {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 0;
-  font-family: "Khula", sans-serif;
-  font-size: 25px;
-  padding: 0;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 60%;
-}
-
-#Quote img {
-  height: auto;
-  width: 20%;
-}
-
-#intro {
+  word-wrap: break-word;
   color: white;
-  margin-top: 0;
-  padding-top: 0;
-  background-color: #4d4d4d;
-  display: -ms-grid;
-  display: grid;
+}
+
+#AboutMe img {
+  border-radius: 50%;
+  height: 50%;
+}
+
+.heading {
+  color: white;
+  margin-left: 20px;
 }
 
 @-webkit-keyframes rotate {
