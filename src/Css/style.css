@@ -393,8 +393,8 @@ body footer P {
 }
 
 #logo img {
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
 }
 
 #arrow.flip,
@@ -661,6 +661,7 @@ body footer P {
           user-select: none;
   width: auto;
   min-height: 100vh;
+  cursor: default;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 57, 57, 0.6)), to(rgba(0, 0, 0, 0.6))), url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
   background-image: linear-gradient(rgba(90, 57, 57, 0.6), rgba(0, 0, 0, 0.6)), url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
   background-repeat: no-repeat;
@@ -693,31 +694,15 @@ body footer P {
   grid-column: 1;
   margin-left: auto;
   margin-right: 100px;
-  -webkit-perspective: 40px;
-          perspective: 40px;
+  -webkit-perspective: 50px;
+          perspective: 50px;
 }
 
 #splash img {
   width: 350px;
   aspect-ratio: 1/1;
-  border-radius: 20%;
-}
-
-#splash .scrollarrows {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  height: 100px;
-  width: auto;
-}
-
-#splash .scrollarrows i {
-  font-size: 50px;
-  display: inline-block;
-  -webkit-animation: backInDown 3s infinite;
-          animation: backInDown 3s infinite;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 
 .typeout p {
@@ -731,8 +716,8 @@ body footer P {
 }
 
 .typeout p:nth-child(1) {
-  -webkit-animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
-          animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
+  -webkit-animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
+          animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
   position: relative;
   margin: 0 auto;
 }
@@ -740,123 +725,13 @@ body footer P {
 .typeout p:nth-child(2) {
   width: 0;
   text-align: center;
-  -webkit-animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
-          animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
+  -webkit-animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
+          animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   margin: 0 auto;
-}
-
-#border {
-  transition-transform: rotate;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  background: transparent;
-  position: relative;
-}
-
-#border::before, #border::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border: 10px #eb311f solid;
-  border-right: none;
-  border-top: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#border.animate {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
-}
-
-#border.animate::before, #border.animate::after {
-  width: 100%;
-  height: 100%;
-  -webkit-transition-property: height, width;
-  transition-property: height, width;
-  -webkit-transition-duration: 0.5s, 0.5s;
-          transition-duration: 0.5s, 0.5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  transition-direction: initial;
-  -webkit-transition-delay: 1s, 1.5s;
-          transition-delay: 1s, 1.5s;
-}
-
-#border.turn {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-#border.turn::before, #border.turn::after {
-  border: 5px white solid;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
-  border-right: none;
-  border-bottom: none;
-  -webkit-transition-property: height, width;
-  transition-property: height, width;
-  -webkit-transition-duration: 0.5s, 0.5s;
-          transition-duration: 0.5s, 0.5s;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  transition-direction: initial;
-  -webkit-transition-delay: 1s, 0.5s;
-          transition-delay: 1s, 0.5s;
-}
-
-#square {
-  position: relative;
-  height: 15vw;
-  width: 15vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 125px;
-  margin-bottom: 0;
-}
-
-#square img {
-  width: 100%;
-  height: 100%;
-}
-
-#square * {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-#blend {
-  mix-blend-mode: multiply;
-}
-
-#blend * {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-
-#grid {
-  display: -ms-grid;
-  display: grid;
-  grid: repeat(2, 1fr)/repeat(2, 1fr);
-}
-
-#grid span {
-  position: relative;
 }
 
 #AboutMe {

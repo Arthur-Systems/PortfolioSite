@@ -378,8 +378,8 @@ font-family: 'Space Grotesk', sans-serif;
         margin-top: -50px;
 
         img {
-            height: 150px;
-            width: 150px;
+            height: 250px;
+            width: 250px;
         }
     }
 
@@ -505,6 +505,7 @@ font-family: 'Space Grotesk', sans-serif;
         user-select: none;
         width: auto;
         min-height: 100vh;
+        cursor: default;
 
         background: {
             image: linear-gradient(rgba(90, 57, 57, 0.6), rgba(0, 0, 0, 0.6)), url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
@@ -546,29 +547,17 @@ font-family: 'Space Grotesk', sans-serif;
                 right: 100px;
             }
 
-            perspective: 40px;
+            perspective: 50px;
         }
 
         img {
             width: 350px;
             aspect-ratio: 1/1;
-            border-radius: 20%;
+          
+            filter:brightness(0.8);
         }
 
-        .scrollarrows {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 100px;
-            width: auto;
-
-            i {
-                font-size: 50px;
-                display: inline-block;
-                animation: backInDown 3s infinite;
-            }
-        }
+       
     }
 
     .typeout {
@@ -580,9 +569,10 @@ font-family: 'Space Grotesk', sans-serif;
             overflow: hidden;
             white-space: nowrap;
             letter-spacing: .15em;
+            
 
             &:nth-child(1) {
-                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
+                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
                 position: relative;
                 margin: 0 auto;
             }
@@ -590,127 +580,14 @@ font-family: 'Space Grotesk', sans-serif;
             &:nth-child(2) {
                 width: 0;
                 text-align: center;
-                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 500ms infinite normal;
+                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
                 animation-delay: 3s;
                 animation-fill-mode: forwards;
                 margin: 0 auto;
             }
         }
     }
-
-    #border {
-        $turn: 1s;
-        $duration: 0.5s;
-
-        transition: {
-            transform: rotate;
-            duration: $turn;
-            timing-function: ease;
-            delay: 0s;
-        }
-
-        background: transparent;
-        position: relative;
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-            border: 10px #eb311f solid;
-            border-right: none;
-            border-top: none;
-            box-sizing: border-box;
-        }
-
-        &.animate {
-            transform: rotate(225deg);
-
-            &::before,
-            &::after {
-                width: 100%;
-                height: 100%;
-
-                transition: {
-                    property: height, width;
-                    duration: $duration, $duration;
-                    timing-function: ease;
-                    direction: initial;
-                    delay: $turn, $turn + $duration;
-                }
-            }
-        }
-
-        &.turn {
-            transform: rotate(0deg);
-
-            &::before,
-            &::after {
-                border: 5px white solid;
-                top: 0;
-                left: 0;
-                width: 50%;
-                height: 50%;
-                border-right: none;
-                border-bottom: none;
-
-                transition: {
-                    property: height, width;
-                    duration: $duration, $duration;
-                    timing-function: ease;
-                    direction: initial;
-                    delay: $turn, $duration;
-                }
-            }
-        }
-    }
-
-    #square {
-        position: relative;
-        height: 15vw;
-        width: 15vw;
-
-        margin: {
-            left: auto;
-            right: auto;
-            top: 125px;
-            bottom: 0;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-
-        * {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-        }
-    }
-
-    #blend {
-        mix-blend-mode: multiply;
-
-        * {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-        }
-    }
-
-    #grid {
-        display: grid;
-        grid: repeat(2, 1fr) / repeat(2, 1fr);
-
-        span {
-            position: relative;
-        }
-    }
-
+    
     #AboutMe {
         display: flex;
 

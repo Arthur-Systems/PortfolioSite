@@ -1,27 +1,23 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let timeline1 = gsap.timeline();
-timeline1.to(
-    ".typeout", { duration: 1, opacity: 0, ease: "power2.out" },
-    ".name", { xPercent: -100 }
-);
-timeline1.to("#Faceimage", { xPercent: -100 });
-timeline1.to(".name", { xPercent: 100 });
-
-// timeline1.to("#intro", {
-//     x: 200,
-//     rotation: 360,
-//     duration: 2,
-// });
+let timeline = gsap.timeline();
+timeline.to(".name", {xPercent: -100, duration: 1, opacity: 0, ease: "power2.out" });
+timeline.to("#Faceimage", { xPercent: -200 , duration: 1, ease: "power1.inOut"});
+timeline.to(".typeout", { duration: 1, opacity: 0, ease: "power2.out" });
+// timeline.to(".name", {xPercent: 100});
 
 ScrollTrigger.create({
-    animation: timeline1,
+    animation: timeline,
     trigger: "#splash",
     start: "top top",
     end: "+=200%",
-    scrub: true,
+    scrub: 2,
     pin: true,
     pinSpacing: true,
     markers: true,
     toggleActions: "restart reverse reset reset",
 });
+
+// if (ScrollTrigger.isTouch === 1) {
+//     ScrollTrigger.kill(true, true);
+//     };

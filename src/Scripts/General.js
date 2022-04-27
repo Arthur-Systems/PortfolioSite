@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     if ($(window).width() > 500) {
         var FA = document.createElement("link");
-        FA.href = "https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css";
+        FA.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css";
         FA.rel = "stylesheet";
         FA.crossorigin = "anonymous";
         FA.referrerpolicy = "no-referrer";
