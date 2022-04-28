@@ -74,22 +74,37 @@ font-family: 'Space Grotesk', sans-serif;
         width: 100%;
         position: fixed;
         transition: top 0.7s;
+        transition: all 1s;
         z-index: 1;
 
-        &.color {
-
-            transition: all 1s;
-            background-color: lighten($background, 10%);
-            box-shadow: 10px 5px 50px white;
+        &.past {
+            background-color: darken($background, 20%);
+            // box-shadow: 10px 5px 50px white;
             animation-duration: 1s;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+
+            #logo{
+               
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.5s ease;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+    #header #Navlist {
+        transition: all 1s ease-in-out;
+        font-size: x-large;
+
+    }
         }
 
         &.attop {
             animation: {}
 
         }
+
+     
     }
 
     body footer {

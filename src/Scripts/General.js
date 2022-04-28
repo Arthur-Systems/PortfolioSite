@@ -1,49 +1,49 @@
-var position = $(window).scrollTop();
+
+var TopOfPage = $(window).scrollTop();
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
+   
     if ($(window).width() > 1024) {
-        if (scroll > position) {
-            var items = {
-                "#header": "social",
-                "#arrow": "flip",
-                "#arrow1": "flip",
-                "#arrownav": "flip",
-                "#arrownav1": "flip",
-                "#NavDrop": "drop",
-                "#SocialDrop": "drop",
-                ".fa-caret-down": "turn",
-            };
-            Object.keys(items).forEach(function(key) {
-                $(key).removeClass(items[key]);
-            });
+        if (scroll > TopOfPage) {
+            // var items = {
+            //     "#header": "social",
+            //     "#arrow": "flip",
+            //     "#arrow1": "flip",
+            //     "#arrownav": "flip",
+            //     "#arrownav1": "flip",
+            //     "#NavDrop": "drop",
+            //     "#SocialDrop": "drop",
+            //     ".fa-caret-down": "turn",
+            // };
+            // Object.keys(items).forEach(function(key) {
+            //     $(key).removeClass(items[key]);
+            // });
+
+            if (scroll < TopOfPage) {
             $("#head").css(
                 "top", -$("#header").height() - $("#logo").height() + "px"
             );
-        } else if (scroll < position) {
+            }
+        } else if (scroll <= TopOfPage ) {
             $("#head").css("top", "0px");
-        } else if (scroll == position) {
+        } else if (scroll == TopOfPage) {
             $("#head").css("top", "0px");
-        } else if (scroll < body) {
-            $("#head").css("top", "0px");
-        }
-        position = scroll;
+        } 
+        TopOfPage = scroll;
     }
-});
-$(window).scroll(function() {
-    var position = $(window).scrollTop();
-    var body = $("#body").scrollTop();
-    if (position <= 1) {
-        $("#head").css("top", "0px");
-    }
-    if ($(document).scrollTop() >= $("#body").position().top) {
-        $("#head").addClass("color")
+
+    if ($(document).scrollTop() > $("#body").offset().top) {
+        $("#head").addClass("past") 
         $("#head").removeClass("attop")
     }
-    if ($(document).scrollTop() < $("#body").position().top && position <= 1) {
-        $("#head").removeClass("color")
+
+    if ($(document).scrollTop() < $("#body").offset().top) {
+        $("#head").removeClass("past")
         $("#head").addClass("attop")
     }
+    
 });
+
 $(document).ready(function() {
     $("#SocialDrop li ul").css(
         "top",
