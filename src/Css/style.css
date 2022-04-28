@@ -34,15 +34,15 @@ html {
 }
 
 #head.past #logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 0;
+  top: -10%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#head.past #logo img {
+  width: auto;
+  height: 150px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -50,9 +50,11 @@ html {
 #head.past #logo:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-#head.past #header #Navlist {
+#head.past #header#Navlist {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   font-size: x-large;

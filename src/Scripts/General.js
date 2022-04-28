@@ -1,10 +1,10 @@
 
-var TopOfPage = $(window).scrollTop();
+var scroll1 = $(window).scrollTop();
 $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
+var scroll2 = $(window).scrollTop();
    
     if ($(window).width() > 1024) {
-        if (scroll > TopOfPage) {
+        if (scroll2 > scroll1) {
             // var items = {
             //     "#header": "social",
             //     "#arrow": "flip",
@@ -19,27 +19,30 @@ $(window).scroll(function() {
             //     $(key).removeClass(items[key]);
             // });
 
-            if (scroll < TopOfPage) {
+            if (scroll2 < scroll1) {
             $("#head").css(
                 "top", -$("#header").height() - $("#logo").height() + "px"
             );
             }
-        } else if (scroll <= TopOfPage ) {
+        } else if (scroll2 <= scroll1 ) {
             $("#head").css("top", "0px");
-        } else if (scroll == TopOfPage) {
+        } else if (scroll2 == scroll1) {
             $("#head").css("top", "0px");
         } 
-        TopOfPage = scroll;
+        scroll1 = scroll2;
     }
 
     if ($(document).scrollTop() > $("#body").offset().top) {
         $("#head").addClass("past") 
         $("#head").removeClass("attop")
+        $("#logo").children('img').attr("src", "/src/Images/Public/UCSCLARGE.png");
     }
 
     if ($(document).scrollTop() < $("#body").offset().top) {
         $("#head").removeClass("past")
         $("#head").addClass("attop")
+        $("#logo").children('img').attr("src", "/src/Images/Public/UCSC.png");
+
     }
     
 });

@@ -81,31 +81,45 @@ font-family: 'Space Grotesk', sans-serif;
             background-color: darken($background, 20%);
             // box-shadow: 10px 5px 50px white;
             animation-duration: 1s;
+            
 
             #logo{
+                margin:0;
+                top: -10%;
+                transition: all 1s ease;
                
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: all 0.5s ease;
+                img{
+                  
+                    width: auto;
+                    height: 150px;
+                    transition: all 0.5s ease;
+                }
                 &:hover {
                     transform: scale(1.2);
+                    transition: all 0.5s ease-in-out;
+                    
                 }
             }
-    #header #Navlist {
-        transition: all 1s ease-in-out;
-        font-size: x-large;
+        
+            #header{
 
-    }
+            
+    
+            &#Navlist {
+                transition: all 1s ease-in-out;
+                font-size: x-large;
+    
+            
+             
+            }
         }
-
+    }
         &.attop {
-            animation: {}
+          
 
         }
-
-     
-    }
+ 
+}
 
     body footer {
         background-color: black;
