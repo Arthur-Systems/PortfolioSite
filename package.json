@@ -11,10 +11,10 @@
         "vite": "^2.5.0"
     },
     "dependencies": {
-        "@keyframes/core": "^2.0.10",
+        "@keyframes/core": "^2.0.8",
         "@popperjs/core": "^2.9.3",
         "aos": "^2.3.4",
-        "npm": "^7.21.0",
+        "npm": "^8.7.0",
         "postcss-discard-comments": "^5.0.1",
         "postcss-scss": "^4.0.0"
     },
