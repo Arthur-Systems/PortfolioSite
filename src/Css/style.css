@@ -40,6 +40,14 @@ html {
   transition: all 1s ease;
 }
 
+#head.past #logo #UCSClogo {
+  display: none;
+}
+
+#head.past #logo #UCSClogoLarge {
+  display: block !important;
+}
+
 #head.past #logo img {
   width: auto;
   height: 150px;
@@ -264,6 +272,21 @@ body footer P {
           animation-fill-mode: forwards;
   -webkit-animation-delay: calc(var(--order) * 150ms);
           animation-delay: calc(var(--order) * 150ms);
+}
+
+.Grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
 }
 
 #SocialTurn {
@@ -698,6 +721,7 @@ body footer P {
 
 #splash .about-heading {
   position: relative;
+  text-align: center;
   -ms-grid-row: 2;
   grid-row: 2;
   -ms-grid-column: 2;
@@ -808,6 +832,7 @@ body footer P {
 
 .heading {
   color: white;
+  text-align: center;
   margin-left: 20px;
 }
 
