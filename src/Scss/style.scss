@@ -1,910 +1,900 @@
-    //!fonts
-    /*
+//!fonts
+/*
 font-family: 'Khula', sans-serif;
 font-family: 'Space Grotesk', sans-serif;
 */
 
-    // !Start Mixins
-    @mixin socialsize {
-        font-size: 25px;
-        margin: 5px 15px;
-        padding: 20px;
-        height: 25px;
-        width: 25px;
-    }
-
-    @mixin socialhover {
-        transition: ease-out 0.5s;
-        background: white;
-    }
-
-    @mixin center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    @mixin underline {
-        content: "";
-        position: absolute;
-        left: 100%;
-        right: 100%;
-        background-color: $navlistcolor;
-        border-radius: 100px;
-        height: 3px;
-    }
-
-    @mixin zero {
-        margin: 0;
-        padding: 0;
-    }
-
-    @mixin flip {
-        animation: {
-            name: rotate;
-            duration: 0.6s;
-            iteration-count: 1;
-            timing-function: ease;
-            fill-mode: forwards;
-        }
-    }
-
-    //!Varables start
-    $Mainfont: "Space Grotesk",
-    sans-serif;
-    $background: #343a40;
-    $navlistcolor: #ff8235;
-
-    //!main body start
-    body,
-    html {
-        margin: 0px;
-        background-color: $background;
-        font-family: "Khula", sans-serif;
-        overflow-x: hidden;
-        width: 100%;
-        min-height: 100%;
-    }
-
-    #head {
-        font-family: $Mainfont;
-        transition: background-color 0.5s ease;
-        font-size: 20px;
-        top: 0px;
-        width: 100%;
-        position: fixed;
-        transition: top 0.7s;
-        transition: all 1s;
-        z-index: 1;
-
-        &.past {
-            background-color: darken($background, 20%);
-            // box-shadow: 10px 5px 50px white;
-            animation-duration: 1s;
-            
-
-            #logo{
-                margin:0;
-                top: -10%;
-                transition: all 1s ease;
-               
-                img{
-                  
-                    width: auto;
-                    height: 150px;
-                    transition: all 0.5s ease;
-                }
-                &:hover {
-                    transform: scale(1.2);
-                    transition: all 0.5s ease-in-out;
-                    
-                }
-            }
-        
-            #header{
-
-                padding-bottom: 10px;
-
-            
-            &#Navlist {
-                transition: all 1s ease-in-out;
-                font-size: x-large;
-
-             
-            }
-        }
-    }
-        &.attop {
-          
-
-        }
- 
+// !Start Mixins
+@mixin socialsize {
+  font-size: 25px;
+  margin: 5px 15px;
+  padding: 20px;
+  height: 25px;
+  width: 25px;
 }
 
-    body footer {
-        background-color: black;
-        margin: 0;
-        width: 100%;
-        bottom: 0;
-        height: 200px;
-        left: 0;
+@mixin socialhover {
+  transition: ease-out 0.5s;
+  background: white;
+}
 
-        P {
-            @include zero();
-        }
-    }
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    //classes and ID's
-    #Navlist {
-        display: flex;
-        align-items: center;
-        padding-left: 50px;
+@mixin underline {
+  content: "";
+  position: absolute;
+  left: 100%;
+  right: 100%;
+  background-color: $navlistcolor;
+  border-radius: 100px;
+  height: 3px;
+}
 
-        a {
-            margin: 0 50px 0 0;
-            font-size: 100%;
-            color: white;
-            position: relative;
-            text-decoration: none;
+@mixin zero {
+  margin: 0;
+  padding: 0;
+}
 
-            &::after {
-                bottom: 0;
-                @include underline();
-            }
+@mixin flip {
+  animation: {
+    name: rotate;
+    duration: 0.6s;
+    iteration-count: 1;
+    timing-function: ease;
+    fill-mode: forwards;
+  }
+}
 
-            &:hover {
-                color: $navlistcolor;
+//!Varables start
+$Mainfont: "Space Grotesk", sans-serif;
+$background: #343a40;
+$navlistcolor: #ff8235;
 
-                &::after {
-                    left: 0%;
-                    right: 0%;
-                    transition: all 0.5s;
-                }
-            }
-        }
-    }
+//!main body start
+body,
+html {
+  margin: 0px;
+  background-color: $background;
+  font-family: "Khula", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
+}
 
-    #NavDrop {
-        z-index: 0;
-        display: none;
-        align-items: center;
-        margin: 0;
-        position: relative;
-        list-style: none;
-        width: 15vw;
-        transition: all 1s ease-in-out;
+#head {
+  font-family: $Mainfont;
+  transition: background-color 0.5s ease;
+  font-size: 20px;
+  top: 0px;
+  width: 100%;
+  position: fixed;
+  transition: top 0.7s;
+  transition: all 1s;
+  z-index: 1;
 
-        p {
-            cursor: pointer;
-            margin: 0;
-            font-size: 100%;
-            color: white;
-            position: relative;
-            text-decoration: none;
-
-            &::after {
-                margin-top: 27px;
-                @include underline();
-            }
-
-            &:hover {
-                i {
-                    cursor: pointer;
-                    color: $navlistcolor;
-                }
-
-                color: $navlistcolor;
-
-                &::after {
-                    left: 0%;
-                    right: 0%;
-                    transition: all 0.5s;
-                }
-            }
-        }
-
-        li ul {
-            visibility: hidden;
-        }
-
-        ul {
-            list-style: none;
-            background: none;
-            left: 0;
-            padding: 0;
-            position: absolute;
-            top: -400px;
-            z-index: -999;
-
-            li {
-                background: #090909;
-
-                padding: {
-                    top: 2vw;
-                    left: 4vw;
-                    right: 4vw;
-                    bottom: 2vw;
-                }
-
-                position: relative;
-
-                &::before {
-                    @include underline();
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    background-color: white;
-                }
-
-                a {
-                    @include center();
-                    width: auto !important;
-                    text-decoration: none;
-                    padding: 0;
-                    text-align: left;
-                    color: white;
-                    position: relative;
-
-                    &::after {
-                        @include underline();
-                        bottom: 0;
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                        color: $navlistcolor;
-
-                        &::after {
-                            left: 15%;
-                            right: 15%;
-                            transition: all 0.5s;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.drop {
-            li {
-                ul {
-                    height: auto;
-                    visibility: visible;
-                }
-            }
-
-            ul li {
-                animation: {
-                    name: moveDown;
-                    duration: 0.6s;
-                    iteration-count: 1;
-                    timing-function: ease;
-                    fill-mode: forwards;
-                    delay: calc(var(--order) * 150ms);
-                }
-            }
-        }
-    }
-
-    #SocialTurn {
-        color: white;
-        position: relative;
-        @include center();
-        margin: 0;
-        padding: 0;
-
-        p {
-            &::after {
-                margin-top: 30px;
-                @include underline();
-            }
-
-            &:hover {
-                cursor: pointer;
-                color: $navlistcolor;
-
-                i {
-                    cursor: pointer;
-                    color: $navlistcolor;
-                }
-
-                &::after {
-                    left: 15%;
-                    right: 10%;
-                    transition: all 0.5s;
-                }
-            }
-        }
-    }
-
-    #SocialDrop {
-        list-style: none;
-        transition: all 1s ease-in-out;
-
-        #Title {
-            color: white;
-            text-decoration: none;
-            width: 170px;
-            position: relative;
-            margin-left: auto;
-            margin-right: 10px;
-
-            &::after {
-                @include underline();
-                bottom: -5px;
-                transition: all 0.5s;
-            }
-
-            &:hover {
-                cursor: pointer;
-                color: $navlistcolor;
-
-                &::after {
-                    left: 10%;
-                    right: 5%;
-                }
-
-                i {
-                    color: $navlistcolor;
-                }
-            }
-        }
-
-        li ul {
-            display: grid;
-            visibility: hidden;
-            grid-template-columns: auto;
-            list-style: none;
-            position: absolute;
-            right: 0;
-
-            li {
-                background: #434343;
-                padding-right: 10px;
-                right: 0;
-
-                p {
-                    font-family: $Mainfont;
-                }
-
-                a {
-                    width: 75%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 5px;
-                }
-
-                :hover p {
-                    color: black;
-                }
-            }
-        }
-
-        &.drop {
-            li ul {
-                height: auto;
-                visibility: visible;
-            }
-
-            ul li {
-                animation: {
-                    name: moveDown;
-                    duration: 0.3s;
-                    iteration-count: 1;
-                    timing-function: ease;
-                    fill-mode: forwards;
-                    delay: calc(var(--order) * 50ms);
-                }
-            }
-        }
-    }
+  &.past {
+    background-color: darken($background, 20%);
+    // box-shadow: 10px 5px 50px white;
+    animation-duration: 1s;
 
     #logo {
-        position: absolute;
-        left: 50%;
-        margin-left: -50px;
-        top: 50%;
-        margin-top: -50px;
+      margin: 0;
+      top: -10%;
+      transition: all 1s ease;
 
-        img {
-            height: 250px;
-            width: 250px;
-        }
-    }
-
-    #arrow,
-    #arrownav {
-        &.flip {
-            @include flip();
-        }
-    }
-
-    #arrow1 {
-        &.flip {
-            @include flip();
-            animation-name: turn !important;
-        }
-    }
-
-    #navtext1 {
-        display: none;
-
-        #arrownav1 {
-            transform: rotate(180deg);
-
-            &.flip {
-                @include flip();
-                animation-name: turn !important;
-            }
-        }
+      img {
+        width: auto;
+        height: 150px;
+        transition: all 0.5s ease;
+      }
+      &:hover {
+        transform: scale(1.2);
+        transition: all 0.5s ease-in-out;
+      }
     }
 
     #header {
-        display: grid;
-        grid-template-columns: 50% auto;
-        user-select: none;
-        position: relative;
+      padding-bottom: 10px;
+
+      &#Navlist {
+        transition: all 1s ease-in-out;
+        font-size: x-large;
+      }
+    }
+  }
+  &.attop {
+  }
+}
+
+body footer {
+  background-color: black;
+  margin: 0;
+  width: 100%;
+  bottom: 0;
+  height: 200px;
+  left: 0;
+
+  P {
+    @include zero();
+  }
+}
+
+//classes and ID's
+#Navlist {
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+
+  a {
+    margin: 0 50px 0 0;
+    font-size: 100%;
+    color: white;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      bottom: 0;
+      @include underline();
     }
 
-    .fab {
-        $Socallogo: ("telegram": #0088cc, "instagram": #833ab4, "twitter": #1da1f2, "facebook": #1778f2, "github": #211f1f, "linkedin": #0e76a8, );
-        color: white;
-        text-align: center;
-        text-decoration: none;
+    &:hover {
+      color: $navlistcolor;
 
-        @each $logo,
-        $i in $Socallogo {
-            &.fa-#{$logo} {
-                background: linear-gradient($i);
-                @include socialsize();
-            }
-        }
+      &::after {
+        left: 0%;
+        right: 0%;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
 
-        @each $logo,
-        $i in $Socallogo {
-            &.fa-#{$logo}:hover {
-                color: $i;
-                @include socialhover();
-            }
-        }
+#NavDrop {
+  z-index: 0;
+  display: none;
+  align-items: center;
+  margin: 0;
+  position: relative;
+  list-style: none;
+  width: 15vw;
+  transition: all 1s ease-in-out;
+
+  p {
+    cursor: pointer;
+    margin: 0;
+    font-size: 100%;
+    color: white;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      margin-top: 27px;
+      @include underline();
     }
 
-    .fas {
-        color: white;
-        @include center;
+    &:hover {
+      i {
+        cursor: pointer;
+        color: $navlistcolor;
+      }
 
-        &.fa-quote-left,
-        &.fa-quote-right,
-        &.fa-angle-right {
-            display: inline-block !important;
-        }
+      color: $navlistcolor;
 
-        &.fa-chevron-down {
-            padding: 0;
-            margin: 0;
-            font-size: 25px;
-
-            animation: {
-                name: bounce;
-                duration: 1.5s;
-                iteration-count: infinite;
-                timing-function: linear;
-                delay: calc(var(--order) * 300ms);
-            }
-        }
-
-        &.fa-corner {
-            display: inline-block !important;
-            position: absolute;
-            right: 0;
-            top: 0;
-            @include zero();
-
-            font: {
-                size: 50px;
-            }
-        }
-
-        &.fa-caret-down {
-            transform: rotate(-90deg);
-            transition: all 0.5s;
-
-            &.turn {
-                transform: rotate(0deg);
-            }
-        }
+      &::after {
+        left: 0%;
+        right: 0%;
+        transition: all 0.5s;
+      }
     }
+  }
 
-    #body {
-        margin-bottom: 2000px;
-        width: 100%;
-    }
+  li ul {
+    visibility: hidden;
+  }
 
-    #Title {
+  ul {
+    list-style: none;
+    background: none;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: -400px;
+    z-index: -999;
+
+    li {
+      background: #090909;
+
+      padding: {
+        top: 2vw;
+        left: 4vw;
+        right: 4vw;
+        bottom: 2vw;
+      }
+
+      position: relative;
+
+      &::before {
+        @include underline();
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+      }
+
+      a {
         @include center();
-    }
-
-    #splash {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr, 1fr;
-        grid-gap: 5px;
-        justify-content: center;
-        align-content: center;
-        user-select: none;
-        width: auto;
-        min-height: 100vh;
-        cursor: default;
-
-        background: {
-            image: linear-gradient(rgba(90, 57, 57, 0.6), rgba(0, 0, 0, 0.6)), url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
-            repeat: no-repeat;
-            size: cover;
-            position: bottom;
-        }
-
-        .about-heading {
-            position: relative;
-
-            grid: {
-                row: 2;
-                column: 2;
-            }
-        }
-
-        h1 {
-            text-align: center;
-            height: auto;
-            color: white;
-
-            margin: {
-                top: auto;
-            }
-
-            font: {
-                size: 5vw;
-                family: $Mainfont;
-            }
-        }
-
-        #Faceimage {
-            grid-row: 1/ span 2;
-            grid-column: 1;
-
-            margin: {
-                left: auto;
-                right: 100px;
-            }
-
-            perspective: 50px;
-        }
-
-        img {
-            width: 350px;
-            aspect-ratio: 1/1;
-          
-            filter:brightness(0.8);
-        }
-
-       
-    }
-
-    .typeout {
-        p {
-            color: white;
-            font-size: 2vw;
-            width: 100%;
-            text-align: left;
-            overflow: hidden;
-            white-space: nowrap;
-            letter-spacing: .15em;
-            
-
-            &:nth-child(1) {
-                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
-                position: relative;
-                margin: 0 auto;
-            }
-
-            &:nth-child(2) {
-                width: 0;
-                text-align: center;
-                animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
-                animation-delay: 3s;
-                animation-fill-mode: forwards;
-                margin: 0 auto;
-            }
-        }
-    }
-    
-    #AboutMe {
-        display: flex;
-
-        flex: {
-            direction: row;
-        }
-
-        margin: {
-            top: 100px;
-            bottom: 0;
-            left: 20px;
-            right: 20px;
-        }
-
-        padding-bottom: 0;
-
-        h1 {
-            word-wrap: none;
-            color: white;
-            font-size: 5vw;
-            position: absolute;
-            margin: 0;
-            padding: 0;
-
-        }
-
-        p {
-            display: flex;
-
-            font: {
-                size: 1.5vw;
-                family: $Mainfont;
-
-            }
-
-            line-height:5vw;
-            margin-right:20px;
-            align-items: center;
-            text-align: center;
-            word-wrap:break-word;
-            color: white;
-        }
-
-        img {
-            border-radius: 50%;
-            height: 50%;
-        }
-    }
-
-    .heading {
+        width: auto !important;
+        text-decoration: none;
+        padding: 0;
+        text-align: left;
         color: white;
+        position: relative;
 
-        margin: {
-            left: 20px;
+        &::after {
+          @include underline();
+          bottom: 0;
         }
+
+        &:hover {
+          cursor: pointer;
+          color: $navlistcolor;
+
+          &::after {
+            left: 15%;
+            right: 15%;
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+  }
+
+  &.drop {
+    li {
+      ul {
+        height: auto;
+        visibility: visible;
+      }
     }
 
-    //!start keyframes
-    @keyframes rotate {
-        to {
-            transform: rotate(180deg);
-        }
+    ul li {
+      animation: {
+        name: moveDown;
+        duration: 0.6s;
+        iteration-count: 1;
+        timing-function: ease;
+        fill-mode: forwards;
+        delay: calc(var(--order) * 150ms);
+      }
+    }
+  }
+}
+
+#SocialTurn {
+  color: white;
+  position: relative;
+  @include center();
+  margin: 0;
+  padding: 0;
+
+  p {
+    &::after {
+      margin-top: 30px;
+      @include underline();
     }
 
-    @keyframes turn {
-        to {
-            transform: rotate(90deg);
-        }
+    &:hover {
+      cursor: pointer;
+      color: $navlistcolor;
+
+      i {
+        cursor: pointer;
+        color: $navlistcolor;
+      }
+
+      &::after {
+        left: 15%;
+        right: 10%;
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+#SocialDrop {
+  list-style: none;
+  transition: all 1s ease-in-out;
+
+  #Title {
+    color: white;
+    text-decoration: none;
+    width: 170px;
+    position: relative;
+    margin-left: auto;
+    margin-right: 10px;
+
+    &::after {
+      @include underline();
+      bottom: -5px;
+      transition: all 0.5s;
     }
 
+    &:hover {
+      cursor: pointer;
+      color: $navlistcolor;
 
+      &::after {
+        left: 10%;
+        right: 5%;
+      }
 
-    @keyframes bounce {
-        0% {
-            opacity: 1;
-            transform: translateY(0px) scale(1);
-        }
+      i {
+        color: $navlistcolor;
+      }
+    }
+  }
 
-        25% {
-            opacity: 0;
-            transform: translateY(10px) scale(0.9);
-        }
+  li ul {
+    display: grid;
+    visibility: hidden;
+    grid-template-columns: auto;
+    list-style: none;
+    position: absolute;
+    right: 0;
 
-        26% {
-            opacity: 0;
-            transform: translateY(-10px) scale(0.9);
-        }
+    li {
+      background: #434343;
+      padding-right: 10px;
+      right: 0;
 
-        55% {
-            opacity: 1;
-            transform: translateY(0px) scale(1);
-        }
+      p {
+        font-family: $Mainfont;
+      }
+
+      a {
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      :hover p {
+        color: black;
+      }
+    }
+  }
+
+  &.drop {
+    li ul {
+      height: auto;
+      visibility: visible;
     }
 
-    @keyframes moveDown {
-        to {
-            transform: translateY(530px);
-        }
+    ul li {
+      animation: {
+        name: moveDown;
+        duration: 0.3s;
+        iteration-count: 1;
+        timing-function: ease;
+        fill-mode: forwards;
+        delay: calc(var(--order) * 50ms);
+      }
+    }
+  }
+}
+
+#logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+
+  img {
+    height: 250px;
+    width: 250px;
+  }
+}
+
+#arrow,
+#arrownav {
+  &.flip {
+    @include flip();
+  }
+}
+
+#arrow1 {
+  &.flip {
+    @include flip();
+    animation-name: turn !important;
+  }
+}
+
+#navtext1 {
+  display: none;
+
+  #arrownav1 {
+    transform: rotate(180deg);
+
+    &.flip {
+      @include flip();
+      animation-name: turn !important;
+    }
+  }
+}
+
+#header {
+  display: grid;
+  grid-template-columns: 50% auto;
+  user-select: none;
+  position: relative;
+}
+
+.fab {
+  $Socallogo: (
+    "telegram": #0088cc,
+    "instagram": #833ab4,
+    "twitter": #1da1f2,
+    "facebook": #1778f2,
+    "github": #211f1f,
+    "linkedin": #0e76a8,
+  );
+  color: white;
+  text-align: center;
+  text-decoration: none;
+
+  @each $logo, $i in $Socallogo {
+    &.fa-#{$logo} {
+      background: linear-gradient($i);
+      @include socialsize();
+    }
+  }
+
+  @each $logo, $i in $Socallogo {
+    &.fa-#{$logo}:hover {
+      color: $i;
+      @include socialhover();
+    }
+  }
+}
+
+.fas {
+  color: white;
+  @include center;
+
+  &.fa-quote-left,
+  &.fa-quote-right,
+  &.fa-angle-right {
+    display: inline-block !important;
+  }
+
+  &.fa-chevron-down {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+
+    animation: {
+      name: bounce;
+      duration: 1.5s;
+      iteration-count: infinite;
+      timing-function: linear;
+      delay: calc(var(--order) * 300ms);
+    }
+  }
+
+  &.fa-corner {
+    display: inline-block !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include zero();
+
+    font: {
+      size: 50px;
+    }
+  }
+
+  &.fa-caret-down {
+    transform: rotate(-90deg);
+    transition: all 0.5s;
+
+    &.turn {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+#body {
+  margin-bottom: 2000px;
+  width: 100%;
+}
+
+#Title {
+  @include center();
+}
+
+#splash {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr, 1fr;
+  grid-gap: 5px;
+  justify-content: center;
+  align-content: center;
+  user-select: none;
+  width: auto;
+  min-height: 100vh;
+  cursor: default;
+
+  background: {
+    image: linear-gradient(rgba(90, 57, 57, 0.6), rgba(0, 0, 0, 0.6)),
+      url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
+    repeat: no-repeat;
+    size: cover;
+    position: bottom;
+  }
+
+  .about-heading {
+    position: relative;
+
+    grid: {
+      row: 2;
+      column: 2;
+    }
+  }
+
+  h1 {
+    text-align: center;
+    height: auto;
+    color: white;
+
+    margin: {
+      top: auto;
     }
 
-    //!start Media
-    @media (max-width: 1500px) {}
+    font: {
+      size: 5vw;
+      family: $Mainfont;
+    }
+  }
 
-    @media (max-width: 1300px) {
-        #Navlist {
-            a {
-                margin-right: 3vw;
-            }
-        }
+  #Faceimage {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+
+    margin: {
+      left: auto;
+      right: 100px;
     }
 
-    @media (max-width: 1100px) {
-        #Navlist {
-            display: none !important;
-        }
+    perspective: 50px;
+  }
 
-        #NavDrop {
-            width: auto;
-            display: flex;
-        }
+  img {
+    width: 350px;
+    aspect-ratio: 1/1;
 
-        #square>* {
-            margin-top: 40px;
-        }
+    filter: brightness(0.8);
+  }
+}
 
-        #logo {
-            position: absolute;
-            left: 50%;
-            margin-left: -50px;
-            top: 50%;
-            margin-top: -50px;
+.typeout {
+  p {
+    color: white;
+    font-size: 2vw;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 0.15em;
 
-            img {
-                height: 150px;
-                width: 150px;
-            }
-        }
-
-        #splash {
-            background-attachment: scroll;
-
-            h1 {
-                padding-top: auto;
-            }
-
-            p {
-                padding-top: 0;
-            }
-        }
-
-        #SplashAD {
-            padding-top: 0 !important;
-        }
-
-        #Quote {
-            p {
-                font-size: 2.5vw;
-                width: 90%;
-            }
-        }
-
-        #NavText {
-            #arrownav1 {
-                &.flip {
-                    @include flip();
-                    animation-name: turn !important;
-                }
-            }
-        }
+    &:nth-child(1) {
+      animation: typewriter 2s steps(40) 1s normal both,
+        blinkTextCursor 1000ms infinite normal;
+      position: relative;
+      margin: 0 auto;
     }
 
-    @media (max-width: 900px) {
+    &:nth-child(2) {
+      width: 0;
+      text-align: center;
+      animation: typewriter 2s steps(40) 1s normal both,
+        blinkTextCursor 1000ms infinite normal;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+      margin: 0 auto;
+    }
+  }
+}
 
-        #social,
-        #Navlist,
-        #SocialTurn,
-        #NavDrop,
-        #SocialDrop,
-        #SplashAD,
-        #logo {
-            display: none;
-        }
+#AboutMe {
+  display: flex;
 
-        .fab {
-            width: auto !important;
-        }
+  flex: {
+    direction: row;
+  }
 
-        #head {
-            position: relative;
-        }
+  margin: {
+    top: 100px;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+  }
 
-        #SocialTurn {
-            color: white;
-            position: relative;
-            @include center();
-            @include zero();
-        }
+  padding-bottom: 0;
 
-        #splash {
-            background-image: none;
-        }
+  h1 {
+    word-wrap: none;
+    color: white;
+    font-size: 5vw;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
 
-        #NavDrop {
-            padding: 1%;
-        }
+  p {
+    display: flex;
 
-        .fab {
-            margin: {
-                left: 10px !important;
-                bottom: 10px;
-            }
-        }
-
-        #Quote {
-            p {
-                font-size: 2.5vw;
-                width: 80%;
-            }
-        }
+    font: {
+      size: 1.5vw;
+      family: $Mainfont;
     }
 
-    @media (max-width: 400px) {
-        #head {
-            background: #434343;
-        }
+    line-height: 5vw;
+    margin-right: 20px;
+    align-items: center;
+    text-align: center;
+    word-wrap: break-word;
+    color: white;
+  }
 
-        #header {
-            #logo {
-                img {
-                    height: 50px;
-                    width: 50px;
-                }
-            }
+  img {
+    border-radius: 50%;
+    height: 50%;
+  }
+}
 
-            #NavDrop,
-            #SocialDrop {
-                display: none;
-            }
-        }
+.heading {
+  color: white;
 
-        #splash {
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: auto auto;
-            grid-gap: 5px;
-            user-select: none;
+  margin: {
+    left: 20px;
+  }
+}
 
-            p {
-                padding: {
-                    top: 50px;
-                }
+//!start keyframes
+@keyframes rotate {
+  to {
+    transform: rotate(180deg);
+  }
+}
 
-                color: white;
-                font-size: 3vw;
-                margin: 0;
-                text-align: left;
-                grid-column: 2 / span 1;
-            }
+@keyframes turn {
+  to {
+    transform: rotate(90deg);
+  }
+}
 
-            h1 {
-                color: white;
-                margin: 0;
+@keyframes bounce {
+  0% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
 
-                font: {
-                    size: 8vw;
-                    family: $Mainfont;
-                }
-            }
-        }
+  25% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+  }
 
-        .fab {
-            margin: {
-                left: 10px !important;
-            }
-        }
+  26% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+  }
 
-        #navtext {
-            display: none;
-        }
+  55% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
 
-        #navtext1 {
-            display: block;
-        }
+@keyframes moveDown {
+  to {
+    transform: translateY(530px);
+  }
+}
 
-        #Quote {
-            p {
-                font-size: 5vw;
-                width: 70vw;
-            }
-        }
+//!start Media
+@media (max-width: 1500px) {
+}
+
+@media (max-width: 1300px) {
+  #Navlist {
+    a {
+      margin-right: 3vw;
     }
+  }
+}
+
+@media (max-width: 1100px) {
+  #Navlist {
+    display: none !important;
+  }
+
+  #NavDrop {
+    width: auto;
+    display: flex;
+  }
+
+  #square > * {
+    margin-top: 40px;
+  }
+
+  #logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+
+    img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  #splash {
+    background-attachment: scroll;
+
+    h1 {
+      padding-top: auto;
+    }
+
+    p {
+      padding-top: 0;
+    }
+  }
+
+  #SplashAD {
+    padding-top: 0 !important;
+  }
+
+  #Quote {
+    p {
+      font-size: 2.5vw;
+      width: 90%;
+    }
+  }
+
+  #NavText {
+    #arrownav1 {
+      &.flip {
+        @include flip();
+        animation-name: turn !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  #social,
+  #Navlist,
+  #SocialTurn,
+  #NavDrop,
+  #SocialDrop,
+  #SplashAD,
+  #logo {
+    display: none;
+  }
+
+  .fab {
+    width: auto !important;
+  }
+
+  #head {
+    position: relative;
+  }
+
+  #SocialTurn {
+    color: white;
+    position: relative;
+    @include center();
+    @include zero();
+  }
+
+  #splash {
+    background-image: none;
+  }
+
+  #NavDrop {
+    padding: 1%;
+  }
+
+  .fab {
+    margin: {
+      left: 10px !important;
+      bottom: 10px;
+    }
+  }
+
+  #Quote {
+    p {
+      font-size: 2.5vw;
+      width: 80%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #head {
+    background: #434343;
+  }
+
+  #header {
+    #logo {
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    #NavDrop,
+    #SocialDrop {
+      display: none;
+    }
+  }
+
+  #splash {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-gap: 5px;
+    user-select: none;
+
+    p {
+      padding: {
+        top: 50px;
+      }
+
+      color: white;
+      font-size: 3vw;
+      margin: 0;
+      text-align: left;
+      grid-column: 2 / span 1;
+    }
+
+    h1 {
+      color: white;
+      margin: 0;
+
+      font: {
+        size: 8vw;
+        family: $Mainfont;
+      }
+    }
+  }
+
+  .fab {
+    margin: {
+      left: 10px !important;
+    }
+  }
+
+  #navtext {
+    display: none;
+  }
+
+  #navtext1 {
+    display: block;
+  }
+
+  #Quote {
+    p {
+      font-size: 5vw;
+      width: 70vw;
+    }
+  }
+}

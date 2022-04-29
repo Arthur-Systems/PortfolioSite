@@ -35,7 +35,12 @@ $(window).scroll(function () {
   if ($(document).scrollTop() + 400 > $("#body").offset().top) {
     $("#head").addClass("past");
     $("#head").removeClass("attop");
-    $("#logo").children("img").attr("src", "/src/Images/Public/UCSCLARGE.png");
+    $("#logo")
+      .children("img")
+      .attr(
+        "src",
+        "https://github.com/Arthur-Systems/PortfolioSite/blob/c8c0ed01702c93bcfa367fbc0df092ef832cd299/src/Images/Public/UCSCLARGE.png?raw=true"
+      );
   }
 
   if ($(document).scrollTop() + 400 < $("#body").offset().top) {
