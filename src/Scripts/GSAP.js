@@ -1,13 +1,21 @@
 gsap.registerPlugin(ScrollTrigger);
 
 let timeline = gsap.timeline();
-timeline.to(".name", {
-  xPercent: 100,
+timeline.to(
+  ".name",
+  {
+    xPercent: 100,
+    duration: 1,
+    opacity: 0,
+    ease: "power2.out",
+  },
+  3
+);
+timeline.to("#Faceimage", {
+  xPercent: -200,
   duration: 1,
-  opacity: 0,
-  ease: "power2.out",
+  ease: "power1.out",
 });
-timeline.to("#Faceimage", { xPercent: -200, duration: 1, ease: "power1.out" });
 timeline.to(".typeout", { duration: 4, opacity: 0, ease: "power2.out" });
 // timeline.to(".name", {xPercent: 100});
 

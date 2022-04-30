@@ -285,6 +285,34 @@ body footer {
   justify-content: center;
   align-items: center;
   margin: 0;
+
+  .container {
+    // width: 100%;
+    // height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 600px;
+    background: lighten(black, 40%);
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    // box-shadow: 0 0 20px 8px #d0d0d0;
+    .card {
+      .card-content {
+        padding: {
+          top: 0;
+          left: 1vw;
+          right: 1vw;
+          bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 #SocialTurn {

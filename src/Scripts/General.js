@@ -1,3 +1,13 @@
+import Typed from "typed.js";
+
+var options = {
+  strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+  typeSpeed: 40,
+  smartBackspace: true,
+};
+
+var typed = new Typed(".typeout", options);
+
 var scroll1 = $(window).scrollTop();
 $(window).scroll(function () {
   var scroll2 = $(window).scrollTop();
@@ -48,6 +58,7 @@ $(document).ready(function () {
     "top",
     "-" + $("#SocialDrop li ul").outerHeight() + "px"
   );
+  typed.start();
 
   if ($(window).width() > 500) {
     var FA = document.createElement("link");
