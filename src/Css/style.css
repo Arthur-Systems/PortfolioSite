@@ -785,7 +785,7 @@ body footer P {
           filter: brightness(0.8);
 }
 
-.typeout p {
+#typed {
   color: white;
   font-size: 2vw;
   width: 100%;
@@ -793,25 +793,30 @@ body footer P {
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: 0.15em;
-}
-
-.typeout p:nth-child(1) {
-  -webkit-animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
-          animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
   position: relative;
-  margin: 0 auto;
+  text-align: center;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
-.typeout p:nth-child(2) {
-  width: 0;
-  text-align: center;
-  -webkit-animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
-          animation: typewriter 2s steps(40) 1s normal both, blinkTextCursor 1000ms infinite normal;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+.typed-cursor {
+  opacity: 1;
+  color: white;
+  font-size: 2vw;
+  -webkit-animation: blink 0.7s infinite;
+          animation: blink 0.7s infinite;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  margin: 0 auto;
+  position: relative;
+  text-align: right;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
 #AboutMe {

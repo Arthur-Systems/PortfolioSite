@@ -2,7 +2,6 @@
 <html lang="en">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!--Fully Signed :)-->
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -53,10 +52,11 @@
     <!-- !Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" type="text/javascript"></script>
     <script type="module" src='/src/Scripts/Dependencies/jquery.keyframes.min.js'></script>
-    <script type="module" src='/src/Scripts/KeyframeAnimations.js'></script>
+    <script type="module" src='/src/Scripts/ExternalSettings.js'></script>
     <script type="module" src="/src/Scripts/General.js"></script>
-    <script type="module" src="/src/Scripts/Settings.js"></script>
     <script type="module" src="/src/Scripts/GSAP.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 </head>
 
 <header id="head">
@@ -137,9 +137,8 @@
         <h1 class="name">
             <bold>Arthur Wei</bold>
         </h1>
-        <div class="typeout about-heading">
-            <p>Full Stack Developer, Computer Scientist,</p>
-            <p>and Graphic Designer</p>
+        <div>
+            <p style="display:none;">Full Stack Developer, Computer Scientist,<br>and Graphic Designer</p>
             <span id="typed"></span>
         </div>
 
@@ -230,7 +229,10 @@
     <script type="module" src="https://unpkg.com/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+
+
 </body>
 
 <footer>

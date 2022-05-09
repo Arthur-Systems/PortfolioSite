@@ -1,13 +1,21 @@
-import Typed from "typed.js";
+$(document).ready(function () {
+  $("#SocialDrop li ul").css(
+    "top",
+    "-" + $("#SocialDrop li ul").outerHeight() + "px"
+  );
 
-var options = {
-  strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-  typeSpeed: 40,
-  smartBackspace: true,
-};
+  if ($(window).width() > 500) {
+    var FA = document.createElement("link");
+    FA.href =
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css";
+    FA.rel = "stylesheet";
+    FA.crossorigin = "anonymous";
+    FA.referrerpolicy = "no-referrer";
+    $(document).find("head").append(FA);
+  }
+});
 
-var typed = new Typed(".typeout", options);
-
+//controls the scroll
 var scroll1 = $(window).scrollTop();
 $(window).scroll(function () {
   var scroll2 = $(window).scrollTop();
@@ -53,24 +61,6 @@ $(window).scroll(function () {
   }
 });
 
-$(document).ready(function () {
-  $("#SocialDrop li ul").css(
-    "top",
-    "-" + $("#SocialDrop li ul").outerHeight() + "px"
-  );
-  typed.start();
-
-  if ($(window).width() > 500) {
-    var FA = document.createElement("link");
-    FA.href =
-      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css";
-    FA.rel = "stylesheet";
-    FA.crossorigin = "anonymous";
-    FA.referrerpolicy = "no-referrer";
-    $(document).find("head").append(FA);
-  }
-});
-
 $(window).on("load ready", function () {
   if ($(window).width() < 1024) {
   }
@@ -87,4 +77,16 @@ $("#SocialDrop").click(function () {
 
   // $("#SocialDrop.drop li ul").css("top", "0px");
   // $("#SocialDrop ul").slideToggle(1000);
+});
+
+//Type.js
+
+var typed = new Typed("#typed", {
+  strings: ["Web Developer", "Web Designer", "Web Developer"],
+  typeSpeed: 50,
+  backSpeed: 50,
+  showCursor: true,
+  cursorChar: "|",
+  autoInsertCss: true,
+  smartBackspace: true,
 });
