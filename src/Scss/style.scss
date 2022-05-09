@@ -58,6 +58,7 @@ $navlistcolor: #ff8235;
 body,
 html {
   margin: 0px;
+  padding: 0px;
   background-color: $background;
   font-family: "Khula", sans-serif;
   overflow-x: hidden;
@@ -576,7 +577,8 @@ body footer {
       url("https://dsm01pap002files.storage.live.com/y4mmnszpbSbZSlw5_rUvCIV4C095QHJAfQU-Nyfb0iqA9KbV00i1hOkU3J0RG397pYy1hm4ESRuLDCUXU4oxh4g2XAJWVs3igGVd0iYIGY-TMlc0iT9_fNNW40skf2a2nc2U9R1_X-TiRL4QzawcKqVH5jb37I1NtS9Ku59yMxFwVkmLIQpOkTNMrO0tcc38Qzl?width=1273&height=955&cropmode=none");
     repeat: no-repeat;
     size: cover;
-    position: bottom;
+    position: center;
+    attachment: fixed;
   }
 
   .about-heading {
@@ -607,20 +609,22 @@ body footer {
   #Faceimage {
     grid-row: 1 / span 2;
     grid-column: 1;
+    background-color: #434343;
 
     margin: {
       left: auto;
       right: 100px;
     }
-
     perspective: 50px;
-  }
-
-  img {
-    width: 350px;
-    aspect-ratio: 1/1;
-
-    filter: brightness(0.8);
+    transform-style: preserve-3d;
+    height: 25vw;
+    width: auto;
+    img {
+      height: 100%;
+      width: 100%;
+      aspect-ratio: 1/1;
+      filter: brightness(0.8);
+    }
   }
 }
 
@@ -634,27 +638,11 @@ body footer {
   letter-spacing: 0.15em;
   position: relative;
   text-align: center;
+
   grid: {
     row: 2;
     column: 2;
   }
-
-  // &:nth-child(1) {
-  //   animation: typewriter 2s steps(40) 1s normal both,
-  //     blinkTextCursor 1000ms infinite normal;
-  //   position: relative;
-  //   margin: 0 auto;
-  // }
-
-  // &:nth-child(2) {
-  //   width: 0;
-  //   text-align: center;
-  //   animation: typewriter 2s steps(40) 1s normal both,
-  //     blinkTextCursor 1000ms infinite normal;
-  //   animation-delay: 3s;
-  //   animation-fill-mode: forwards;
-  //   margin: 0 auto;
-  // }
 }
 .typed-cursor {
   opacity: 1;

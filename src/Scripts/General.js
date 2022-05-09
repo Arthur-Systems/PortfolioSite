@@ -50,12 +50,12 @@ $(window).scroll(function () {
     scroll1 = scroll2;
   }
 
-  if ($(document).scrollTop() + 600 > $("#body").offset().top) {
+  if ($(document).scrollTop() + 800 > $("#body").offset().top) {
     $("#head").addClass("past");
     $("#head").removeClass("attop");
   }
 
-  if ($(document).scrollTop() + 600 < $("#body").offset().top) {
+  if ($(document).scrollTop() + 800 < $("#body").offset().top) {
     $("#head").removeClass("past");
     $("#head").addClass("attop");
   }
@@ -77,16 +77,4 @@ $("#SocialDrop").click(function () {
 
   // $("#SocialDrop.drop li ul").css("top", "0px");
   // $("#SocialDrop ul").slideToggle(1000);
-});
-
-//Type.js
-
-var typed = new Typed("#typed", {
-  strings: ["Web Developer", "Web Designer", "Web Developer"],
-  typeSpeed: 50,
-  backSpeed: 50,
-  showCursor: true,
-  cursorChar: "|",
-  autoInsertCss: true,
-  smartBackspace: true,
 });

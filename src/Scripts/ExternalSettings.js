@@ -64,4 +64,25 @@ $(document).ready(function () {
   });
 });
 
-//import js file form url
+//Type.js
+
+var typed = new Typed("#typed", {
+  strings: [
+    "A Full Stack Developer, A Computer Engineer",
+    "A Full Stack Developer, A Computer Scientist",
+    "A Full Stack Developer, A Web Developer",
+    "A  <i>Visionary</i> and A <i>Leader</i> in the field of <br>Computer Science.^1000",
+  ],
+  typeSpeed: 50,
+  backSpeed: 50,
+  showCursor: true,
+  cursorChar: "|",
+  autoInsertCss: true,
+  smartBackspace: true,
+  backDelay: 10,
+
+  onComplete: function (self) {
+    //remove the cursor
+    $(".typed-cursor").remove();
+  },
+});
